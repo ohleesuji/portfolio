@@ -5,3 +5,6 @@
 .project-copy ul{font-size:15px}.project-copy h4{font-size:16px}.project-meta{font-size:13px}.approach-card dl{font-size:14px}
 @media(max-width:1050px){.project-copy ul{font-size:14px}}
 @media(max-width:760px){.project-copy ul{font-size:14px}.project-copy h4{font-size:15px}.project-meta{font-size:12px}.approach-card dl{font-size:14px}}
+
+/* A single introduction and company tabs keep navigation focused. */
+.hero{display:block}.hero>div{max-width:900px}
