@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1040" viewBox="0 0 1000 1040">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#63758d" stroke-width="1.4"/></marker></defs>
+<rect width="1000" height="1040" fill="white"/>
+<g font-family="Arial,Apple SD Gothic Neo,sans-serif" text-anchor="middle" fill="#172033">
+<text x="500" y="70" font-size="32" font-weight="700">여러 대화를 하나의 답변으로</text>
+<rect x="190" y="110" width="620" height="100" rx="12" fill="#edf3fb"/>
+<text x="500" y="150" font-size="26" font-weight="700">조회한 전체 채팅방 대화</text>
+<text x="500" y="187" font-size="22" fill="#55657a">시간 순서와 대화 맥락을 유지해 분할</text>
+<g fill="none" stroke="#63758d" stroke-width="3" marker-end="url(#arrow)"><path d="M500 215V270H185V310"/><path d="M500 270V310"/><path d="M500 270H815V310"/></g>
+<g fill="#f5f7fb" stroke="#cbd7e7" stroke-width="2"><rect x="60" y="325" width="250" height="130" rx="12"/><rect x="375" y="325" width="250" height="130" rx="12"/><rect x="690" y="325" width="250" height="130" rx="12"/></g>
+<text x="185" y="377" font-size="26" font-weight="700">대화 구간 A</text><text x="185" y="419" font-size="24">분석</text>
+<text x="500" y="377" font-size="26" font-weight="700">대화 구간 B</text><text x="500" y="419" font-size="24">분석</text>
+<text x="815" y="377" font-size="26" font-weight="700">대화 구간 C</text><text x="815" y="419" font-size="24">분석</text>
+<text x="500" y="497" font-size="23" fill="#365cf5">최대 3개 구간 동시 분석</text>
+<text x="500" y="540" font-size="21" fill="#55657a">실패한 구간만 재시도 · 성공 결과 유지</text>
+<path d="M500 562V607" fill="none" stroke="#63758d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="160" y="625" width="680" height="95" rx="12" fill="#edf3fb"/>
+<text x="500" y="664" font-size="25" font-weight="700">전체 구간 분석 성공 후 근거 선별</text>
+<text x="500" y="699" font-size="21" fill="#55657a">재시도 후에도 실패 시 오류 안내</text>
+<path d="M500 725V765" fill="none" stroke="#63758d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="160" y="782" width="680" height="108" rx="12" fill="#edf3fb"/>
+<text x="500" y="826" font-size="26" font-weight="700">답변에 사용할 분석 결과 통합</text>
+<text x="500" y="865" font-size="22" fill="#55657a">중복 제거 · 맥락 연결 · 변경 사항 반영</text>
+<path d="M500 894V930" fill="none" stroke="#63758d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="275" y="945" width="450" height="65" rx="12" fill="#143762"/>
+<text x="500" y="986" font-size="27" fill="white" font-weight="700">하나의 최종 답변</text>
+</g></svg>
