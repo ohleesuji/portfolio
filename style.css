@@ -70,3 +70,12 @@
 #case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{width:100%;max-width:none;--preview-width:100%}
 @media(max-width:600px){.response-examples .response-prompt{font-size:12px}.response-examples.original-evidence .evidence-gallery{gap:20px 10px}.rank-tag{font-size:10px}}
 #case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{flex:1 1 100%}
+
+/* Three response examples on a single row, with directly associated metrics. */
+#case-10 .project-body{grid-template-columns:.78fr 1.22fr;gap:26px}
+.response-examples.original-evidence .evidence-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.response-examples .response-prompt{min-height:42px;margin-bottom:8px;font-size:13px}
+.response-stats{width:100%;text-align:center;font-size:11px;line-height:1.7;color:#647087;margin:0 0 13px}
+.response-stats span{display:block}.response-stats b{color:#143762}
+#case-27 .original-evidence .evidence-button{flex-basis:100%;width:100%;max-width:560px}
+@media(max-width:760px){#case-10 .project-body{grid-template-columns:1fr}.response-examples.original-evidence .evidence-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.response-examples .response-prompt{font-size:11px;min-height:50px}.response-stats{font-size:10px}}
