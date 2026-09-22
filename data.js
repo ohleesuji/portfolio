@@ -3,12 +3,12 @@ const PORTFOLIO = {
     {
       "key": "kakao",
       "name": "카카오",
-      "role": "카나나 AI 서비스 기획",
+      "role": "카나나 AI Product Manager",
       "period": "2025.12.01 ~ 현재",
       "duration": "약 10개월",
       "start": 5,
       "end": 10,
-      "intro": "카카오톡 대화 데이터 기반 AI 에이전트·메모리·공유형 콘텐츠 기획"
+      "intro": "카카오톡 대화 기반 AI 제품의 방향 · 전략 수립, 우선순위 · 성과 관리"
     },
     {
       "key": "samsung",
@@ -29,7 +29,7 @@ const PORTFOLIO = {
       "duration": "3년 7개월 29일",
       "start": 12,
       "end": 22,
-      "intro": "퍼널 분석과 실험, 금융사 제휴와 규제특례를 통한 제품 성장"
+      "intro": "대출 · 보험 제품 전략 · 우선순위 · 성과 관리, 퍼널 개선 · 금융사 연동 · 규제특례 추진"
     },
     {
       "key": "nhn",
@@ -120,7 +120,8 @@ const PORTFOLIO = {
       "galleryColumns": 3,
       "teamLabel": "협업 구성",
       "evidenceTitle": "과거 대화를 찾아 분석하는 MVP 사용자 흐름",
-      "disclaimer": "피그마 · 정책서의 초기 시안"
+      "disclaimer": "피그마 · 정책서의 초기 시안",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-7",
@@ -186,7 +187,8 @@ const PORTFOLIO = {
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
       "evidenceTitle": "질문 의도에 따라 채팅방 · 기간을 추천하는 흐름",
-      "disclaimer": "실제 서비스 화면과 질문 의도별 조회 방식"
+      "disclaimer": "실제 서비스 화면과 질문 의도별 조회 방식",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-6",
@@ -226,7 +228,7 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/sep23-chunk_asis_tobe.png",
+          "src": "assets/pm-chunk-flow.png",
           "label": "여러 대화를 동시에 분석해 레이턴시를 1/3로 줄인 병렬 처리 설계",
           "caption": "여러 대화를 동시에 분석해 레이턴시를 1/3로 줄인 병렬 처리 설계",
           "wide": true,
@@ -237,7 +239,8 @@ const PORTFOLIO = {
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "순서대로 분석하던 방식을 동시 분석 · 결과 통합으로 전환",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-8",
@@ -278,18 +281,19 @@ const PORTFOLIO = {
       "originals": [
         {
           "src": "assets/claude-evaluation-original.png",
-          "label": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
-          "caption": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
+          "label": "평가 케이스 결과 분석안",
+          "caption": "",
           "wide": true,
           "width": 2200,
           "height": 1866
         }
       ],
-      "evidenceNote": "유형별 점수는 실행 오류를 제외한 정상 응답의 0~1점 평균. 전체 PASS율은 실행 오류를 포함한 105회 기준. 92%는 정답이 명확한 추출·요약 평가군의 수치.",
+      "evidenceNote": "92%는 정답이 명확한 추출 · 요약 평가군 기준",
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
-      "evidenceTitle": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "evidenceTitle": "평가 케이스 결과 분석안",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-9",
@@ -365,7 +369,8 @@ const PORTFOLIO = {
       "galleryColumns": 3,
       "teamLabel": "협업 구성",
       "evidenceTitle": "메모리 첫 안내 · 설정 · 요약 화면과 기억 처리 흐름",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-10",
@@ -441,9 +446,9 @@ const PORTFOLIO = {
       "galleryColumns": 3,
       "responseExamples": true,
       "teamLabel": "협업 구성",
-      "evidenceTitle": "실제 카나나 응답 · 클릭률 · 공유율은 서제스트 최근 14일 기준",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "shareLabel": "공유율"
+      "shareLabel": "공유율",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-11",
@@ -550,7 +555,8 @@ const PORTFOLIO = {
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "보험 상담 신청 목표 달성 추이",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "보험 Product Owner"
     },
     {
       "id": "case-13",
@@ -616,7 +622,8 @@ const PORTFOLIO = {
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
       "evidenceTitle": "보험 홈 이용 분석과 개선 화면",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "보험 Product Owner"
     },
     {
       "id": "case-14",
@@ -681,7 +688,8 @@ const PORTFOLIO = {
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
       "evidenceTitle": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-15",
@@ -746,7 +754,8 @@ const PORTFOLIO = {
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
       "evidenceTitle": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-16",
@@ -761,7 +770,8 @@ const PORTFOLIO = {
           ]
         }
       ],
-      "role": ""
+      "role": "",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-17",
@@ -818,7 +828,8 @@ const PORTFOLIO = {
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
       "evidenceTitle": "주택담보대출 갈아타기 서비스 화면",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-18",
@@ -891,7 +902,8 @@ const PORTFOLIO = {
       "galleryColumns": 3,
       "teamLabel": "협업 구성",
       "evidenceTitle": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-19",
@@ -940,7 +952,8 @@ const PORTFOLIO = {
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "주택 검색 단계 개선 전 · 후의 퍼널 전환",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-20",
@@ -989,7 +1002,8 @@ const PORTFOLIO = {
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "상담 분석을 바탕으로 확대한 대출 상품",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-21",
@@ -1037,7 +1051,8 @@ const PORTFOLIO = {
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "금리 비교 정보를 추가한 A/B 테스트 실험안",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-22",
@@ -1099,7 +1114,8 @@ const PORTFOLIO = {
           "height": 2116
         }
       ],
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "position": "대출 Product Owner"
     },
     {
       "id": "case-23",
