@@ -168,12 +168,12 @@ const PORTFOLIO = {
           "height": 1190
         },
         {
-          "src": "assets/sep23-scope_screen_b.png",
+          "src": "assets/scope-response-corrected.png",
           "label": "대화에 근거한 응답",
           "caption": "대화에 근거한 응답",
           "wide": false,
-          "width": 659,
-          "height": 1181
+          "width": 388,
+          "height": 696
         },
         {
           "src": "assets/sep23-scope_policy_table.png",
