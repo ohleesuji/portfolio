@@ -18,3 +18,5 @@
 .viewer-body img{width:auto;max-width:100%;min-width:0;margin:auto}
 .viewer-body{max-height:75vh}
 @media(max-width:760px){.phone-gallery{gap:8px}.image-label{font-size:10px}}
+
+.special .project-meta{grid-column:1 / -1}
