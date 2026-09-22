@@ -79,3 +79,15 @@
 .response-stats span{display:block}.response-stats b{color:#143762}
 #case-27 .original-evidence .evidence-button{flex-basis:100%;width:100%;max-width:560px}
 @media(max-width:760px){#case-10 .project-body{grid-template-columns:1fr}.response-examples.original-evidence .evidence-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.response-examples .response-prompt{font-size:11px;min-height:50px}.response-stats{font-size:10px}}
+
+/* Uncropped source images with captions; company navigation keeps all cases visible. */
+.company-group{scroll-margin-top:170px;outline:none}.project:focus{outline:none}
+.original-evidence .evidence-gallery>div{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.original-evidence .evidence-button,.original-evidence.full .evidence-button{aspect-ratio:auto!important;flex:none!important;height:auto;min-height:0}
+.original-evidence .evidence-button img{position:static!important;inset:auto!important;display:block;width:100%!important;height:auto!important;max-width:100%;max-height:none!important;object-fit:contain;transform:none}
+.evidence-title{font-size:13px!important;line-height:1.6!important;font-weight:650;color:#143762!important;margin:0 0 15px!important;text-align:center}
+.image-caption{font-size:11px;line-height:1.5;text-align:center;color:#647087;margin:9px 0 0;width:100%}
+.image-disclaimer{font-size:10px;color:#788398;line-height:1.6;margin:18px 0 0;text-align:right}
+#case-10 .original-evidence .evidence-gallery>div>.evidence-button{width:100%;max-width:234px}
+
+.text-only .project-body{grid-template-columns:1fr}

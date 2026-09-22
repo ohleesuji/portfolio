@@ -5,7 +5,7 @@ const PORTFOLIO = {
       "name": "카카오",
       "role": "카나나 AI 서비스 기획",
       "period": "2025.12.01 ~ 현재",
-      "duration": "9개월 21일",
+      "duration": "약 10개월",
       "start": 5,
       "end": 10,
       "intro": "카카오톡 대화 데이터 기반 AI 에이전트·메모리·공유형 콘텐츠 기획"
@@ -64,128 +64,140 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "웹 검색으로는 찾을 수 없는 나의 일정·기억·관계. 카카오톡에만 있는 과거 대화를 찾아 요약·분석하는 새로운 AI 경험을 0에서 설계"
+            "웹 검색으로는 찾을 수 없는 나의 일정 · 기억 · 관계 카카오톡에만 있는 과거 대화를 찾아 요약 · 분석하는 새로운 AI 경험을 0에서 설계"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "하루 말풍선 수·메시지 길이로 기간별 토큰 사용량 계산",
-            "계산 결과로 최대 4개 방·기본 2주 조회 범위 설정",
+            "하루 말풍선 수 · 메시지 길이로 기간별 토큰 사용량 계산",
+            "계산 결과로 최대 4개 방 · 기본 2주 조회 범위 설정",
             "반복 필드를 줄인 규칙형 텍스트 입력 형식 제안",
             "요청 유형 8종과 대화 선택→분석 흐름 설계",
-            "동의·원문 즉시 삭제와 후속 질문 처리 기준 수립"
+            "동의 · 원문 즉시 삭제와 후속 질문 처리 기준 수립"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
             "대화 선택부터 답변까지 MVP 전 과정 정책 확정",
+            "대화량 상위 5%도 담는 기본 4개 방 · 2주 범위 확정",
             "입력 형식 변경으로 토큰 약 60% 절감",
-            "같은 대화의 추가 질문은 3시간 내 재선택 없이 진행"
+            "추가 질문은 3시간 동안 채팅방 재선택 없이 이어서 진행"
           ]
         }
       ],
-      "role": "서비스·UX·정책 기획",
+      "role": "서비스 · UX · 정책 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 클라 2명 · 서버 2명 · 모델 1명 · FE 1명",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-v4-image.png",
-          "label": "과거 대화를 이해하는 대화연동 에이전트 0→1 구축",
+          "label": "분석할 대화 요청",
+          "caption": "분석할 대화 요청",
           "wide": false,
           "width": 786,
           "height": 1704
         },
         {
-          "src": "assets/claude-v4-image2.png",
-          "label": "과거 대화를 이해하는 대화연동 에이전트 0→1 구축",
+          "src": "assets/sep23-v4-image2.png",
+          "label": "대상 채팅방 선택",
+          "caption": "대상 채팅방 선택",
           "wide": false,
-          "width": 478,
-          "height": 948
+          "width": 667,
+          "height": 1323
         },
         {
-          "src": "assets/claude-v4-image3.png",
-          "label": "과거 대화를 이해하는 대화연동 에이전트 0→1 구축",
+          "src": "assets/sep23-v4-image3.png",
+          "label": "기간 확인 · 분석 시작",
+          "caption": "기간 확인 · 분석 시작",
           "wide": false,
-          "width": 450,
-          "height": 884
+          "width": 693,
+          "height": 1362
         }
       ],
-      "galleryColumns": 3
+      "galleryColumns": 3,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "과거 대화를 찾아 분석하는 MVP 사용자 흐름",
+      "disclaimer": "피그마 · 정책서의 초기 시안"
     },
     {
       "id": "case-7",
       "page": 7,
       "company": "kakao",
-      "title": "채팅방 선택 없이 질문만으로 찾는 전체 대화 탐색",
+      "title": "질문 의도로 알맞은 채팅방 · 기간을 찾아 답하는 대화 탐색",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "대화가 오간 방과 시점을 사용자가 기억해야 하는 부담. “이번 주 일정”처럼 질문 속 날짜와 실제 조회할 기간이 다른 요청도 답하도록 탐색 범위 확장"
+            "MVP는 사용자가 채팅방 · 기간을 직접 골라야 분석 가능 대화가 오간 방과 시점을 기억해야 하는 부담이 크고, 질문 속 날짜만으로는 알맞은 조회 범위를 정할 수 없음"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "여러 채팅방에서 근거를 찾는 전체 조회 정책 설계",
-            "과거 시점·최근 맥락·특정 상대별 조회 방식 정의",
-            "추천 기간을 보여주고 바로 분석하는 흐름 설계",
-            "조회 범위·저장 여부를 알리는 안내 문구 설계",
-            "늘어난 입력량을 검토해 병렬 분석 과제로 연결"
+            "질문 의도를 해석해 LLM이 채팅방 · 기간을 추천하는 구조",
+            "과거 시점형: 해당 시점 전후 전체 채팅방 조회",
+            "최근 맥락형: 성격 · 일정 · 할 일은 최근 7일 전체 조회",
+            "특정 상대형: 상대가 핵심인 요청은 해당 채팅방 선택",
+            "최근 7일 대화량이 토큰 한도의 81.5%로 수용 범위 확인"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "직접 고른 4개 방에서 전체 채팅방 탐색으로 확장",
-            "[바로 확인하기]로 채팅방 선택 없이 즉시 분석",
-            "일정·할 일 요청까지 최근 7일 전체 조회로 응답",
-            "추천 기간을 확인하고 바꿀 수 있는 흐름 제공"
+            "채팅방 · 기간을 고르지 않아도 질문만으로 분석 시작",
+            "채팅방 4개 선택 제한 없이 전체 대화에서 근거 탐색",
+            "추천 범위 확인 후 [바로 확인하기]로 즉시 시작"
           ]
         }
       ],
-      "role": "조회 경험·프롬프트·정책 기획 및 데이터 분석",
+      "role": "조회 정책 · 프롬프트 · UX 기획 및 데이터 분석",
       "contribution": "100%",
       "team": "디자인 1명 · 서버 1명 · 모델 1명 · FE 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-scope_screen_a.png",
-          "label": "조회 범위와 기간 안내",
+          "src": "assets/sep23-scope_screen_a.png",
+          "label": "추천 조회 범위 안내",
+          "caption": "추천 조회 범위 안내",
           "wide": false,
-          "width": 598,
-          "height": 1044
+          "width": 681,
+          "height": 1190
         },
         {
-          "src": "assets/claude-scope_screen_b.png",
+          "src": "assets/sep23-scope_screen_b.png",
           "label": "대화에 근거한 응답",
+          "caption": "대화에 근거한 응답",
           "wide": false,
-          "width": 602,
-          "height": 1078
+          "width": 659,
+          "height": 1181
         },
         {
-          "src": "assets/claude-scope_policy_table.png",
-          "label": "질문 유형별 조회 정책",
+          "src": "assets/sep23-scope_policy_table.png",
+          "label": "질문 의도별 조회 정책",
+          "caption": "질문 의도별 조회 정책",
           "wide": true,
-          "width": 2098,
-          "height": 338
+          "width": 4196,
+          "height": 676
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "질문 의도에 따라 채팅방 · 기간을 추천하는 흐름",
+      "disclaimer": "실제 서비스 화면과 질문 의도별 조회 방식"
     },
     {
       "id": "case-6",
       "page": 6,
       "company": "kakao",
-      "title": "여러 대화를 동시에 분석해 한 번에 답하는 병렬 처리 설계",
+      "title": "여러 대화를 동시에 분석해 레이턴시를 1/3로 줄인 병렬 처리 설계",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "전체 채팅방 조회로 분석할 대화가 크게 늘어남. 순서대로 분석하면 대기 시간이 쌓이고, 일부 구간 결과만 답변에 반영되는 문제"
+            "전체 채팅방 조회로 분석할 대화가 크게 늘어남 순서대로 분석하면 대기 시간이 쌓이고, 일부 구간 결과만 답변에 반영되는 문제"
           ]
         },
         {
@@ -193,7 +205,7 @@ const PORTFOLIO = {
           "items": [
             "대화를 나눠 최대 3개 구간을 동시에 분석",
             "구간별로 답변에 쓸 근거가 있는지 판단 기준 정의",
-            "중복 제거·시간 흐름 연결로 결과를 하나로 통합",
+            "중복 제거 · 시간 흐름 연결로 결과를 하나로 통합",
             "성공한 분석은 유지하고 실패한 구간만 재시도",
             "재시도 후 실패 시 일부 결과로 답하지 않도록 처리"
           ]
@@ -201,75 +213,83 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "대화 분할·동시 분석·답변 통합 흐름과 입출력 명세 수립",
-            "답변 근거 없음과 분석 오류를 구분한 처리·재시도 기준 확정"
+            "순차 분석 대비 응답 레이턴시 1/3로 단축",
+            "요약 · 관계 분석에 전체 대화 맥락 반영",
+            "답 없음과 분석 오류를 구분한 처리 기준 정리",
+            "분할부터 통합까지 처리 흐름 · 입출력 명세 수립"
           ]
         }
       ],
-      "role": "병렬 처리·결과 통합·실패 재시도 정책 기획",
+      "role": "병렬 처리 · 결과 통합 · 실패 재시도 정책 기획",
       "contribution": "100%",
       "team": "서버 2명 · 모델 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-chunk_asis_tobe.png",
-          "label": "여러 대화를 동시에 분석해 한 번에 답하는 병렬 처리 설계",
+          "src": "assets/sep23-chunk_asis_tobe.png",
+          "label": "여러 대화를 동시에 분석해 레이턴시를 1/3로 줄인 병렬 처리 설계",
+          "caption": "여러 대화를 동시에 분석해 레이턴시를 1/3로 줄인 병렬 처리 설계",
           "wide": true,
-          "width": 1640,
-          "height": 964
+          "width": 2283,
+          "height": 1342
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "순서대로 분석하던 방식을 동시 분석 · 결과 통합으로 전환",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-8",
       "page": 8,
       "company": "kakao",
-      "title": "헷갈리는 대화 21건·525회 반복 평가로 정한 분석 모델 기준",
+      "title": "헷갈리는 대화 21건 · 525회 반복 평가로 정한 분석 모델 기준",
       "image": "assets/evidence-hd-08.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "긴 대화에서 정보 누락·화자 혼동 오류 발생. 모델을 바꾸면 나아지는지, 어떤 상황에서 틀리는지 같은 케이스로 반복 검증할 기준이 필요"
+            "긴 대화에서 정보 누락 · 화자 혼동 오류 발생 모델을 바꾸면 나아지는지, 어떤 상황에서 틀리는지 같은 케이스로 반복 검증할 기준이 필요"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "정정·주체 혼동 등 함정을 담은 평가 케이스 21건 설계",
-            "케이스마다 헷갈리는 이유·기대 답변·필수 채점 포인트 정의",
-            "5개 모델·프롬프트 조합 × 21개 케이스 × 각 5회 반복, 총 525회 실행",
-            "품질·오류율·응답 시간·유형별 정확도 8개 지표 비교",
+            "정정 · 주체 혼동 등 함정을 담은 평가 케이스 21건 설계",
+            "케이스마다 헷갈리는 이유 · 기대 답변 · 필수 채점 포인트 정의",
+            "5개 모델 · 프롬프트 조합을 같은 케이스로 각 5회 반복",
+            "품질 · 오류율 · 응답 시간 · 유형별 정확도 8개 지표 비교",
             "실패 응답을 원문과 대조해 오류 유형 분류"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "모델 B의 단계 추론 설정(V3)을 품질·속도를 고려한 균형 기준안으로 선정",
-            "사실 확인 응답 품질 0.860 → 0.969 개선",
-            "정정된 정보 찾기 사례: 기존 0/5회 성공 → 선정안 5/5회 성공",
-            "정답이 명확한 추출·요약 평가군의 PASS율 각각 92%",
-            "빠른 설정(V2) 병행 비교, 복합 추출은 프롬프트 개선 과제로 분리"
+            "틀린 답이 적은 V3(모델 B · CoT)를 기준안으로 선정",
+            "중간에 바뀐 정보: 기존 모델 5회 모두 오답 → V3 5회 모두 정답",
+            "정보 추출 · 흐름 요약 합격률 각 92%, 5개 안 중 최고"
           ]
         }
       ],
-      "role": "평가 케이스 설계·모델 비교 실험·고도화 정책 기획",
+      "role": "평가 케이스 설계 · 모델 비교 실험 · 고도화 정책 기획",
       "contribution": "100%",
       "team": "모델 1명",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-evaluation-original.png",
-          "label": "평가 케이스·8개 지표 비교·분석 모델 선정 근거",
+          "label": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
+          "caption": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
+          "wide": true,
           "width": 2200,
-          "height": 1866,
-          "wide": true
+          "height": 1866
         }
       ],
       "evidenceNote": "유형별 점수는 실행 오류를 제외한 정상 응답의 0~1점 평균. 전체 PASS율은 실행 오류를 포함한 105회 기준. 92%는 정답이 명확한 추출·요약 평가군의 수치.",
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "평가 케이스 구성부터 8개 지표 비교, 채택 근거까지 (모델명 익명 처리)",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-9",
@@ -281,44 +301,46 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "대화할 때마다 배경과 선호를 다시 설명해야 하고, 누구에게나 같은 일반적인 답변이 돌아오는 한계. 기억한 정보로 나에게 맞춘 답을 주는 개인화 필요"
+            "대화할 때마다 배경과 선호를 다시 설명해야 하고, 누구에게나 같은 일반적인 답변이 돌아오는 한계 기억한 정보로 나에게 맞춘 답을 주는 개인화 필요"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
             "대화 속 자동 기억과 직접 요청 기억의 기준 정의",
-            "기억 확인·수정·삭제를 대화와 설정 화면에 연결",
+            "기억 확인 · 수정 · 삭제를 대화와 설정 화면에 연결",
             "오래 쓸 정보와 저장하면 안 되는 정보 구분",
-            "메모리 켜기·끄기와 삭제 동작 차이 정리",
+            "메모리 켜기 · 끄기와 삭제 동작 차이 정리",
             "지운 기억이 다시 저장되지 않도록 방지 규칙 설계"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "생활·관심사·답변 스타일 등 기억 8종 분류 정의",
-            "주민번호·계좌번호 등 민감정보 저장 차단 기준 확정",
-            "기억 요약·설정·삭제의 화면별 동작 기준 마련",
-            "메모리 MVP 출시 범위와 도구 명세 확정"
+            "생활 · 관심사 · 답변 스타일 등 기억 8종 분류 정의",
+            "주민번호 · 계좌번호 등 민감정보 저장 차단 기준 확정",
+            "기억 요약 · 설정 · 삭제의 화면별 동작 기준 마련",
+            "메모리 MVP 출시 범위와 기능 명세 확정"
           ]
         }
       ],
-      "role": "메모리 MVP 서비스·UX·정책 기획",
+      "role": "메모리 MVP 서비스 · UX · 정책 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 서버 1명 · 모델 1명 · FE 1명",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-mem_consent.png",
-          "label": "메모리 첫 사용 안내",
+          "label": "첫 사용 안내",
+          "caption": "첫 사용 안내",
           "wide": false,
           "width": 512,
           "height": 1054
         },
         {
           "src": "assets/claude-mem_setting.png",
-          "label": "메모리 켜기·끄기와 삭제",
+          "label": "켜기 · 끄기 · 삭제",
+          "caption": "켜기 · 끄기 · 삭제",
           "wide": false,
           "width": 516,
           "height": 1044
@@ -326,122 +348,120 @@ const PORTFOLIO = {
         {
           "src": "assets/claude-mem_summary.png",
           "label": "기억한 내용 요약",
+          "caption": "기억한 내용 요약",
           "wide": false,
           "width": 508,
           "height": 954
         },
         {
           "src": "assets/claude-mem_doc_blur.png",
-          "label": "메모리 처리 흐름과 정책",
+          "label": "기억 처리 흐름",
+          "caption": "기억 처리 흐름",
           "wide": true,
           "width": 1666,
           "height": 1058
         }
       ],
-      "galleryColumns": 3
+      "galleryColumns": 3,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "메모리 첫 안내 · 설정 · 요약 화면과 기억 처리 흐름",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-10",
       "page": 10,
       "company": "kakao",
-      "title": "대화로 만든 공유형 콘텐츠 7종 기획·구현",
+      "title": "대화로 만든 공유형 콘텐츠 7종, 웹검색 · 장소 대비 클릭률 최대 3.2배",
       "image": "assets/evidence-hd-10.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "나와 친구의 대화 특징을 재미있게 보여주면 결과를 친구와 비교·공유하며 자연스럽게 확산될 수 있다고 판단"
+            "나와 친구의 대화 특징을 재미있게 보여주면 결과를 친구와 비교 · 공유하며 자연스럽게 확산될 수 있다고 판단"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "말투 나이·AI 판결소·톡방 시상식·TBTI 등 7종 구현",
-            "콘텐츠별 시작 발화·응답 구성·결과 형식 설계",
-            "MBTI 형식을 응용한 대화 성향 콘텐츠 TBTI 기획",
-            "점수·유형명·대화 근거로 공유하고 싶은 결과 설계",
-            "1:1·단톡방·개인 캡처 등 공유 방식 정의",
-            "관계 악화를 막는 완충 문장·대화 제안 설계"
+            "말투 나이 · AI 판결소 · 톡방 시상식 · TBTI 등 7종 구현",
+            "콘텐츠별 시작 발화 · 응답 구성 · 결과 형식 설계",
+            "점수 · 유형명 · 대화 근거로 공유하고 싶은 결과 설계",
+            "관계 악화를 막는 완충 문장 · 대화 제안 설계"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "공유형 콘텐츠 추정 공유율 12.1% · 일반 기능 1.7% 대비 약 7배",
-            "공유형 콘텐츠 CTR 8.3% · 일반 기능 4.8% 대비 약 1.7배",
-            "단톡방 시상식 응답 대비 추정 공유율 33.33%",
-            "서버·모델 변경 없이 프롬프트로 콘텐츠를 추가하는 구조 마련"
+            "클릭률 8.1%: 웹검색 4.8%의 1.7배, 장소 2.5%의 3.2배",
+            "공유율 11.98%: 웹검색 0.36%의 33배, 장소 0.08%의 150배",
+            "성격 분석 클릭률 14.7%, 웹검색 최고 7.1%의 2배",
+            "서버 · 모델 변경 없이 프롬프트만으로 콘텐츠 추가"
           ]
         }
       ],
-      "role": "공유형 콘텐츠 기획·응답 설계",
+      "role": "공유형 콘텐츠 기획 · 응답 설계",
       "contribution": "100%",
       "team": "모델 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/viral-age-private.png",
+          "src": "assets/sep23-viral_age.png",
           "label": "내 톡 나이 봐줘 · 실제 카나나 응답",
+          "caption": "",
+          "wide": false,
+          "width": 521,
+          "height": 1291,
           "prompt": "내 톡 나이 봐줘",
-          "width": 283,
-          "height": 701,
-          "ctr": "9.85%",
-          "share": "11.72%"
+          "ctr": "11.6%",
+          "share": "15.44%"
         },
         {
-          "src": "assets/viral-tbti-private.png",
+          "src": "assets/sep23-viral_tbti.png",
           "label": "톡 대화로 내 성향 분석해줘 · 실제 카나나 응답",
+          "caption": "",
+          "wide": false,
+          "width": 557,
+          "height": 1291,
           "prompt": "톡 대화로 내 성향 분석해줘",
-          "width": 234,
-          "height": 542,
-          "ctr": "12.41%",
-          "share": "10.00%"
+          "ctr": "14.7%",
+          "share": "11.25%"
         },
         {
-          "src": "assets/viral-award-private.png",
+          "src": "assets/sep23-viral_award.png",
           "label": "톡방 시상식 해줘 · 실제 카나나 응답",
+          "caption": "",
+          "wide": false,
+          "width": 435,
+          "height": 1291,
           "prompt": "톡방 시상식 해줘",
-          "width": 342,
-          "height": 1014,
-          "ctr": "2.26%",
-          "share": "33.33%"
+          "ctr": "2.8%",
+          "share": "25.52%"
         }
       ],
       "galleryColumns": 3,
       "responseExamples": true,
-      "evidenceNote": "2026.09.21 기준. CTR은 노출·클릭 직접 집계값, 공유율은 서제스트와 응답을 연결한 응답 대비 추정치. 비교 지표는 공유형 4종·일반 기능 3종 합산.",
-      "shareSummary": {
-        "shared": {
-          "impressions": 21187,
-          "clicks": 1767,
-          "responses": 1277,
-          "shares": 154
-        },
-        "utility": {
-          "impressions": 14883,
-          "clicks": 714,
-          "responses": 299,
-          "shares": 5
-        }
-      }
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "실제 카나나 응답 · 클릭률 · 공유율은 서제스트 최근 14일 기준",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "shareLabel": "공유율"
     },
     {
       "id": "case-11",
       "page": 11,
       "company": "samsung",
-      "title": "대출 상태 시각화로 높인 연장·실행 전환",
+      "title": "대출 상태 시각화와 상황별 행동 유도로 대출 화면 재설계",
       "image": "assets/evidence-hd-11.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "대출 가능 금액과 담보 비율을 확인하기 어렵고, 일괄 노출된 메뉴만으로 필요한 행동을 찾기 어려움. 상태를 쉽게 이해하고 다음 행동으로 연결하도록 개선"
+            "대출 가능 금액과 담보 비율을 확인하기 어렵고, 일괄 노출된 메뉴만으로 필요한 행동을 찾기 어려움 상태를 쉽게 이해하고 다음 행동으로 연결하도록 개선"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "대출 가능 금액·담보 비율을 바 차트로 시각화",
+            "대출 가능 금액 · 담보 비율을 바 차트로 시각화",
             "사용자 상황에 필요한 기능을 우선 노출",
             "불필요한 메뉴를 숨겨 정보 탐색 부담 축소",
             "담보 부족과 대출 연장 시점을 알리는 기능 추가"
@@ -450,9 +470,9 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "대출 연장률 및 실행 전환율 개선",
-            "담보 부족 인지 개선으로 연체 리스크 감소",
-            "대출 상태와 담보 부족 여부를 한눈에 확인"
+            "메뉴 9개 나열에서 상태 요약 · 핵심 행동 중심으로 재구성",
+            "만기 임박 · 담보 부족을 먼저 알려 연장 · 상환 행동으로 연결",
+            "대출 금액 · 담보 비율을 한 화면에서 확인하는 구조"
           ]
         }
       ],
@@ -462,21 +482,26 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-integrated-9-image13.png",
-          "label": "대출 상태 시각화로 높인 연장·실행 전환",
+          "src": "assets/sep23-integrated-9-image13.png",
+          "label": "개선 전",
+          "caption": "개선 전",
           "wide": false,
-          "width": 245,
-          "height": 533
+          "width": 739,
+          "height": 1608
         },
         {
-          "src": "assets/claude-integrated-9-image14.png",
-          "label": "대출 상태 시각화로 높인 연장·실행 전환",
+          "src": "assets/sep23-integrated-9-image14.png",
+          "label": "개선 후",
+          "caption": "개선 후",
           "wide": false,
-          "width": 237,
-          "height": 533
+          "width": 715,
+          "height": 1608
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "대출 정보 탐색 화면의 개선 전 · 후",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-12",
@@ -495,7 +520,7 @@ const PORTFOLIO = {
           "title": "주요 업무",
           "items": [
             "상담 신청 경로와 전환 데이터를 분석해 개선안 도출",
-            "신규 유입 확대를 위한 채널·소재별 성과 분석",
+            "신규 유입 확대를 위한 채널 · 소재별 성과 분석",
             "주요 지표 모니터링과 성과 리포팅",
             "가설을 세우고 실험해 효과적인 신청 경로 검증"
           ]
@@ -503,25 +528,29 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "매출 121% 증가 (2024년 8월 기준)",
+            "상담 신청 경로 개선 전 대비 매출 121% 증가",
             "보험 상담 신청 목표 달성률 최대 152%"
           ]
         }
       ],
-      "role": "제품 총괄 및 실험·서비스 기획",
+      "role": "제품 총괄 및 실험 · 서비스 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 2명 · 데이터 분석 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-image1.png",
+          "src": "assets/sep23-image1.png",
           "label": "보험 상담 신청 경로 개선으로 매출 121% 성장",
+          "caption": "보험 상담 신청 경로 개선으로 매출 121% 성장",
           "wide": true,
-          "width": 1493,
-          "height": 655
+          "width": 2012,
+          "height": 882
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "보험 상담 신청 목표 달성 추이",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-13",
@@ -533,15 +562,15 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "광고 중심의 보험 홈과 달리 사용자는 보유 보험 확인과 분석을 원해 광고 영역의 클릭률이 낮았음. 보험 관리 경험을 상담·상품 이용으로 연결"
+            "광고 중심의 보험 홈과 달리 사용자는 보유 보험 확인과 분석을 원해 광고 영역의 클릭률이 낮았음 보험 관리 경험을 상담 · 상품 이용으로 연결"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
             "사용자 인터뷰와 이용 데이터로 핵심 수요 확인",
-            "보험 확인·분석 기능에 쉽게 접근하는 정보 구조 설계",
-            "관리 기능과 보험 혜택·상담을 연결하는 화면 기획",
+            "보험 확인 · 분석 기능에 쉽게 접근하는 정보 구조 설계",
+            "관리 기능과 보험 혜택 · 상담을 연결하는 화면 기획",
             "개편 후 이탈과 주요 기능의 전환 지표 확인"
           ]
         },
@@ -554,7 +583,7 @@ const PORTFOLIO = {
           ]
         }
       ],
-      "role": "제품 총괄 및 실험·서비스 기획",
+      "role": "제품 총괄 및 실험 · 서비스 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 2명 · 데이터 분석 1명",
       "caption": null,
@@ -562,6 +591,7 @@ const PORTFOLIO = {
         {
           "src": "assets/claude-image2.png",
           "label": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
+          "caption": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
           "wide": false,
           "width": 811,
           "height": 1085
@@ -569,6 +599,7 @@ const PORTFOLIO = {
         {
           "src": "assets/claude-image3.png",
           "label": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
+          "caption": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
           "wide": false,
           "width": 1237,
           "height": 1035
@@ -576,18 +607,22 @@ const PORTFOLIO = {
         {
           "src": "assets/claude-image4.png",
           "label": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
+          "caption": "관리 중심 보험 홈 개편으로 이탈 22% 감소",
           "wide": true,
           "width": 2189,
           "height": 1713
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "보험 홈 이용 분석과 개선 화면",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-14",
       "page": 14,
       "company": "toss",
-      "title": "퍼널 병목 개선으로 대출 전환율 8배·매출 28배",
+      "title": "퍼널 병목 개선으로 대출 전환율 8배 · 매출 28배",
       "image": "assets/evidence-hd-14.png?v=20260922-results",
       "sections": [
         {
@@ -599,7 +634,7 @@ const PORTFOLIO = {
         {
           "title": "주요 업무",
           "items": [
-            "단계별 퍼널과 신청·실행 결과 데이터를 분석",
+            "단계별 퍼널과 신청 · 실행 결과 데이터를 분석",
             "정기 사용자 인터뷰로 불편과 미충족 수요 발굴",
             "가설을 검증할 실험 과제와 사용자 요구사항 정의",
             "사용자 흐름을 설계하고 결과에 따라 개선 반복"
@@ -608,39 +643,45 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "서비스 진입 대비 최종 전환율 8배 개선",
-            "매출 28배 증가"
+            "개선 전 대비 진입→최종 전환율 8배 상승",
+            "개선 전 대비 매출 28배 증가"
           ]
         }
       ],
-      "role": "제품 총괄 및 실험·서비스 기획",
+      "role": "제품 총괄 및 실험 · 서비스 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-fig_toss_funnel.png",
-          "label": "퍼널 병목 개선으로 대출 전환율 8배·매출 28배",
+          "label": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
+          "caption": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
           "wide": true,
           "width": 2000,
           "height": 900
         },
         {
           "src": "assets/claude-s9_orig0.jpg",
-          "label": "퍼널 병목 개선으로 대출 전환율 8배·매출 28배",
+          "label": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
+          "caption": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
           "wide": false,
           "width": 1023,
           "height": 586
         },
         {
-          "src": "assets/claude-s9_orig1.jpeg",
-          "label": "퍼널 병목 개선으로 대출 전환율 8배·매출 28배",
+          "src": "assets/sep23-s9_orig1.jpeg",
+          "label": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
+          "caption": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
           "wide": false,
-          "width": 960,
-          "height": 415
+          "width": 1265,
+          "height": 547
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-15",
@@ -652,24 +693,23 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "다양한 금융사 상품을 연결해 사용자 선택지를 확대하고, 금융사별 정책·연동 차이로 생기는 신청 이후의 실행 장벽을 개선"
+            "다양한 금융사 상품을 연결해 사용자 선택지를 확대하고, 금융사별 정책 · 연동 차이로 생기는 신청 이후의 실행 장벽을 개선"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
             "금융사 연동을 위한 표준 API 설계",
-            "제휴사의 운영·개발 담당자와 정책 및 이슈 협의",
+            "제휴사의 운영 · 개발 담당자와 정책 및 이슈 협의",
             "제품 QA와 실제 환경 테스트 진행",
-            "제휴사별 연동 일정·개발 리소스 조율"
+            "제휴사별 연동 일정 · 개발 리소스 조율"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
             "금융사 약 22곳 연동",
-            "대출 신청 대비 실행률 6배 개선",
-            "제휴 상품과 대출 선택지 확대"
+            "대출 신청 대비 실행률 6배 개선"
           ]
         }
       ],
@@ -680,33 +720,54 @@ const PORTFOLIO = {
       "originals": [
         {
           "src": "assets/claude-fig_toss_partner.png",
-          "label": "금융사 22곳 연동으로 대출 실행률 6배 개선",
+          "label": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
+          "caption": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
           "wide": true,
           "width": 2000,
           "height": 980
         },
         {
           "src": "assets/claude-s10_orig0.png",
-          "label": "금융사 22곳 연동으로 대출 실행률 6배 개선",
+          "label": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
+          "caption": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
           "wide": false,
           "width": 1747,
           "height": 837
         },
         {
           "src": "assets/claude-s10_orig1.jpg",
-          "label": "금융사 22곳 연동으로 대출 실행률 6배 개선",
+          "label": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
+          "caption": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
           "wide": false,
           "width": 789,
           "height": 671
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+    },
+    {
+      "id": "case-16",
+      "company": "toss",
+      "title": "개발 우선순위 · 일정 · 리소스 관리",
+      "textOnly": true,
+      "sections": [
+        {
+          "title": "주요 업무 및 결과",
+          "items": [
+            "병렬 과제의 우선순위와 담당 리소스를 정리하고 스크럼으로 진행 관리, 일정 내 완료율 개선"
+          ]
+        }
+      ],
+      "role": ""
     },
     {
       "id": "case-17",
       "page": 17,
       "company": "toss",
-      "title": "주택담보대출 갈아타기 출시, 플랫폼 중 최고 실행액",
+      "title": "온라인 대환대출 인프라 연계 주택담보대출 갈아타기 출시",
       "image": "assets/evidence-hd-17.png?v=20260922-results",
       "sections": [
         {
@@ -718,18 +779,17 @@ const PORTFOLIO = {
         {
           "title": "주요 업무",
           "items": [
-            "정부·제휴사 요구사항을 제품 정책에 반영",
+            "정부 · 제휴사 요구사항을 제품 정책에 반영",
             "사용자 인터뷰로 갈아타기 과정의 불편 파악",
             "서비스 흐름과 상세 기능 설계",
-            "디자인·개발·제휴사와 출시 및 운영 협업"
+            "디자인 · 개발 · 제휴사와 출시 및 운영 협업"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "금융 플랫폼 중 가장 높은 대출 실행액·전환율 달성",
-            "비교부터 신청까지 이어지는 사용자 경험 구현",
-            "출시 후 실행액과 전환 지표 중심으로 제품 개선"
+            "주택담보대출 갈아타기 서비스 출시",
+            "비교부터 신청까지 이어지는 사용자 경험 구현"
           ]
         }
       ],
@@ -740,20 +800,25 @@ const PORTFOLIO = {
       "originals": [
         {
           "src": "assets/claude-image11.png",
-          "label": "주택담보대출 갈아타기 출시, 플랫폼 중 최고 실행액",
+          "label": "온라인 대환대출 인프라 연계 주택담보대출 갈아타기 출시",
+          "caption": "온라인 대환대출 인프라 연계 주택담보대출 갈아타기 출시",
           "wide": false,
           "width": 1080,
           "height": 2116
         },
         {
-          "src": "assets/claude-image12.png",
-          "label": "주택담보대출 갈아타기 출시, 플랫폼 중 최고 실행액",
+          "src": "assets/sep23-image12.png",
+          "label": "온라인 대환대출 인프라 연계 주택담보대출 갈아타기 출시",
+          "caption": "온라인 대환대출 인프라 연계 주택담보대출 갈아타기 출시",
           "wide": false,
-          "width": 409,
-          "height": 766
+          "width": 888,
+          "height": 1664
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "주택담보대출 갈아타기 서비스 화면",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-18",
@@ -765,16 +830,16 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "주택담보대출의 낮은 온라인 이용 비중과 대출 모집인 중심의 오프라인 유통 구조에서 온라인 비교·중개 서비스 기회를 발견"
+            "주택담보대출의 낮은 온라인 이용 비중과 대출 모집인 중심의 오프라인 유통 구조에서 온라인 비교 · 중개 서비스 기회를 발견"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "시장 지표와 대출 상담·모집 구조 분석",
+            "시장 지표와 대출 상담 · 모집 구조 분석",
             "재위탁 규제 쟁점을 검토하고 규제특례 신청 추진",
             "서비스 모델과 소비자 편익을 신청서로 구체화",
-            "법무·대관·금융소비자보호 담당자와 심사 대응"
+            "법무 · 대관 · 금융소비자보호 담당자와 심사 대응"
           ]
         },
         {
@@ -785,41 +850,48 @@ const PORTFOLIO = {
           ]
         }
       ],
-      "role": "제품 총괄 및 서비스 모델·신청서 작성",
+      "role": "제품 총괄 및 서비스 모델 · 신청서 작성",
       "contribution": "100%",
       "team": "법무 1명 · 대관 1명 · 금융소비자보호 1명",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-fig_toss_sandbox.png",
-          "label": "규제 샌드박스로 6개월 만에 혁신금융서비스 지정",
+          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
           "wide": true,
           "width": 2000,
           "height": 890
         },
         {
-          "src": "assets/claude-s13_orig0.png",
-          "label": "규제 샌드박스로 6개월 만에 혁신금융서비스 지정",
+          "src": "assets/sep23-s13_orig0.png",
+          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
           "wide": false,
-          "width": 837,
-          "height": 381
+          "width": 990,
+          "height": 450
         },
         {
           "src": "assets/claude-s13_orig1.jpeg",
-          "label": "규제 샌드박스로 6개월 만에 혁신금융서비스 지정",
+          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
           "wide": false,
           "width": 611,
           "height": 470
         },
         {
           "src": "assets/claude-s13_orig2.jpeg",
-          "label": "규제 샌드박스로 6개월 만에 혁신금융서비스 지정",
+          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
           "wide": false,
           "width": 599,
           "height": 465
         }
       ],
-      "galleryColumns": 3
+      "galleryColumns": 3,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-19",
@@ -831,7 +903,7 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "주택 검색 단계에서 사용자 28%가 이탈. 이탈 사용자 중 72%가 KB시세가 없는 신축 아파트를 검색한 사실을 확인"
+            "주택 검색 단계에서 사용자 28%가 이탈 이탈 사용자 중 72%가 KB시세가 없는 신축 아파트를 검색한 사실을 확인"
           ]
         },
         {
@@ -847,25 +919,28 @@ const PORTFOLIO = {
           "title": "결과/성과",
           "items": [
             "주택 검색 단계 전환율 11%p 상승",
-            "기존에 수용하지 못한 신축 주택 수요 확보",
-            "신규 매출원 발굴"
+            "기존에 수용하지 못한 신축 주택 수요 확보"
           ]
         }
       ],
-      "role": "제품 총괄 및 데이터 분석·제휴 기획",
+      "role": "제품 총괄 및 데이터 분석 · 제휴 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-image16.jpg",
+          "src": "assets/sep23-image16.jpg",
           "label": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
+          "caption": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
           "wide": true,
-          "width": 825,
-          "height": 836
+          "width": 1889,
+          "height": 1914
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "주택 검색 단계 개선 전 · 후의 퍼널 전환",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-20",
@@ -893,8 +968,7 @@ const PORTFOLIO = {
           "title": "결과/성과",
           "items": [
             "후순위 대출 취급 금융사 3개 연동",
-            "전체 매출에서 후순위 제휴사 비중 최대 28%",
-            "기존 한도로 충족하지 못한 자금 수요에 대응"
+            "전체 매출에서 후순위 제휴사 비중 최대 28%"
           ]
         }
       ],
@@ -904,14 +978,18 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-image17.png",
+          "src": "assets/sep23-image17.png",
           "label": "후순위 대출 제휴로 전체 매출의 최대 28% 창출",
-          "wide": false,
-          "width": 316,
-          "height": 647
+          "caption": "후순위 대출 제휴로 전체 매출의 최대 28% 창출",
+          "wide": true,
+          "width": 782,
+          "height": 1601
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "상담 분석을 바탕으로 확대한 대출 상품",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-21",
@@ -923,7 +1001,7 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "제휴 상품의 금리가 낮아졌지만 사용자가 경쟁력을 체감하지 못해 전환이 기대에 못 미침. 시장 금리와 비교하면 선택을 도울 수 있다고 판단"
+            "제휴 상품의 금리가 낮아졌지만 사용자가 경쟁력을 체감하지 못해 전환이 기대에 못 미침 시장 금리와 비교하면 선택을 도울 수 있다고 판단"
           ]
         },
         {
@@ -938,8 +1016,7 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "최종 전환율 22% 상승",
-            "상품 선택에 필요한 금리 비교 맥락 제공"
+            "최종 전환율 22% 상승"
           ]
         }
       ],
@@ -949,14 +1026,18 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-image18.png",
+          "src": "assets/sep23-image18.png",
           "label": "시장 금리 비교 정보로 최종 전환율 22% 상승",
+          "caption": "시장 금리 비교 정보로 최종 전환율 22% 상승",
           "wide": true,
-          "width": 1021,
-          "height": 970
+          "width": 1734,
+          "height": 1648
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "금리 비교 정보를 추가한 A/B 테스트 실험안",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-22",
@@ -994,24 +1075,31 @@ const PORTFOLIO = {
       "galleryColumns": 3,
       "originals": [
         {
-          "src": "assets/financial-term-image21.png",
-          "label": "대출 목적 용어 개선",
-          "width": 838,
-          "height": 739
+          "src": "assets/sep23-image21.png",
+          "label": "대출 목적 안내 개선 전 · 후",
+          "caption": "대출 목적 안내 개선 전 · 후",
+          "wide": false,
+          "width": 1606,
+          "height": 1416
         },
         {
           "src": "assets/financial-term-image19.png",
-          "label": "금융사 정보 안내",
+          "label": "금융사 정보의 신뢰도 보완",
+          "caption": "금융사 정보의 신뢰도 보완",
+          "wide": false,
           "width": 1080,
           "height": 2116
         },
         {
           "src": "assets/financial-term-image20.png",
-          "label": "생활자금 대출 목적 안내",
+          "label": "이용 가능한 대출 목적 안내",
+          "caption": "이용 가능한 대출 목적 안내",
+          "wide": false,
           "width": 1080,
           "height": 2116
         }
-      ]
+      ],
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-23",
@@ -1023,55 +1111,60 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "광고 거래에 참여하는 매체와 광고주 네트워크를 확대하고, 파트너 연동부터 운영·정산까지 안정적으로 관리할 필요"
+            "광고 거래에 참여하는 매체와 광고주 네트워크를 확대하고, 파트너 연동부터 운영 · 정산까지 안정적으로 관리할 필요"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "국내외 SSP·DSP에 제휴 제안 및 계약 협의",
+            "국내외 SSP · DSP에 제휴 제안 및 계약 협의",
             "파트너 계약서와 기술 검토 자료 작성",
             "연동 후 양사 데이터를 비교하고 정산 금액 검토",
-            "성과를 모니터링하며 매체 비용·클릭률 이슈 대응"
+            "성과를 모니터링하며 매체 비용 · 클릭률 이슈 대응"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
             "매체 측 플랫폼(SSP) 16곳 연동",
-            "광고주 측 플랫폼(DSP) 15곳 파트너십·연동",
-            "신규 광고 거래와 매출 기회 확대"
+            "광고주 측 플랫폼(DSP) 15곳 파트너십 · 연동"
           ]
         }
       ],
-      "role": "파트너 제휴·연동·운영 기획",
+      "role": "파트너 제휴 · 연동 · 운영 기획",
       "contribution": "100%",
       "team": "단독 (국내외 파트너사 직접 커뮤니케이션)",
       "caption": null,
       "originals": [
         {
           "src": "assets/claude-fig_nhn_adx.png",
-          "label": "국내외 광고 플랫폼 31곳 연동으로 거래 네트워크 확대",
+          "label": "매체와 광고주를 연결하는 광고 거래 네트워크",
+          "caption": "매체와 광고주를 연결하는 광고 거래 네트워크",
           "wide": true,
           "width": 2000,
           "height": 820
         },
         {
-          "src": "assets/claude-s19_orig0.jpg",
-          "label": "국내외 광고 플랫폼 31곳 연동으로 거래 네트워크 확대",
+          "src": "assets/sep23-s19_orig0.jpg",
+          "label": "매체와 광고주를 연결하는 광고 거래 네트워크",
+          "caption": "매체와 광고주를 연결하는 광고 거래 네트워크",
           "wide": false,
-          "width": 828,
-          "height": 574
+          "width": 976,
+          "height": 677
         },
         {
           "src": "assets/claude-s19_orig1.jpg",
-          "label": "국내외 광고 플랫폼 31곳 연동으로 거래 네트워크 확대",
+          "label": "매체와 광고주를 연결하는 광고 거래 네트워크",
+          "caption": "매체와 광고주를 연결하는 광고 거래 네트워크",
           "wide": false,
           "width": 822,
           "height": 665
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "수행",
+      "evidenceTitle": "매체와 광고주를 연결하는 광고 거래 네트워크",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-24",
@@ -1083,16 +1176,16 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "부정 트래픽과 비효율적인 매체 비용을 줄이고, 광고 거래 지표를 개선하며 브라우저·모바일 플랫폼 정책 변화에 대응"
+            "부정 트래픽과 비효율적인 매체 비용을 줄이고, 광고 거래 지표를 개선하며 브라우저 · 모바일 플랫폼 정책 변화에 대응"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "내부 정책을 위반한 부정·어뷰징 매체 탐지 및 관리",
-            "클릭률·트래픽·노출 지표를 점검하고 이슈 대응",
+            "내부 정책을 위반한 부정 · 어뷰징 매체 탐지 및 관리",
+            "클릭률 · 트래픽 · 노출 지표를 점검하고 이슈 대응",
             "eCPM 기준값을 조정하며 수익 효율 검토",
-            "SameSite·SKAN 정책 검토 및 SDK 업데이트 안내"
+            "SameSite · SKAN 정책 검토 및 SDK 업데이트 안내"
           ]
         },
         {
@@ -1109,21 +1202,26 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-fig_nhn_fraud.png",
-          "label": "부정 매체 관리로 연 1.2억 원 비용 절감",
+          "src": "assets/sep23-fig_nhn_fraud.png",
+          "label": "부정 트래픽 차단과 수익 기준 조정의 두 갈래 개선",
+          "caption": "부정 트래픽 차단과 수익 기준 조정의 두 갈래 개선",
           "wide": true,
-          "width": 2000,
-          "height": 750
+          "width": 2257,
+          "height": 846
         },
         {
           "src": "assets/claude-s20_orig0.png",
-          "label": "부정 매체 관리로 연 1.2억 원 비용 절감",
+          "label": "부정 트래픽 차단과 수익 기준 조정의 두 갈래 개선",
+          "caption": "부정 트래픽 차단과 수익 기준 조정의 두 갈래 개선",
           "wide": false,
           "width": 1530,
           "height": 849
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "teamLabel": "수행",
+      "evidenceTitle": "부정 트래픽 차단과 수익 기준 조정의 두 갈래 개선",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-25",
@@ -1159,7 +1257,19 @@ const PORTFOLIO = {
       "role": "어드민 기획·지표·데이터 정의",
       "contribution": "100%",
       "team": "서버 2명 · 프론트 1명 · 디자인 1명",
-      "caption": null
+      "caption": null,
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "originals": [
+        {
+          "src": "assets/sep23-extra-image26.jpg",
+          "width": 933,
+          "height": 703,
+          "label": "광고 성과 모니터링을 위한 운영 어드민 구축",
+          "caption": "광고 성과 모니터링을 위한 운영 어드민 구축",
+          "wide": true
+        }
+      ],
+      "galleryColumns": 1
     },
     {
       "id": "case-26",
@@ -1196,7 +1306,35 @@ const PORTFOLIO = {
       "role": "서비스·데이터 정책 기획",
       "contribution": "70%",
       "team": "기획 2명 · 분석 1명 · 데이터 엔지니어 3명",
-      "caption": null
+      "caption": null,
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "originals": [
+        {
+          "src": "assets/sep23-extra-image27.png",
+          "width": 628,
+          "height": 764,
+          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "wide": true
+        },
+        {
+          "src": "assets/sep23-extra-image28.png",
+          "width": 248,
+          "height": 503,
+          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "wide": true
+        },
+        {
+          "src": "assets/sep23-extra-image29.png",
+          "width": 245,
+          "height": 504,
+          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "wide": true
+        }
+      ],
+      "galleryColumns": 1
     },
     {
       "id": "case-27",
@@ -1240,17 +1378,20 @@ const PORTFOLIO = {
           "width": 1014,
           "height": 510,
           "wide": true,
-          "label": "외부 플랫폼과 자사 RTB Exchange의 입찰·응답 흐름"
+          "label": "외부 플랫폼과 자사 RTB Exchange의 입찰·응답 흐름",
+          "caption": "외부 플랫폼과 자사 RTB Exchange의 입찰·응답 흐름"
         },
         {
           "src": "assets/claude-exchange-image31.jpeg",
           "width": 1035,
           "height": 585,
           "wide": true,
-          "label": "매체와 복수의 외부 광고 수요를 연결하는 거래 구조"
+          "label": "매체와 복수의 외부 광고 수요를 연결하는 거래 구조",
+          "caption": "매체와 복수의 외부 광고 수요를 연결하는 거래 구조"
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-28",
@@ -1287,7 +1428,19 @@ const PORTFOLIO = {
       "role": "분석 기획·인사이트 도출·리포트 작성",
       "contribution": "100%",
       "team": "데이터 분석가 1명",
-      "caption": null
+      "caption": null,
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "originals": [
+        {
+          "src": "assets/sep23-extra-image32.jpeg",
+          "width": 1273,
+          "height": 1054,
+          "label": "광고주 행동 데이터 분석·컨설팅",
+          "caption": "광고주 행동 데이터 분석·컨설팅",
+          "wide": true
+        }
+      ],
+      "galleryColumns": 1
     },
     {
       "id": "case-29",
@@ -1299,15 +1452,15 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "광고주가 인플루언서에게 가격을 개별 문의하고 선입금해야 하는 불편을 확인. 거래와 성과 확인을 지원하는 광고 오픈마켓 기획"
+            "광고주가 인플루언서에게 가격을 개별 문의하고 선입금해야 하는 불편을 확인 거래와 성과 확인을 지원하는 광고 오픈마켓 기획"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
             "광고주 약 100명을 만나 수요와 시장성 검증",
-            "요구사항을 반영한 웹 서비스 설계·구축",
-            "광고 거래·에스크로·성과 리포트 기능 기획",
+            "요구사항을 반영한 웹 서비스 설계 · 구축",
+            "광고 거래 · 에스크로 · 성과 리포트 기능 기획",
             "광고주와 인플루언서 유입 마케팅 및 운영 개선"
           ]
         },
@@ -1320,10 +1473,56 @@ const PORTFOLIO = {
           ]
         }
       ],
-      "role": "서비스 기획·출시·운영 총괄",
+      "role": "서비스 기획 · 출시 · 운영 총괄",
       "contribution": "100%",
       "team": "기획 1명 · 디자인 1명 · 풀스택 개발 3명",
-      "caption": null
+      "caption": null,
+      "teamLabel": "협업 구성",
+      "evidenceTitle": "광고 거래 · 관리 · 리포트 서비스 화면",
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "originals": [
+        {
+          "src": "assets/sep23-image33.png",
+          "label": "광고 오픈마켓 메인 화면",
+          "caption": "광고 오픈마켓 메인 화면",
+          "wide": false,
+          "width": 1419,
+          "height": 793
+        },
+        {
+          "src": "assets/sep23-image35.png",
+          "label": "광고 거래 화면",
+          "caption": "광고 거래 화면",
+          "wide": false,
+          "width": 3180,
+          "height": 2051
+        },
+        {
+          "src": "assets/sep23-image37.png",
+          "label": "캠페인 관리 화면",
+          "caption": "캠페인 관리 화면",
+          "wide": false,
+          "width": 1056,
+          "height": 1553
+        },
+        {
+          "src": "assets/sep23-image39.png",
+          "label": "성과 리포트 화면",
+          "caption": "성과 리포트 화면",
+          "wide": false,
+          "width": 1314,
+          "height": 1292
+        },
+        {
+          "src": "assets/sep23-image40.png",
+          "label": "광고 운영 화면",
+          "caption": "광고 운영 화면",
+          "wide": false,
+          "width": 1300,
+          "height": 1433
+        }
+      ],
+      "galleryColumns": 2
     }
   ]
 };
