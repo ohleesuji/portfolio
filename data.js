@@ -1326,27 +1326,11 @@ const PORTFOLIO = {
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
       "originals": [
         {
-          "src": "assets/sep23-extra-image27.png",
-          "width": 628,
-          "height": 764,
-          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
-          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
-          "wide": true
-        },
-        {
-          "src": "assets/sep23-extra-image28.png",
-          "width": 248,
-          "height": 503,
-          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
-          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
-          "wide": true
-        },
-        {
-          "src": "assets/sep23-extra-image29.png",
-          "width": 245,
-          "height": 504,
-          "label": "검색 관심사 기반 맞춤 광고 상품 출시",
-          "caption": "검색 관심사 기반 맞춤 광고 상품 출시",
+          "src": "assets/keyword-delivery-flow.png",
+          "width": 1098,
+          "height": 1032,
+          "label": "키워드 딜리버리 프로세스 개요",
+          "caption": "검색 관심사 수집 → 광고주 데이터 전달 → 맞춤 광고 송출",
           "wide": true
         }
       ],

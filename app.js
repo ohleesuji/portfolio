@@ -40,7 +40,7 @@ function fitCompactEvidence(project){
  const copy=project.querySelector('.project-copy'),figure=project.querySelector('.evidence'),gallery=figure.querySelector('.evidence-gallery');
  const items=[...gallery.children];
  if(!window.matchMedia('(min-width:761px)').matches){items.forEach(item=>item.style.removeProperty('--fitted-width'));return;}
- const rows=project.id==='case-26'?[[items[0]],items.slice(1)]:[items.slice(0,2),items.slice(2,4),items.slice(4)];
+ const rows=project.id==='case-26'?[items]:[items.slice(0,2),items.slice(2,4),items.slice(4)];
  const captionSpace=rows.reduce((sum,row)=>sum+Math.max(...row.map(item=>{const cap=item.querySelector('.image-caption');if(!cap)return 0;const cs=getComputedStyle(cap);return cap.getBoundingClientRect().height+parseFloat(cs.marginTop)+parseFloat(cs.marginBottom)})),0);
  const overhead=figure.getBoundingClientRect().height-gallery.getBoundingClientRect().height;
  const imageHeight=Math.max(60,(copy.getBoundingClientRect().height-overhead-captionSpace-14*(rows.length-1)-4)/rows.length);
