@@ -43,3 +43,16 @@
 
 .evidence:not(.original-evidence){width:100%;max-width:520px;justify-self:center;margin-inline:auto}
 .original-evidence.full .evidence-button{aspect-ratio:auto}
+
+/* Keep related screenshots together rather than distributing them across empty cells. */
+.original-evidence .evidence-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:18px 16px}
+.original-evidence .evidence-gallery>div{width:min(var(--item-width,560px),calc((100% - (var(--image-count,1) - 1)*16px)/var(--image-count,1)));flex:none}
+.original-evidence .evidence-gallery>.evidence-wide{width:100%}
+.original-evidence .evidence-gallery>div:not(.evidence-wide)>.evidence-button{width:100%;flex-basis:auto}
+.paired-project .paired-body{display:block}
+.paired-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.paired-item{min-width:0;display:flex;flex-direction:column;gap:20px}
+.paired-item .project-copy{min-height:145px}
+.paired-item .evidence{width:100%;margin:0}
+.paired-project .project-meta{margin-top:30px}
+@media(max-width:760px){.paired-grid{grid-template-columns:1fr;gap:32px}.paired-item .project-copy{min-height:0}.paired-item{gap:16px}.paired-item+.paired-item{border-top:1px solid var(--line);padding-top:26px}.original-evidence .evidence-gallery{gap:16px 12px}.original-evidence .evidence-gallery>div{width:min(var(--item-width,560px),calc((100% - (var(--image-count,1) - 1)*12px)/var(--image-count,1)))}.original-evidence .evidence-gallery>.evidence-wide{width:100%}}
