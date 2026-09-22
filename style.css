@@ -91,3 +91,13 @@
 #case-10 .original-evidence .evidence-gallery>div>.evidence-button{width:100%;max-width:234px}
 
 .text-only .project-body{grid-template-columns:1fr}
+/* Keep these image collections within the adjacent text column. */
+@media(min-width:761px){
+:is(#case-26,#case-29) .project-copy{align-self:start}
+:is(#case-26,#case-29) .evidence{align-self:start}
+:is(#case-26,#case-29) .evidence-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+:is(#case-26,#case-29) .evidence-gallery>div{width:100%;min-width:0}
+#case-26 .evidence-gallery>div{grid-column:auto}
+#case-26 .evidence-gallery>div:first-child{grid-column:1/-1}
+:is(#case-26,#case-29) .original-evidence .evidence-gallery>div>.evidence-button{width:min(100%,var(--fitted-width,260px));max-width:100%}
+}
