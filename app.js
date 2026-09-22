@@ -5,11 +5,19 @@ const career=document.querySelector('#career-list');
 career.innerHTML=companies.map(c=>`<a class="career-row" href="#case-${c.start}"><span class="date">${esc(c.period)}<small>${esc(c.duration)}</small></span><strong>${esc(c.name)}</strong><span class="role">${esc(c.role)}<small>${esc(c.intro)}</small></span><span class="arrow">→</span></a>`).join('');
 const filters=document.querySelector('#filters');
 filters.innerHTML=[{key:'all',name:'전체'},...companies].map(c=>`<button type="button" data-company="${c.key}" aria-pressed="${c.key==='all'}">${esc(c.name)}</button>`).join('');
+function previewWidth(p,count){
+  if(!p.width||!p.height)return 560;
+  const ratio=p.width/p.height;
+  const portrait=ratio<.72;
+  const height=portrait?380:(p.wide||count===1?380:250);
+  const width=portrait?220:(p.wide||count===1?560:300);
+  return Math.round(Math.min(width,height*ratio,p.width/1.5));
+}
 function evidenceHTML(c,special){
 const originals=c.originals;
 const pictures=originals||[{src:c.image,label:c.title}];
 const steps=c.evaluationSteps?`<ol class="evaluation-steps">${c.evaluationSteps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>`:'';
-return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''}">${steps}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}"><button type="button" class="evidence-button" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button></div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}</figure>`;
+return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''}">${steps}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}"><button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button></div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}</figure>`;
 }
 function caseHTML(c){const special=c.page===22;return `<article class="project ${special?'special':''}" id="${c.id}"><header class="project-header"><p class="eyebrow">${esc(companies.find(x=>x.key===c.company).name)} / PROJECT ${String(cases.indexOf(c)+1).padStart(2,'0')}</p><h3>${esc(c.title)}</h3></header><div class="project-body"><div class="project-copy">${c.sections.map((s,i)=>`<section class="${!special&&i===2?'results':''}"><h4>${esc(s.title)}</h4><ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>`).join('')}${c.role?`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd><dt>기여도</dt><dd>${esc(c.contribution)}</dd>${c.team?`<dt>협업 구성</dt><dd>${esc(c.team)}</dd>`:''}</dl>`:''}</div>${evidenceHTML(c,special)}</div></article>`}
 document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${c.key}" ${c.key==='all'?'':'hidden'}><header class="company-heading"><div><h3>${esc(c.name)}</h3><p>${esc(c.intro)}</p></div></header>${cases.filter(x=>x.company===c.key).map(caseHTML).join('')}</div>`).join('');

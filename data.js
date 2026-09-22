@@ -963,7 +963,28 @@ const PORTFOLIO = {
       "role": "사용자 관점의 금융 용어·정보 안내 개선, 실험 기획",
       "contribution": "용어·정보 안내 개선안 및 실험 설계",
       "team": "",
-      "caption": null
+      "caption": null,
+      "galleryColumns": 3,
+      "originals": [
+        {
+          "src": "assets/financial-term-image21.png",
+          "label": "대출 목적 용어 개선",
+          "width": 838,
+          "height": 739
+        },
+        {
+          "src": "assets/financial-term-image19.png",
+          "label": "금융사 정보 안내",
+          "width": 1080,
+          "height": 2116
+        },
+        {
+          "src": "assets/financial-term-image20.png",
+          "label": "생활자금 대출 목적 안내",
+          "width": 1080,
+          "height": 2116
+        }
+      ]
     },
     {
       "id": "case-23",
