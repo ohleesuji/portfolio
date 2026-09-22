@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="980" viewBox="0 0 960 980" role="img" aria-labelledby="title desc">
+<title id="title">검색 관심사를 맞춤 광고로 연결하는 과정</title><desc id="desc">검색 키워드와 쿠키 식별자를 연결하고 정제한 데이터를 광고주 DSP에 전달한 뒤 관심 상품 광고를 송출하는 3단계 흐름</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M1 1L7 5L1 9" fill="none" stroke="#7287a8" stroke-width="2"/></marker></defs>
+<rect width="960" height="980" rx="24" fill="#fff"/>
+<g font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+<text x="40" y="56" fill="#143762" font-size="30" font-weight="700">검색 관심사를 맞춤 광고로 연결</text>
+<text x="40" y="91" fill="#647087" font-size="21">키워드 데이터 상품의 수집 · 전달 · 활용 흐름</text>
+<rect x="40" y="125" width="880" height="225" rx="18" fill="#f6f8fc" stroke="#dfe6ef"/>
+<circle cx="83" cy="171" r="23" fill="#143762"/><text x="83" y="179" text-anchor="middle" fill="white" font-size="23" font-weight="700">1</text>
+<text x="124" y="179" fill="#172033" font-size="28" font-weight="700">검색 관심사 수집</text>
+<text x="72" y="236" fill="#47546a" font-size="23">상품 검색 키워드와</text><text x="72" y="273" fill="#47546a" font-size="23">쿠키 식별자 연결 · 적재</text>
+<rect x="522" y="172" width="358" height="62" rx="10" fill="#fff" stroke="#cad5e4"/>
+<circle cx="548" cy="201" r="9" fill="none" stroke="#647087" stroke-width="2.5"/><path d="M555 208l8 8" stroke="#647087" stroke-width="2.5"/>
+<text x="584" y="212" font-size="23" fill="#172033">원피스 검색</text>
+<rect x="522" y="256" width="358" height="55" rx="9" fill="#e7edf8"/><text x="701" y="291" text-anchor="middle" font-size="21" fill="#143762">검색어 + Cookie ID</text>
+<path d="M480 358v42" stroke="#7287a8" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="417" width="880" height="225" rx="18" fill="#f6f8fc" stroke="#dfe6ef"/>
+<circle cx="83" cy="463" r="23" fill="#143762"/><text x="83" y="471" text-anchor="middle" fill="white" font-size="23" font-weight="700">2</text>
+<text x="124" y="471" fill="#172033" font-size="28" font-weight="700">데이터 정제 · 전달</text>
+<text x="72" y="528" fill="#47546a" font-size="23">정제한 키워드 · 쿠키 데이터를</text><text x="72" y="565" fill="#47546a" font-size="23">광고주의 광고 집행 시스템에 전달</text>
+<rect x="548" y="458" width="306" height="145" rx="14" fill="#fff" stroke="#b8c9e3" stroke-width="2"/>
+<rect x="573" y="482" width="44" height="38" rx="7" fill="#e7edf8"/><path d="M584 494h22M584 502h22M584 510h14" stroke="#365cf5" stroke-width="3"/>
+<text x="635" y="510" font-size="25" font-weight="700" fill="#143762">광고주 DSP</text>
+<text x="701" y="561" text-anchor="middle" font-size="20" fill="#647087">관심사 기반 타기팅에 활용</text>
+<path d="M480 650v42" stroke="#7287a8" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="709" width="880" height="225" rx="18" fill="#eff4ff" stroke="#cad7ef"/>
+<circle cx="83" cy="755" r="23" fill="#365cf5"/><text x="83" y="763" text-anchor="middle" fill="white" font-size="23" font-weight="700">3</text>
+<text x="124" y="763" fill="#172033" font-size="28" font-weight="700">맞춤 광고 송출</text>
+<text x="72" y="820" fill="#47546a" font-size="23">실시간 검색 관심사를 반영해</text><text x="72" y="857" fill="#47546a" font-size="23">관심 상품 광고 노출</text>
+<rect x="548" y="745" width="306" height="153" rx="12" fill="white" stroke="#b8c9e3"/>
+<rect x="565" y="762" width="85" height="117" rx="8" fill="#edf1fa"/>
+<path d="M592 780h29l-4 26 20 51h-62l20-51z" fill="#a7bada"/>
+<rect x="670" y="765" width="44" height="25" rx="5" fill="#e7edf8"/><text x="692" y="783" text-anchor="middle" font-size="16" fill="#143762">광고</text>
+<text x="670" y="824" font-size="22" font-weight="700" fill="#143762">관심 상품</text><text x="670" y="855" font-size="21" fill="#647087">원피스</text>
+<text x="918" y="967" text-anchor="end" font-size="17" fill="#7b8799">이해를 돕기 위해 재구성한 예시 화면</text>
+</g></svg>
