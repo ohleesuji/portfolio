@@ -22,3 +22,11 @@
 .special .project-meta{grid-column:1 / -1}
 
 
+
+.evidence-gallery .evidence-wide{grid-column:1/-1}
+.evaluation-steps{counter-reset:eval;list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;font-size:12px;font-weight:650;color:var(--navy)}
+.evaluation-steps li{counter-increment:eval;border-left:3px solid #ccd7f6;padding:6px 10px;background:#f5f7fb}
+.evaluation-steps li:before{content:counter(eval,decimal-leading-zero) " ";color:var(--blue);font-size:11px;margin-right:5px}
+.evidence-note{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0 0}
+.original-evidence .evidence-gallery{gap:18px}
+@media(max-width:760px){.original-evidence .evidence-gallery{gap:10px}.evaluation-steps{font-size:11px}.evidence-note{font-size:10px}}
