@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1020" viewBox="0 0 960 1020">
+<rect width="960" height="1020" fill="white"/>
+<g font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+<text x="36" y="48" font-size="30" fill="#143762" font-weight="700">사용자 A의 검색 기록에서 관심사 1개 선정</text>
+<text x="36" y="88" font-size="23" fill="#647087">30일 이력 보관 · 최근 7일의 최신성과 검색 빈도 반영</text>
+<rect x="36" y="118" width="888" height="216" rx="16" fill="#f6f8fc" stroke="#dfe6ef"/>
+<circle cx="77" cy="160" r="22" fill="#143762"/><text x="77" y="168" text-anchor="middle" fill="white" font-size="22">1</text>
+<text x="116" y="169" font-size="28" font-weight="700" fill="#172033">검색 기록 확인</text>
+<text x="68" y="228" font-size="25" font-weight="700" fill="#143762">어제</text>
+<text x="158" y="228" font-size="25" fill="#47546a">최신 휴대폰 · 고성능 휴대폰 · 업무용 노트북</text>
+<text x="68" y="282" font-size="25" font-weight="700" fill="#143762">그제</text>
+<text x="158" y="282" font-size="25" fill="#47546a">휴대폰 추천</text>
+<path d="M480 342v20m-7-6 7 7 7-7" fill="none" stroke="#7287a8" stroke-width="3"/>
+<rect x="36" y="379" width="888" height="330" rx="16" fill="#f6f8fc" stroke="#dfe6ef"/>
+<circle cx="77" cy="421" r="22" fill="#143762"/><text x="77" y="429" text-anchor="middle" fill="white" font-size="22">2</text>
+<text x="116" y="430" font-size="28" font-weight="700" fill="#172033">같은 관심사로 묶고 점수 합산</text>
+<text x="68" y="478" font-size="23" fill="#647087">이베이 기준 키워드로 통합 · 어제 1점, 그제 0.9점 적용</text>
+<path d="M68 502h824M68 598h824" stroke="#dfe6ef"/>
+<text x="68" y="548" font-size="27" font-weight="700" fill="#143762">휴대폰</text>
+<text x="253" y="541" font-size="23" fill="#47546a">어제 2회 + 그제 1회</text>
+<text x="253" y="576" font-size="23" fill="#647087">1 + 1 + 0.9</text>
+<text x="868" y="558" text-anchor="end" font-size="32" font-weight="700" fill="#365cf5">2.9점</text>
+<text x="68" y="648" font-size="27" font-weight="700" fill="#143762">노트북</text>
+<text x="253" y="648" font-size="23" fill="#47546a">어제 1회</text>
+<text x="868" y="653" text-anchor="end" font-size="32" font-weight="700" fill="#143762">1점</text>
+<path d="M480 717v20m-7-6 7 7 7-7" fill="none" stroke="#7287a8" stroke-width="3"/>
+<rect x="36" y="754" width="888" height="226" rx="16" fill="#eff4ff" stroke="#cad7ef"/>
+<circle cx="77" cy="796" r="22" fill="#143762"/><text x="77" y="804" text-anchor="middle" fill="white" font-size="22">3</text>
+<text x="116" y="805" font-size="28" font-weight="700" fill="#172033">가장 높은 관심사 ‘휴대폰’ 전달</text>
+<text x="68" y="866" font-size="25" fill="#47546a">광고 요청 시 사용자 A의 쿠키에 매칭된 ‘휴대폰’ 전달</text>
+<text x="68" y="924" font-size="25" font-weight="700" fill="#143762">이베이에서 휴대폰 관련 광고 상품 선별 · 송출</text>
+</g></svg>
