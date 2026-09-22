@@ -155,7 +155,7 @@ const PORTFOLIO = {
       "page": 7,
       "company": "kakao",
       "title": "전체 채팅방 조회 및 발화 기반 탐색 경험 개선",
-      "image": "assets/evidence-hd-07.png",
+      "image": "assets/evidence-hd-07.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -195,7 +195,7 @@ const PORTFOLIO = {
       "page": 8,
       "company": "kakao",
       "title": "사용자 피드백과 모델 평가 기반 대화연동 고도화",
-      "image": "assets/evidence-hd-08.png",
+      "image": "assets/evidence-hd-08.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -235,7 +235,7 @@ const PORTFOLIO = {
       "page": 9,
       "company": "kakao",
       "title": "개인 맥락을 지속적으로 활용하는 메모리 MVP 기획",
-      "image": "assets/evidence-hd-09.png",
+      "image": "assets/evidence-hd-09.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -275,7 +275,7 @@ const PORTFOLIO = {
       "page": 10,
       "company": "kakao",
       "title": "자발적 공유를 유도하는 대화연동 바이럴 콘텐츠 기획",
-      "image": "assets/evidence-hd-10.png",
+      "image": "assets/evidence-hd-10.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -315,7 +315,7 @@ const PORTFOLIO = {
       "page": 11,
       "company": "samsung",
       "title": "사용자 여정 재설계를 통한 행동 유도 및 개선",
-      "image": "assets/evidence-hd-11.png",
+      "image": "assets/evidence-hd-11.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -353,7 +353,7 @@ const PORTFOLIO = {
       "page": 12,
       "company": "toss",
       "title": "보험 상담 신청 경로 최적화 및 매출 성장",
-      "image": "assets/evidence-hd-12.png",
+      "image": "assets/evidence-hd-12.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -390,7 +390,7 @@ const PORTFOLIO = {
       "page": 13,
       "company": "toss",
       "title": "보험 관리 수요를 반영한 홈 화면 및 전환율 개선",
-      "image": "assets/evidence-hd-13.png",
+      "image": "assets/evidence-hd-13.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -428,7 +428,7 @@ const PORTFOLIO = {
       "page": 14,
       "company": "toss",
       "title": "퍼널 분석과 사용자 조사 기반 대출 제품 성장",
-      "image": "assets/evidence-hd-14.png",
+      "image": "assets/evidence-hd-14.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -465,7 +465,7 @@ const PORTFOLIO = {
       "page": 15,
       "company": "toss",
       "title": "금융사 제휴 연동 및 대출 실행 전환 개선",
-      "image": "assets/evidence-hd-15.png",
+      "image": "assets/evidence-hd-15.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -503,7 +503,7 @@ const PORTFOLIO = {
       "page": 16,
       "company": "toss",
       "title": "개발 우선순위·일정·리소스 관리",
-      "image": "assets/evidence-hd-16.png",
+      "image": "assets/evidence-hd-16.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -541,7 +541,7 @@ const PORTFOLIO = {
       "page": 17,
       "company": "toss",
       "title": "주택담보대출 갈아타기 서비스 기획·출시·운영",
-      "image": "assets/evidence-hd-17.png",
+      "image": "assets/evidence-hd-17.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -579,7 +579,7 @@ const PORTFOLIO = {
       "page": 18,
       "company": "toss",
       "title": "대출상담사 중개 서비스의 혁신금융서비스 지정 추진",
-      "image": "assets/evidence-hd-18.png",
+      "image": "assets/evidence-hd-18.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -616,7 +616,7 @@ const PORTFOLIO = {
       "page": 19,
       "company": "toss",
       "title": "주택 검색 이탈 분석을 통한 신규 대출 수요 발굴",
-      "image": "assets/evidence-hd-19.png",
+      "image": "assets/evidence-hd-19.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -654,7 +654,7 @@ const PORTFOLIO = {
       "page": 20,
       "company": "toss",
       "title": "상담 데이터 분석을 통한 후순위 대출 제휴 확대",
-      "image": "assets/evidence-hd-20.png",
+      "image": "assets/evidence-hd-20.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -692,7 +692,7 @@ const PORTFOLIO = {
       "page": 21,
       "company": "toss",
       "title": "시장 금리 비교 정보 제공을 통한 전환율 개선",
-      "image": "assets/evidence-hd-21.png",
+      "image": "assets/evidence-hd-21.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -729,7 +729,7 @@ const PORTFOLIO = {
       "page": 22,
       "company": "toss",
       "title": "금융 용어와 정보 안내를 사용자 관점으로 개선",
-      "image": "assets/evidence-hd-22.png",
+      "image": "assets/evidence-hd-22.png?v=20260922-results",
       "sections": [
         {
           "title": "대출 목적을 쉬운 표현으로 안내",
@@ -763,7 +763,7 @@ const PORTFOLIO = {
       "page": 23,
       "company": "nhn",
       "title": "국내외 SSP·DSP 파트너십 및 광고 플랫폼 연동",
-      "image": "assets/evidence-hd-23.png",
+      "image": "assets/evidence-hd-23.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -801,7 +801,7 @@ const PORTFOLIO = {
       "page": 24,
       "company": "nhn",
       "title": "부정 매체 관리와 광고 수익 효율 개선",
-      "image": "assets/evidence-hd-24.png",
+      "image": "assets/evidence-hd-24.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -838,7 +838,7 @@ const PORTFOLIO = {
       "page": 25,
       "company": "nhn",
       "title": "광고 성과 모니터링을 위한 운영 어드민 구축",
-      "image": "assets/evidence-hd-25.png",
+      "image": "assets/evidence-hd-25.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -876,7 +876,7 @@ const PORTFOLIO = {
       "page": 26,
       "company": "nhn",
       "title": "검색 키워드 데이터 기반 타기팅 광고 상품 기획",
-      "image": "assets/evidence-hd-26.png",
+      "image": "assets/evidence-hd-26.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -914,7 +914,7 @@ const PORTFOLIO = {
       "page": 27,
       "company": "nhn",
       "title": "Ad Exchange 광고 거래 구조 확장",
-      "image": "assets/evidence-hd-27.png",
+      "image": "assets/evidence-hd-27.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -952,7 +952,7 @@ const PORTFOLIO = {
       "page": 28,
       "company": "nhn",
       "title": "광고주 대상 DMP 데이터 분석 및 컨설팅",
-      "image": "assets/evidence-hd-28.png",
+      "image": "assets/evidence-hd-28.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -989,7 +989,7 @@ const PORTFOLIO = {
       "page": 29,
       "company": "socialup",
       "title": "SNS 광고 오픈마켓 기획·출시·운영",
-      "image": "assets/evidence-hd-29.png",
+      "image": "assets/evidence-hd-29.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
