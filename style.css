@@ -12,7 +12,7 @@
 /* Original evidence is displayed without enlarging a low-resolution slide crop. */
 .original-evidence .evidence-button{aspect-ratio:auto;border-radius:8px}
 .original-evidence .evidence-button img{display:block;position:static;width:100%;height:auto;max-width:100%;pointer-events:none}
-.evidence-gallery.phone-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.evidence-gallery.phone-gallery{display:grid;grid-template-columns:repeat(var(--image-count,3),minmax(0,1fr));gap:16px;align-items:start}
 .image-label{font-size:12px;text-align:center;margin:10px 0;color:var(--muted)}
 .phone-gallery .zoom{font-size:9px;right:4px;bottom:4px;padding:3px 5px}
 .viewer-body img{width:auto;max-width:100%;min-width:0;margin:auto}
