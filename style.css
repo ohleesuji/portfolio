@@ -56,3 +56,17 @@
 .paired-item .evidence{width:100%;margin:0}
 .paired-project .project-meta{margin-top:30px}
 @media(max-width:760px){.paired-grid{grid-template-columns:1fr;gap:32px}.paired-item .project-copy{min-height:0}.paired-item{gap:16px}.paired-item+.paired-item{border-top:1px solid var(--line);padding-top:26px}.original-evidence .evidence-gallery{gap:16px 12px}.original-evidence .evidence-gallery>div{width:min(var(--item-width,560px),calc((100% - (var(--image-count,1) - 1)*12px)/var(--image-count,1)))}.original-evidence .evidence-gallery>.evidence-wide{width:100%}}
+
+/* Updated PPT: separate ranks, visible response prompts, original-size assets. */
+.role-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rank-tag{display:inline-block;padding:3px 7px;border:1px solid #dce3ef;border-radius:5px;font-size:11px;font-weight:600;white-space:nowrap;color:#62718a;background:#f6f8fc}
+.metric strong.quality-metric{font-size:clamp(28px,3.4vw,42px);white-space:nowrap}
+.metric p>span{font-size:13px;color:#66738b}
+.response-examples.original-evidence .evidence-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;align-items:start}
+.response-examples.original-evidence .evidence-gallery>div{width:100%;display:flex;flex-direction:column;align-items:center}
+.response-examples .response-prompt{font-size:14px;font-weight:700;line-height:1.5;color:#173b63;margin:0 0 12px;width:100%;min-height:42px;text-align:center;word-break:keep-all}
+.response-examples.original-evidence .evidence-gallery>div:not(.evidence-wide)>.evidence-button{width:min(100%,234px);max-width:234px;--preview-width:234px}
+.response-examples .evidence-button img{width:100%;height:auto;max-height:none;object-fit:contain}
+#case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{width:100%;max-width:none;--preview-width:100%}
+@media(max-width:600px){.response-examples .response-prompt{font-size:12px}.response-examples.original-evidence .evidence-gallery{gap:20px 10px}.rank-tag{font-size:10px}}
+#case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{flex:1 1 100%}

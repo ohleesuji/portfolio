@@ -3,7 +3,7 @@ const PORTFOLIO = {
     {
       "key": "kakao",
       "name": "카카오",
-      "role": "AI 서비스 기획",
+      "role": "카나나 AI 서비스 기획",
       "period": "2025.12.01 ~ 현재",
       "duration": "9개월 21일",
       "start": 5,
@@ -18,7 +18,8 @@ const PORTFOLIO = {
       "duration": "9개월 14일",
       "start": 11,
       "end": 11,
-      "intro": "대출 상태 시각화와 상황별 행동 유도로 사용자 여정 재설계"
+      "intro": "대출 상태 시각화와 상황별 행동 유도로 사용자 여정 재설계",
+      "rank": "수석"
     },
     {
       "key": "toss",
@@ -38,17 +39,19 @@ const PORTFOLIO = {
       "duration": "3년 4개월",
       "start": 23,
       "end": 28,
-      "intro": "광고 플랫폼 연동, 데이터 상품과 운영 효율 개선"
+      "intro": "광고 플랫폼 연동, 데이터 상품과 운영 효율 개선",
+      "rank": "대리"
     },
     {
       "key": "socialup",
       "name": "소셜업",
-      "role": "창업자·대표",
+      "role": "SNS 광고 오픈마켓 서비스 기획·사업 총괄",
       "period": "2014.08.01 ~ 2017.09.19",
       "duration": "3년 1개월 19일",
       "start": 29,
       "end": 29,
-      "intro": "광고주 수요 검증부터 SNS 광고 오픈마켓 출시·운영까지 총괄"
+      "intro": "광고주 수요 검증부터 SNS 광고 오픈마켓 출시·운영까지 총괄",
+      "rank": "대표 (창업)"
     }
   ],
   "cases": [
@@ -220,7 +223,7 @@ const PORTFOLIO = {
       "id": "case-8",
       "page": 8,
       "company": "kakao",
-      "title": "평가셋 설계와 525회 반복 실험을 통한 대화 분석 품질 개선",
+      "title": "헷갈리는 대화 21건·525회 반복 평가로 정한 분석 모델 기준",
       "image": "assets/evidence-hd-08.png?v=20260922-results",
       "sections": [
         {
@@ -235,7 +238,7 @@ const PORTFOLIO = {
           "items": [
             "사실 확인 8건·정보 추출 7건·흐름 요약 6건, 평가 케이스 21건 설계",
             "케이스별 혼동 지점·기대 답변·필수 채점 포인트 정의",
-            "모델 A·B의 5개 모델·프롬프트 조합을 동일 케이스로 각 5회 반복, 총 525회 평가",
+            "5개 모델·프롬프트 조합 × 21개 케이스 × 각 5회 반복, 총 525회 실행",
             "내용 품질·전체 PASS·실행 오류·평균 및 P95 응답 시간·유형별 정확도 8개 지표 비교",
             "실패 응답을 원문과 대조해 정보 누락·주체 혼동·요약 범위 오류 분류"
           ]
@@ -244,6 +247,7 @@ const PORTFOLIO = {
           "title": "결과/성과",
           "items": [
             "품질·응답 속도·실행 안정성을 비교해 모델 B의 단계 추론 설정을 균형 기준안으로 선정",
+            "사실 확인 응답 품질 0.860 → 0.969 개선 (정상 응답의 0~1점 평균)",
             "정정된 최종 정보 찾기 사례: 모델 A 기본 설정 0/5회 성공, 선정 설정 5/5회 성공",
             "정답이 명확한 추출·요약 평가군에서 PASS율 각각 92% 확인",
             "선정 설정의 전체 PASS율 80.0%·실행 오류 10/105건, 복합 추출 개선 과제 도출"
@@ -256,17 +260,12 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/model-evaluation.png?v=20260922-claude",
-          "label": "모델 A·B의 유형별 정확도·속도·실행 오류 비교",
-          "width": 1920,
-          "height": 1575
+          "src": "assets/claude-evaluation-original.png",
+          "label": "평가 케이스·8개 지표 비교·분석 모델 선정 근거",
+          "width": 2200,
+          "height": 1866,
+          "wide": true
         }
-      ],
-      "evaluationSteps": [
-        "평가 케이스 21건 설계",
-        "기대 답변·채점 기준 정의",
-        "5개 설정 × 각 5회 반복",
-        "유형별 오류 분석·기준안 선정"
       ],
       "evidenceNote": "유형별 점수는 실행 오류를 제외한 정상 응답의 0~1점 평균. 전체 PASS율은 실행 오류를 포함한 105회 기준. 92%는 정답이 명확한 추출·요약 평가군의 수치.",
       "galleryColumns": 1
@@ -275,13 +274,14 @@ const PORTFOLIO = {
       "id": "case-9",
       "page": 9,
       "company": "kakao",
-      "title": "같은 설명을 반복하지 않게 하는 개인화 메모리 기획",
+      "title": "사용자 맥락을 기억해 맞춤형 답변을 제공하는 메모리 기획",
       "image": "assets/evidence-hd-09.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "대화할 때마다 같은 배경과 선호를 다시 설명해야 하는 불편. 이전 대화의 정보를 기억해 다음 응답에 활용하는 개인화 필요"
+            "사용자의 배경·선호·관심사를 기억해 상황에 맞는 답변 제공",
+            "이전 대화의 정보를 다음 응답에 활용해 같은 설명을 반복하는 불편 감소"
           ]
         },
         {
@@ -344,56 +344,70 @@ const PORTFOLIO = {
       "id": "case-10",
       "page": 10,
       "company": "kakao",
-      "title": "대화로 만든 공유형 콘텐츠, 말투 나이·TBTI 구현",
+      "title": "대화로 만든 공유형 콘텐츠 7종, 톡방 시상식 공유율 41%",
       "image": "assets/evidence-hd-10.png?v=20260922-results",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "나와 친구의 대화 특징을 재미있게 보여주면 결과를 친구와 비교·공유하며 자연스럽게 확산될 수 있다고 판단"
+            "나와 친구의 대화 특징을 재미있는 콘텐츠로 만들어 결과 비교·공유를 통한 자발적 확산 유도"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "말투 나이·AI 판결소·TBTI 등 후보 7종 기획",
-            "시작 발화와 개인화 결과·응답 구성 설계",
-            "점수·유형명과 실제 대화 근거를 연결",
-            "1:1·단톡방·개인 캡처 등 공유 방식 구체화",
-            "관계 악화를 줄이는 완충 문장과 대화 제안 작성"
+            "말투 나이·AI 판결소·톡방 시상식·TBTI 등 공유형 콘텐츠 7종 구현",
+            "콘텐츠별 시작 발화·응답 구성·결과 형식 설계",
+            "MBTI 형식을 응용한 대화 성향 콘텐츠 TBTI 기획",
+            "점수·유형명·실제 대화 근거를 연결해 공유할 이유 제공",
+            "1:1·단톡방·개인 캡처 등 공유 방식과 관계 악화를 줄이는 완충 문장 설계"
           ]
         },
         {
           "title": "결과/성과",
           "items": [
-            "말투 나이 측정기·TBTI 실제 응답 구현",
-            "후보 7종의 콘셉트·응답 구성·공유 방식 정의",
-            "점수·유형명·대화 근거로 공유하고 싶은 결과 설계",
-            "관계 악화를 막는 완충 문장 기준 마련"
+            "톡방 시상식 응답 대비 공유율 41%",
+            "개인 분석부터 톡방 단체 콘텐츠까지 7종 구현",
+            "서버·모델 변경 없이 프롬프트로 콘텐츠를 추가하는 구조 마련"
           ]
         }
       ],
-      "role": "신규 서비스 아이데이션 및 콘텐츠 콘셉트 기획",
+      "role": "공유형 콘텐츠 기획·응답 설계",
       "contribution": "100%",
       "team": "모델 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-integrated-7-image11.png",
-          "label": "대화로 만든 공유형 콘텐츠, 말투 나이·TBTI 구현",
-          "wide": false,
+          "src": "assets/viral-age-private.png",
+          "label": "내 톡 나이 봐줘 · 실제 카나나 응답",
+          "prompt": "내 톡 나이 봐줘",
           "width": 283,
           "height": 701
         },
         {
-          "src": "assets/claude-integrated-7-image12.png",
-          "label": "대화로 만든 공유형 콘텐츠, 말투 나이·TBTI 구현",
-          "wide": false,
+          "src": "assets/viral-tbti-private.png",
+          "label": "톡 대화로 내 성향 분석해줘 · 실제 카나나 응답",
+          "prompt": "톡 대화로 내 성향 분석해줘",
           "width": 234,
           "height": 542
+        },
+        {
+          "src": "assets/viral-award-private.png",
+          "label": "톡방 시상식 해줘 · 실제 카나나 응답",
+          "prompt": "톡방 시상식 해줘",
+          "width": 342,
+          "height": 1014
+        },
+        {
+          "src": "assets/viral-judge-private.png",
+          "label": "우리 중에 누가 잘못했어? · 실제 카나나 응답",
+          "prompt": "우리 중에 누가 잘못했어?",
+          "width": 330,
+          "height": 1020
         }
       ],
-      "galleryColumns": 2
+      "galleryColumns": 2,
+      "responseExamples": true
     },
     {
       "id": "case-11",
