@@ -334,7 +334,7 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-mem_consent.png",
+          "src": "assets/refresh-30-mem_consent.png",
           "label": "첫 사용 안내",
           "caption": "첫 사용 안내",
           "wide": false,
@@ -342,7 +342,7 @@ const PORTFOLIO = {
           "height": 1054
         },
         {
-          "src": "assets/claude-mem_setting.png",
+          "src": "assets/refresh-30-mem_setting.png",
           "label": "켜기 · 끄기 · 삭제",
           "caption": "켜기 · 끄기 · 삭제",
           "wide": false,
@@ -350,7 +350,7 @@ const PORTFOLIO = {
           "height": 1044
         },
         {
-          "src": "assets/claude-mem_summary.png",
+          "src": "assets/refresh-30-mem_summary.png",
           "label": "기억한 내용 요약",
           "caption": "기억한 내용 요약",
           "wide": false,
@@ -358,7 +358,7 @@ const PORTFOLIO = {
           "height": 954
         },
         {
-          "src": "assets/claude-mem_doc_blur.png",
+          "src": "assets/refresh-30-mem_doc_blur.png",
           "label": "기억 처리 흐름",
           "caption": "기억 처리 흐름",
           "wide": true,
@@ -755,22 +755,6 @@ const PORTFOLIO = {
       "teamLabel": "협업 구성",
       "evidenceTitle": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
-    },
-    {
-      "id": "case-16",
-      "company": "toss",
-      "title": "개발 우선순위 · 일정 · 리소스 관리",
-      "textOnly": true,
-      "sections": [
-        {
-          "title": "주요 업무 및 결과",
-          "items": [
-            "병렬 과제의 우선순위와 담당 리소스를 정리하고 스크럼으로 진행 관리, 일정 내 완료율 개선"
-          ]
-        }
-      ],
-      "role": "",
       "position": "대출 Product Owner"
     },
     {
@@ -1249,9 +1233,7 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "엑셀 기반 캠페인 지표 수기 관리의 비효율 확인",
-            "성과 파악과 문제 대응 시간 단축 필요",
-            "주요 지표를 통합 조회하는 운영 화면 기획"
+            "엑셀로 수기 관리하던 캠페인 지표를 통합 조회하고, 성과 파악과 문제 대응 시간을 줄이는 운영 화면 필요"
           ]
         },
         {
@@ -1264,7 +1246,7 @@ const PORTFOLIO = {
           ]
         },
         {
-          "title": "결과",
+          "title": "결과/성과",
           "items": [
             "캠페인 성과와 운영 지표를 통합 조회하는 모니터링 화면 구축",
             "예산 미소진 가능성을 미리 파악하는 지표로 운영 대응 지원"
@@ -1278,15 +1260,24 @@ const PORTFOLIO = {
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
       "originals": [
         {
-          "src": "assets/sep23-extra-image26.jpg",
+          "src": "assets/refresh-951-fig_nhn_admin.png",
+          "label": "엑셀 수기 관리에서 통합 모니터링 화면으로 전환",
+          "caption": "엑셀 수기 관리에서 통합 모니터링 화면으로 전환",
+          "width": 2257,
+          "height": 800,
+          "wide": true
+        },
+        {
+          "src": "assets/refresh-951-nhn_admin.jpg",
+          "label": "운영 어드민 설계 자료",
+          "caption": "운영 어드민 설계 자료",
           "width": 933,
           "height": 703,
-          "label": "광고 성과 모니터링을 위한 운영 어드민 구축",
-          "caption": "광고 성과 모니터링을 위한 운영 어드민 구축",
-          "wide": true
+          "wide": false
         }
       ],
-      "galleryColumns": 1
+      "galleryColumns": 1,
+      "evidenceTitle": ""
     },
     {
       "id": "case-26",
@@ -1345,15 +1336,13 @@ const PORTFOLIO = {
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "외부 SSP 트래픽의 내부 DSP 한정 연결 구조",
-            "외부 DSP의 입찰 참여와 거래 범위 확대 필요",
-            "광고 거래 구조 개선을 통한 신규 수요 확보"
+            "외부 SSP 트래픽이 내부 DSP에만 연결돼, 늘어난 외부 DSP 수요를 매출로 연결하기 어려운 거래 구조 개선"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
-            "외부 SSP 트래픽에 외부 DSP도 참여하는 2차 입찰 구조 기획",
+            "내부 DSP 대표를 선정한 뒤 외부 DSP와 경쟁하는 2차 입찰 구조 기획",
             "입찰 로그로 구조 변경에 따른 매출 시뮬레이션",
             "입찰가 비율 9개 케이스를 테스트해 손실 없는 수익 구간 설정",
             "최저 입찰가 · 낙찰 정책 수립과 실제 서비스 적용"
@@ -1370,28 +1359,29 @@ const PORTFOLIO = {
       ],
       "role": "거래 구조·프로세스·정책 기획",
       "contribution": "70%",
-      "team": "기획 2명 · 서버 4명 · 프론트 2명 · 디자인 1명",
+      "team": "서버 · DE 2명 · FE 1명 · 디자인 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-exchange-image30.jpeg",
-          "width": 1014,
-          "height": 510,
-          "wide": true,
-          "label": "외부 플랫폼과 자사 RTB Exchange의 입찰·응답 흐름",
-          "caption": "외부 플랫폼과 자사 RTB Exchange의 입찰·응답 흐름"
+          "src": "assets/refresh-950-fig_nhn_dsp.png",
+          "label": "외부 DSP까지 참여하는 2차 입찰 구조로 전환",
+          "caption": "외부 DSP까지 참여하는 2차 입찰 구조로 전환",
+          "width": 2257,
+          "height": 900,
+          "wide": true
         },
         {
-          "src": "assets/claude-exchange-image31.jpeg",
-          "width": 1035,
-          "height": 585,
-          "wide": true,
-          "label": "매체와 복수의 외부 광고 수요를 연결하는 거래 구조",
-          "caption": "매체와 복수의 외부 광고 수요를 연결하는 거래 구조"
+          "src": "assets/refresh-950-exchange_flow.jpeg",
+          "label": "입찰 요청과 응답 흐름 설계 자료",
+          "caption": "입찰 요청과 응답 흐름 설계 자료",
+          "width": 1014,
+          "height": 510,
+          "wide": false
         }
       ],
       "galleryColumns": 1,
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+      "evidenceTitle": ""
     },
     {
       "id": "case-28",

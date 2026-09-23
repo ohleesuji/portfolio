@@ -101,3 +101,7 @@
 #case-26 .evidence-gallery>div:first-child{grid-column:1/-1}
 :is(#case-26,#case-29) .original-evidence .evidence-gallery>div>.evidence-button{width:min(100%,var(--fitted-width,260px));max-width:100%}
 }
+
+/* Updated source diagrams and supporting documents. */
+:is(#case-25,#case-27) .original-evidence .evidence-gallery{gap:20px}
+:is(#case-25,#case-27) .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:min(100%,340px);max-width:340px}
