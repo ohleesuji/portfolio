@@ -334,7 +334,7 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/refresh-30-mem_consent.png",
+          "src": "assets/final-ppt-9-mem_consent.png",
           "label": "첫 사용 안내",
           "caption": "첫 사용 안내",
           "wide": false,
@@ -342,7 +342,7 @@ const PORTFOLIO = {
           "height": 1054
         },
         {
-          "src": "assets/refresh-30-mem_setting.png",
+          "src": "assets/final-ppt-9-mem_setting.png",
           "label": "켜기 · 끄기 · 삭제",
           "caption": "켜기 · 끄기 · 삭제",
           "wide": false,
@@ -350,7 +350,7 @@ const PORTFOLIO = {
           "height": 1044
         },
         {
-          "src": "assets/refresh-30-mem_summary.png",
+          "src": "assets/final-ppt-9-mem_summary.png",
           "label": "기억한 내용 요약",
           "caption": "기억한 내용 요약",
           "wide": false,
@@ -358,9 +358,9 @@ const PORTFOLIO = {
           "height": 954
         },
         {
-          "src": "assets/refresh-30-mem_doc_blur.png",
+          "src": "assets/final-ppt-9-mem_doc_blur.png",
           "label": "기억 처리 흐름",
-          "caption": "기억 처리 흐름",
+          "caption": "",
           "wide": true,
           "width": 1666,
           "height": 1058
@@ -1260,24 +1260,25 @@ const PORTFOLIO = {
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
       "originals": [
         {
-          "src": "assets/refresh-951-fig_nhn_admin.png",
+          "src": "assets/final-ppt-24-fig_nhn_admin.png",
           "label": "엑셀 수기 관리에서 통합 모니터링 화면으로 전환",
-          "caption": "엑셀 수기 관리에서 통합 모니터링 화면으로 전환",
+          "caption": "",
           "width": 2257,
           "height": 800,
           "wide": true
         },
         {
-          "src": "assets/refresh-951-nhn_admin.jpg",
+          "src": "assets/final-ppt-24-nhn_admin.jpg",
           "label": "운영 어드민 설계 자료",
-          "caption": "운영 어드민 설계 자료",
+          "caption": "",
           "width": 933,
           "height": 703,
-          "wide": false
+          "wide": false,
+          "heading": "실제 업무 자료"
         }
       ],
       "galleryColumns": 1,
-      "evidenceTitle": ""
+      "evidenceTitle": "엑셀 수기 관리에서 통합 모니터링 화면으로 전환"
     },
     {
       "id": "case-26",
@@ -1363,25 +1364,26 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/refresh-950-fig_nhn_dsp.png",
+          "src": "assets/final-ppt-26-fig_nhn_dsp.png",
           "label": "외부 DSP까지 참여하는 2차 입찰 구조로 전환",
-          "caption": "외부 DSP까지 참여하는 2차 입찰 구조로 전환",
+          "caption": "",
           "width": 2257,
           "height": 900,
           "wide": true
         },
         {
-          "src": "assets/refresh-950-exchange_flow.jpeg",
+          "src": "assets/final-ppt-26-exchange_flow.jpeg",
           "label": "입찰 요청과 응답 흐름 설계 자료",
-          "caption": "입찰 요청과 응답 흐름 설계 자료",
+          "caption": "",
           "width": 1014,
           "height": 510,
-          "wide": false
+          "wide": false,
+          "heading": "실제 업무 자료"
         }
       ],
       "galleryColumns": 1,
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "evidenceTitle": ""
+      "evidenceTitle": "외부 DSP까지 참여하는 2차 입찰 구조로 전환"
     },
     {
       "id": "case-28",

@@ -105,3 +105,9 @@
 /* Updated source diagrams and supporting documents. */
 :is(#case-25,#case-27) .original-evidence .evidence-gallery{gap:20px}
 :is(#case-25,#case-27) .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:min(100%,340px);max-width:340px}
+
+/* Match the final PPT evidence grouping and source captions. */
+.evidence-subheading{font-size:13px;font-weight:650;color:#7b7b7b;text-align:center;margin:12px 0 10px}
+#case-25 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:44%;max-width:none}
+#case-27 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:66%;max-width:none}
+:is(#case-25,#case-27) .evidence-title{font-size:15px!important;color:#333!important}
