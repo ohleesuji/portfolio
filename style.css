@@ -117,7 +117,6 @@
 #case-agent-quality .evidence-gallery{gap:24px}
 #case-home-suggest .original-evidence .evidence-gallery>div{width:calc((100% - 20px)/2)}
 #case-home-suggest .original-evidence .evidence-button{max-width:250px}
-#case-intent-analytics .original-evidence .evidence-button{width:100%;max-width:580px}
 #case-9 .evidence-gallery>.evidence-wide .evidence-button{width:100%;max-width:none}
 
 /* Product-level case studies, with all supporting work expanded below. */
@@ -164,3 +163,33 @@
 @media(max-width:760px){.core-story{grid-template-columns:1fr;gap:15px}.core-story p{font-size:13px}.core-story h4,.core-impact-label{font-size:13px}}
 
 .core-outcomes.outcomes-single{grid-template-columns:1fr;}
+
+/* Clear two-level product grouping: short product introduction, separate case cards. */
+.core-project{border:0;background:transparent;box-shadow:none;overflow:visible;margin-top:38px}
+.core-project>.core-header{border:0;border-left:4px solid #183e69;background:none;padding:4px 0 8px 24px;margin-bottom:24px}
+.core-header h3{font-size:29px;line-height:1.5;max-width:1000px}
+.core-intro{margin:15px 0 13px;font-size:16px;line-height:1.8}
+.product-status{display:flex;gap:12px;align-items:baseline;margin:14px 0;color:#53647e;font-size:13px;line-height:1.8}
+.product-status strong{flex:none;color:#143762;font-size:14px}
+.product-role{display:flex;gap:18px;margin:13px 0 0;color:#53647e;font-size:13px;line-height:1.8}
+.product-role b{flex:none;color:#143762}
+.core-details{display:grid;gap:24px;margin-left:13px;padding-left:26px;border-left:1px solid #cfdbeb}
+.core-details>.project-detail{position:relative;border:1px solid #dce4ee;border-radius:14px;background:#fff;overflow:hidden}
+.project-detail>.project-header{border-bottom:1px solid #e5eaf1;padding:22px 28px 20px}
+.project-detail>.project-header h4{font-size:22px;line-height:1.55}
+.project-detail .project-body{padding:28px}
+.detail-label{font-size:12px;font-weight:700;color:#476b9d}
+.case-anchor{position:absolute;top:0;left:0;scroll-margin-top:166px}
+@media(max-width:760px){
+ .core-project{margin-top:28px}
+ .core-project>.core-header{padding-left:17px;margin-bottom:18px}
+ .core-header h3{font-size:24px}
+ .core-intro{font-size:14px}
+ .product-status{display:block;font-size:12px}
+ .product-status strong{display:block;margin-bottom:3px;font-size:13px}
+ .product-role{font-size:12px;gap:11px}
+ .core-details{margin:0;padding:0;border:0;gap:18px}
+ .project-detail>.project-header{padding:20px}
+ .project-detail>.project-header h4{font-size:20px}
+ .project-detail .project-body{padding:20px}
+}
