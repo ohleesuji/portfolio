@@ -111,3 +111,11 @@
 #case-25 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:44%;max-width:none}
 #case-27 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:66%;max-width:none}
 :is(#case-25,#case-27) .evidence-title{font-size:15px!important;color:#333!important}
+
+/* Evidence for ongoing Kakao product and evaluation work. */
+#case-agent-quality .original-evidence .evidence-button{width:100%;max-width:none}
+#case-agent-quality .evidence-gallery{gap:24px}
+#case-home-suggest .original-evidence .evidence-gallery>div{width:calc((100% - 20px)/2)}
+#case-home-suggest .original-evidence .evidence-button{max-width:250px}
+#case-intent-analytics .original-evidence .evidence-button{width:100%;max-width:580px}
+#case-9 .evidence-gallery>.evidence-wide .evidence-button{width:100%;max-width:none}
