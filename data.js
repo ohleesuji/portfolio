@@ -329,6 +329,7 @@ const PORTFOLIO = {
         }
       ],
       "role": "에이전트 프롬프트·도구 설명 개선, 평가셋·채점 기준과 검증 우선순위 관리",
+      "team": "AI 모델 1명",
       "originals": [
         {
           "src": "assets/nov07-memory-eval-cases.png",
@@ -456,6 +457,7 @@ const PORTFOLIO = {
         }
       ],
       "role": "버티컬별 메모리 활용 기준과 공통 메모리 연계·가이드 설계",
+      "team": "단독 수행",
       "originals": [
         {
           "src": "assets/hierarchy-memory-verticals.svg",
