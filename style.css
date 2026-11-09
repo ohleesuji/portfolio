@@ -228,3 +228,8 @@
  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
  .metric strong.quality-metric{font-size:clamp(20px,5.5vw,28px)}
 }
+
+/* Product hierarchy refinements. */
+.project-detail .detail-label{color:#7b8a9d;font-weight:550}
+#company-toss>.supporting-project{margin-top:34px;border:1px solid #dce4ee;border-radius:14px;background:#fff}
+#company-toss>.supporting-project>.project-header{background:#f5f7fb}

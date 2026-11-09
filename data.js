@@ -1762,7 +1762,7 @@ const PORTFOLIO = {
       "id": "toss-loans",
       "company": "toss",
       "position": "Product Owner",
-      "title": "대출 서비스 기획·운영",
+      "title": "대출 제품 성장·서비스 확장",
       "intro": "진입부터 신청·실행까지의 사용자 여정을 개선하고, 금융사 연동·제휴 상품 확대·규제특례로 대출 서비스의 범위를 확장",
       "role": "대출 제품 전략·개발 우선순위·핵심 지표 관리, 신청 과정 개선과 금융사 제휴·연동·제도 대응 총괄",
       "outcomes": [
@@ -1796,7 +1796,7 @@ const PORTFOLIO = {
       "id": "toss-insurance",
       "company": "toss",
       "position": "Product Owner",
-      "title": "보험 서비스 기획·운영",
+      "title": "보험 제품 성장·고객 경험 개선",
       "intro": "보험 관리부터 상담 신청까지 이어지는 사용자 경험을 정리하고, 신청 경로와 보험 홈의 정보 구조를 개선해 이용·매출 성과로 연결",
       "role": "보험 제품 전략·핵심 지표 관리, 상담 신청 경로·보험 홈 개선과 실험 총괄",
       "outcomes": [
