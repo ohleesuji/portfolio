@@ -3,12 +3,13 @@ const PORTFOLIO = {
     {
       "key": "kakao",
       "name": "카카오",
-      "role": "카나나 AI Product Manager",
+      "role": "AI Product Manager",
       "period": "2025.12.01 ~ 현재",
       "duration": "약 11개월",
       "start": 9,
       "end": 10,
-      "intro": "개인화 메모리의 제품 방향·구축 범위 수립, 대화연동 출시·운영과 모델·프롬프트 품질 개선"
+      "intro": "개인화 메모리의 제품 방향·구축 범위 수립, 대화연동 출시·운영과 모델·프롬프트 품질 개선",
+      "entryId": "case-9"
     },
     {
       "key": "samsung",
@@ -18,7 +19,7 @@ const PORTFOLIO = {
       "duration": "9개월 14일",
       "start": 11,
       "end": 11,
-      "intro": "대출 상태 시각화와 상황별 행동 유도로 사용자 여정 재설계",
+      "intro": "대출 가능 금액·담보 상태 확인과 연장·상환 이용 흐름 개선",
       "rank": "수석"
     },
     {
@@ -60,13 +61,14 @@ const PORTFOLIO = {
       "id": "case-5",
       "page": 5,
       "company": "kakao",
-      "title": "카카오톡 대화분석의 이용 흐름·개인정보 처리 정책 설계",
+      "title": "카카오톡 대화 분석 서비스 기획·출시",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
             "기기 내 분석(On-device AI)을 서버 분석으로 확장하면서, 대화 선택·전송·분석 이후에도 처음 질문과 추가 질문이 끊기지 않는 이용 경험 구축",
-            "개인 대화를 사용하는 서비스에 맞춰 대화 사용 동의·원문 삭제와 분석 중 이탈·실패에 대응할 운영 기준 수립"
+            "개인 대화를 사용하는 서비스에 맞춰 대화 사용 동의·원문 삭제와 분석 중 이탈·실패에 대응할 운영 기준 수립",
+            "원하는 내용이 오간 채팅방과 시점을 알아야 하는 불편을 줄이고, 질문만으로 전체 채팅방에서 관련 대화를 찾는 탐색 경험 제공"
           ]
         },
         {
@@ -75,72 +77,8 @@ const PORTFOLIO = {
             "일반적인 대화 질문에 답하는 기능을 기본으로, 말투·성향 분석 등 공유를 유도하는 재미 요소까지 이용 범위 정의",
             "분석할 대화를 먼저 받아야 하므로, 채팅방·기간 선택과 전송을 안내한 뒤 처음 질문의 답변을 자동으로 이어가는 2단계 처리 설계",
             "같은 채팅방·기간의 추가 질문은 재선택 없이 재분석하고, 분석 범위 변경·세션 만료 시 대화를 다시 선택하도록 정책 수립",
-            "대화 사용 동의·분석 후 원문 삭제 기준과 이탈·재진입·분석 실패 시 복구·재시도 동작 설계"
-          ]
-        },
-        {
-          "title": "결과/성과",
-          "items": [
-            "대화 전송 후 처음 질문을 다시 입력하지 않아도 분석·답변이 이어지는 이용 흐름 구축",
-            "같은 대화의 추가 질문은 선택을 반복하지 않고, 분석 대상 변경·만료 시에는 재선택하도록 연결"
-          ]
-        }
-      ],
-      "role": "서버 분석 첫 도입의 사용자 흐름과 대화 사용·추가 질문·복구 정책 설계",
-      "contribution": "100%",
-      "team": "디자인 1명 · 클라이언트 개발 2명 · 서버 개발 2명 · AI 모델 1명 · 프런트엔드 개발 1명",
-      "caption": null,
-      "originals": [
-        {
-          "src": "assets/claude-v4-image.png",
-          "label": "분석할 대화 요청",
-          "caption": "분석할 대화 요청",
-          "wide": false,
-          "width": 786,
-          "height": 1704
-        },
-        {
-          "src": "assets/sep23-v4-image2.png",
-          "label": "대상 채팅방 선택",
-          "caption": "대상 채팅방 선택",
-          "wide": false,
-          "width": 667,
-          "height": 1323
-        },
-        {
-          "src": "assets/sep23-v4-image3.png",
-          "label": "기간 확인 · 분석 시작",
-          "caption": "기간 확인 · 분석 시작",
-          "wide": false,
-          "width": 693,
-          "height": 1362
-        }
-      ],
-      "galleryColumns": 3,
-      "teamLabel": "협업 구성",
-      "evidenceTitle": "대화 선택부터 서버 분석과 답변까지의 사용자 흐름",
-      "disclaimer": "피그마 · 정책서의 초기 시안",
-      "position": "AI Product Manager"
-    },
-    {
-      "id": "case-7",
-      "page": 7,
-      "company": "kakao",
-      "title": "전체 채팅방 탐색 확대·입력 토큰 약 60% 절감",
-      "sections": [
-        {
-          "title": "문제 의식 및 목표",
-          "items": [
-            "원하는 내용이 오간 채팅방과 시점을 알아야 하는 불편을 줄이고, 질문만으로 전체 채팅방에서 관련 대화를 찾는 탐색 경험 제공",
-            "늘어난 대화량에 맞춰 입력 형식과 배분 정책을 개선해, 제한된 입력량 안에서 여러 채팅방의 근거를 활용할 수 있는 범위 확대"
-          ]
-        },
-        {
-          "title": "주요 업무",
-          "items": [
+            "대화 사용 동의·분석 후 원문 삭제 기준과 이탈·재진입·분석 실패 시 복구·재시도 동작 설계",
             "메시지 수·길이와 화자·시간 입력량 분석으로 초기 범위 최대 4개 방·기본 2주 결정",
-            "대화량이 많은 방에 입력 용량이 쏠려 작은 방의 중요한 정보가 빠지지 않도록, 방별 기본 분량 배정 후 남는 용량을 재분배하는 정책 수립",
-            "보낸 사람·시간은 유지하면서 반복되는 JSON 항목을 간결한 텍스트로 바꾸고, 동일 대화 샘플의 입력량 비교",
             "“다음 주 일정”을 과거 대화에서 찾듯, 질문 속 날짜와 근거 조회 기간을 구분하는 기준 정의",
             "질문에 맞는 채팅방·기간을 추천하는 분석 시작 화면 설계"
           ]
@@ -148,14 +86,15 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "최대 4개 방을 직접 선택하던 방식에서 질문 기반 전체 채팅방 탐색으로 확대",
-            "동일한 대화 샘플의 입력 토큰 약 60% 절감: JSON 약 17,000→플랫텍스트 약 6,900"
+            "채팅방·기간 선택 안내 후 대화를 전송받아, 처음 질문의 분석·답변을 이어가는 처리 구조 구축",
+            "같은 대화의 추가 질문은 선택을 반복하지 않고, 분석 대상 변경·만료 시에는 재선택하도록 연결",
+            "최대 4개 방을 직접 선택하던 방식에서 질문 기반 전체 채팅방 탐색으로 확대"
           ]
         }
       ],
-      "role": "대화량 분석과 입력 형식·배분 정책·조회 범위·사용자 흐름 개선",
+      "role": "서버 분석 첫 도입의 사용자 흐름과 대화 사용·추가 질문·복구 정책 설계",
       "contribution": "100%",
-      "team": "디자인 · 클라이언트 개발 · 서버 개발 · AI 모델 · 프런트엔드 개발",
+      "team": "디자인 1명 · 클라이언트 개발 2명 · 서버 개발 2명 · AI 모델 1명 · 프런트엔드 개발 1명",
       "caption": null,
       "originals": [
         {
@@ -173,41 +112,66 @@ const PORTFOLIO = {
           "wide": false,
           "width": 388,
           "height": 696
-        },
-        {
-          "src": "assets/hierarchy-format-comparison.svg?v=20261107-readable-originals",
-          "label": "같은 대화의 JSON·플랫텍스트 입력 비교",
-          "caption": "메시지 내용·보낸 사람·시간을 유지하면서 반복 표시를 줄인 입력 형식",
-          "width": 1200,
-          "height": 930,
-          "wide": true
         }
       ],
       "galleryColumns": 2,
       "teamLabel": "협업 구성",
-      "evidenceTitle": "질문에 따른 조회 범위 추천과 JSON·플랫텍스트 비교",
+      "evidenceTitle": "질문에 맞는 대화 조회와 근거 기반 답변",
       "disclaimer": "실제 서비스 화면과 질문 의도별 조회 방식",
       "position": "AI Product Manager",
+      "additionalEvidence": {
+        "title": "초기 대화 선택 화면",
+        "originals": [
+          {
+            "src": "assets/claude-v4-image.png",
+            "label": "분석할 대화 요청",
+            "caption": "분석할 대화 요청",
+            "wide": false,
+            "width": 786,
+            "height": 1704
+          },
+          {
+            "src": "assets/sep23-v4-image2.png",
+            "label": "대상 채팅방 선택",
+            "caption": "대상 채팅방 선택",
+            "wide": false,
+            "width": 667,
+            "height": 1323
+          },
+          {
+            "src": "assets/sep23-v4-image3.png",
+            "label": "기간 확인 · 분석 시작",
+            "caption": "기간 확인 · 분석 시작",
+            "wide": false,
+            "width": 693,
+            "height": 1362
+          }
+        ],
+        "galleryColumns": 3,
+        "disclaimer": "피그마 · 정책서의 초기 시안"
+      },
       "anchorAliases": [
-        "case-token-budget"
-      ],
-      "evidenceNote": "토큰: AI가 텍스트를 처리하는 단위 · JSON과 일반 텍스트의 동일 내용 비교"
+        "case-7"
+      ]
     },
     {
       "id": "case-6",
       "page": 6,
       "company": "kakao",
-      "title": "대화 분할 분석 도입·병렬 처리와 응답 통합 설계",
+      "title": "토큰 한도를 넘는 긴 대화의 분할 분석 구현",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
+            "늘어난 대화량에 맞춰 입력 형식과 배분 정책을 개선해, 제한된 입력량 안에서 여러 채팅방의 근거를 활용할 수 있는 범위 확대",
             "긴 대화를 순차 분석할 때 누적되는 대기시간과 구간별 정보 누락을 줄이고, 여러 구간의 내용을 대화 순서에 맞춰 하나의 답변으로 통합"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
+            "대화량이 많은 방에 입력 용량이 쏠려 작은 방의 중요한 정보가 빠지지 않도록, 방별 기본 분량 배정 후 남는 용량을 재분배하는 정책 수립",
+            "보낸 사람·시간은 유지하면서 반복되는 JSON 항목을 간결한 텍스트로 바꾸고, 동일 대화 샘플의 입력량 비교",
             "대화를 구간별로 나눠 동시에 분석하도록 설계하고, 서버 부하·비용에 맞춘 처리량·자원 제한 기준 정의",
             "분석 완료 순서 대신 원래 대화 순서로 결과를 정렬하고, 약속 장소 변경처럼 앞뒤 구간의 내용을 연결하는 통합 기준 설계",
             "중복·상충 결과를 정리해 확인된 근거만 답변에 반영하는 기준 수립",
@@ -217,16 +181,25 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
+            "동일한 대화 샘플의 입력 토큰 약 60% 절감: JSON 약 17,000→플랫텍스트 약 6,900",
             "긴 대화를 여러 구간으로 나눠 분석하는 처리 방식 도입",
             "후속 병렬 처리에 필요한 동시 분석량·대화 순서·결과 통합·실패 복구 명세 확정"
           ]
         }
       ],
-      "role": "대화 분할·병렬 분석·결과 통합과 실패 복구 정책 설계",
+      "role": "대화 입력·배분 정책, 분할·병렬 분석·결과 통합 정책 설계",
       "contribution": "100%",
       "team": "서버 개발 2명 · AI 모델 1명",
       "caption": null,
       "originals": [
+        {
+          "src": "assets/hierarchy-format-comparison.svg?v=20261107-readable-originals",
+          "label": "같은 대화의 JSON·플랫텍스트 입력 비교",
+          "caption": "메시지 내용·보낸 사람·시간을 유지하면서 반복 표시를 줄인 입력 형식",
+          "width": 1200,
+          "height": 930,
+          "wide": true
+        },
         {
           "src": "assets/hierarchy-chunk-flow.svg?v=20261107-readable-originals",
           "label": "대화 분할·동시 분석·결과 통합 흐름",
@@ -237,16 +210,20 @@ const PORTFOLIO = {
         }
       ],
       "galleryColumns": 1,
-      "teamLabel": "협업 구성",
-      "evidenceTitle": "대화 분할부터 병렬 분석·결과 통합까지의 처리 흐름",
+      "teamLabel": "협업 구성 · 분할 처리",
+      "evidenceTitle": "입력 형식 경량화와 분할·병렬 분석 설계",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "AI Product Manager"
+      "position": "AI Product Manager",
+      "anchorAliases": [
+        "case-token-budget"
+      ],
+      "evidenceNote": "토큰: AI가 텍스트를 처리하는 단위 · JSON과 일반 텍스트의 동일 내용 비교"
     },
     {
       "id": "case-8",
       "page": 8,
       "company": "kakao",
-      "title": "모델·프롬프트 개선으로 사실 확인 평가 0.86→0.97",
+      "title": "모델·프롬프트 개선, 사실 확인 평균 0.860→0.969",
       "image": "assets/evidence-hd-08.png?v=20260922-results",
       "sections": [
         {
@@ -324,7 +301,7 @@ const PORTFOLIO = {
       "id": "case-agent-quality",
       "company": "kakao",
       "position": "AI Product Manager",
-      "title": "메모리 프롬프트 고도화·저장 평가 최고 94.6%",
+      "title": "메모리 저장 오류 개선과 222개 시나리오 검증, 최고 평균 94.6%",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -400,7 +377,7 @@ const PORTFOLIO = {
       "id": "case-9",
       "page": 9,
       "company": "kakao",
-      "title": "맞춤형 답변을 위한 개인화 메모리 기획",
+      "title": "개인화 메모리 구축: 취향·계획 저장부터 사용자 직접 관리까지",
       "image": "assets/evidence-hd-09.png?v=20260922-results",
       "sections": [
         {
@@ -474,7 +451,7 @@ const PORTFOLIO = {
     {
       "id": "case-memory-verticals",
       "company": "kakao",
-      "title": "버티컬 에이전트에서 활용할 공통 메모리 기반 구축",
+      "title": "장소·쇼핑 등 4개 에이전트의 공통 메모리 활용 기준 수립",
       "sections": [
         {
           "title": "문제 의식 및 목표",
@@ -519,7 +496,7 @@ const PORTFOLIO = {
       "id": "case-10",
       "page": 10,
       "company": "kakao",
-      "title": "대화 기반 콘텐츠 7종 구현·공유율 최고 25.52%",
+      "title": "대화 기반 공유 콘텐츠 7종 구현, 최고 공유율 25.52%",
       "image": "assets/evidence-hd-10.png?v=20260922-results",
       "sections": [
         {
@@ -597,7 +574,7 @@ const PORTFOLIO = {
       "id": "case-11",
       "page": 11,
       "company": "samsung",
-      "title": "대출 상태 시각화와 상황별 행동 유도로 대출 화면 재설계",
+      "title": "대출 현황 확인과 연장·상환 화면 개선",
       "image": "assets/evidence-hd-11.png?v=20260922-results",
       "sections": [
         {
@@ -654,7 +631,7 @@ const PORTFOLIO = {
       "id": "case-12",
       "page": 12,
       "company": "toss",
-      "title": "보험 상담 신청 경로 개선으로 매출 121% 성장",
+      "title": "보험 상담 신청 경로 개선으로 매출 121% 증가",
       "image": "assets/evidence-hd-12.png?v=20260922-results",
       "sections": [
         {
@@ -770,7 +747,7 @@ const PORTFOLIO = {
       "id": "case-14",
       "page": 14,
       "company": "toss",
-      "title": "퍼널 병목 개선으로 대출 전환율 8배 · 매출 28배",
+      "title": "대출 서비스 성장: 전환율 8배·매출 28배",
       "image": "assets/evidence-hd-14.png?v=20260922-results",
       "sections": [
         {
@@ -830,13 +807,69 @@ const PORTFOLIO = {
       "teamLabel": "협업 구성",
       "evidenceTitle": "퍼널 단계마다 병목을 찾아 개선한 과제와 결과",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
+      "position": "대출 Product Owner",
+      "additionalWork": {
+        "id": "case-16",
+        "page": 16,
+        "company": "toss",
+        "title": "개발 우선순위·일정·리소스 관리",
+        "image": "assets/slide-16.png",
+        "sections": [
+          {
+            "title": "문제 의식 및 목표",
+            "items": [
+              "여러 제품 과제를 병행하는 팀이 같은 우선순위로 움직일 수 있도록, 과제 간 의존성과 가용 인력을 고려한 일정·실행 관리"
+            ]
+          },
+          {
+            "title": "주요 업무",
+            "items": [
+              "요구사항에 따른 과제 우선순위·일정·리소스 배정",
+              "주간·일일 스크럼으로 진행 상황·이슈 점검",
+              "일정 변경과 병렬 작업 범위 공유"
+            ]
+          },
+          {
+            "title": "결과/성과",
+            "items": [
+              "팀이 우선순위와 병렬 수행 범위를 공유하도록 정리",
+              "과제별 진행 상황과 지연 요인을 확인하는 체계 운영",
+              "계획한 일정 내 프로젝트 완료율 개선"
+            ]
+          }
+        ],
+        "role": "제품 총괄·프로젝트 진행 관리",
+        "contribution": "100%",
+        "team": "디자인 · 개발 · 데이터 분석 · 사업개발",
+        "position": "Product Owner",
+        "originals": [
+          {
+            "src": "assets/restored-toss-priority.png",
+            "label": "개발 과제의 우선순위와 담당 배정",
+            "caption": "개발 과제의 우선순위·일정·담당 배정",
+            "wide": true,
+            "width": 886,
+            "height": 877
+          },
+          {
+            "src": "assets/restored-toss-progress.png",
+            "label": "프로젝트 진행 상황 공유",
+            "caption": "진행·검토·완료 상태와 지연 요인 공유",
+            "wide": true,
+            "width": 1309,
+            "height": 568
+          }
+        ],
+        "galleryColumns": 1,
+        "evidenceTitle": "우선순위·담당 배정과 진행 현황 관리",
+        "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
+      }
     },
     {
       "id": "case-15",
       "page": 15,
       "company": "toss",
-      "title": "금융사 22곳 연동 · 신청 대비 실행률 6배 개선",
+      "title": "금융사 22곳 연동으로 신청 대비 대출 실행률 6배 개선",
       "image": "assets/evidence-hd-15.png?v=20260922-results",
       "sections": [
         {
@@ -896,62 +929,6 @@ const PORTFOLIO = {
       "evidenceTitle": "표준 API로 금융사를 연결하고 실행 장벽을 줄인 구조",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
       "position": "대출 Product Owner"
-    },
-    {
-      "id": "case-16",
-      "page": 16,
-      "company": "toss",
-      "title": "개발 우선순위·일정·리소스 관리",
-      "image": "assets/slide-16.png",
-      "sections": [
-        {
-          "title": "문제 의식 및 목표",
-          "items": [
-            "여러 제품 과제를 병행하는 팀이 같은 우선순위로 움직일 수 있도록, 과제 간 의존성과 가용 인력을 고려한 일정·실행 관리"
-          ]
-        },
-        {
-          "title": "주요 업무",
-          "items": [
-            "요구사항에 따른 과제 우선순위·일정·리소스 배정",
-            "주간·일일 스크럼으로 진행 상황·이슈 점검",
-            "일정 변경과 병렬 작업 범위 공유"
-          ]
-        },
-        {
-          "title": "결과/성과",
-          "items": [
-            "팀이 우선순위와 병렬 수행 범위를 공유하도록 정리",
-            "과제별 진행 상황과 지연 요인을 확인하는 체계 운영",
-            "계획한 일정 내 프로젝트 완료율 개선"
-          ]
-        }
-      ],
-      "role": "제품 총괄·프로젝트 진행 관리",
-      "contribution": "100%",
-      "team": "디자인 · 개발 · 데이터 분석 · 사업개발",
-      "position": "Product Owner",
-      "originals": [
-        {
-          "src": "assets/restored-toss-priority.png",
-          "label": "개발 과제의 우선순위와 담당 배정",
-          "caption": "개발 과제의 우선순위·일정·담당 배정",
-          "wide": true,
-          "width": 886,
-          "height": 877
-        },
-        {
-          "src": "assets/restored-toss-progress.png",
-          "label": "프로젝트 진행 상황 공유",
-          "caption": "진행·검토·완료 상태와 지연 요인 공유",
-          "wide": true,
-          "width": 1309,
-          "height": 568
-        }
-      ],
-      "galleryColumns": 1,
-      "evidenceTitle": "우선순위·담당 배정과 진행 현황 관리",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리"
     },
     {
       "id": "case-17",
@@ -1087,210 +1064,250 @@ const PORTFOLIO = {
       "id": "case-19",
       "page": 19,
       "company": "toss",
-      "title": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
+      "title": "신축 주택·한도 부족 고객을 위한 대출 상품 확대",
       "image": "assets/evidence-hd-19.png?v=20260922-results",
-      "sections": [
-        {
-          "title": "문제 의식 및 목표",
-          "items": [
-            "주택 검색 단계 이탈률 28%, 이탈 사용자의 72%가 KB시세 없는 신축 아파트를 검색한 결과를 바탕으로 시세 정보 부재로 중단되는 대출 수요 확보"
-          ]
-        },
-        {
-          "title": "주요 업무",
-          "items": [
-            "검색 로그로 이탈 원인과 시세 정보 부재로 중단된 대출 수요 분석",
-            "KB시세 없는 주택을 취급하는 제휴사 발굴",
-            "해당 주택의 대출 지원 상품 연동"
-          ]
-        },
-        {
-          "title": "결과/성과",
-          "items": [
-            "주택 검색 단계 전환율 11%p 상승",
-            "기존에 수용하지 못한 신축 주택 수요 확보"
-          ]
-        }
-      ],
-      "role": "제품 총괄 및 데이터 분석 · 제휴 기획",
+      "sections": [],
+      "role": "제품 총괄·데이터 분석·제휴 상품 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
       "caption": null,
-      "originals": [
-        {
-          "src": "assets/sep23-image16.jpg",
-          "label": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
-          "caption": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
-          "wide": true,
-          "width": 1889,
-          "height": 1914
-        }
-      ],
+      "originals": [],
       "galleryColumns": 1,
       "teamLabel": "협업 구성",
       "evidenceTitle": "주택 검색 단계 개선 전 · 후의 퍼널 전환",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
-    },
-    {
-      "id": "case-20",
-      "page": 20,
-      "company": "toss",
-      "title": "후순위 대출 제휴로 서비스 매출의 최대 28% 창출",
-      "image": "assets/evidence-hd-20.png?v=20260922-results",
-      "sections": [
+      "position": "대출 Product Owner",
+      "parts": [
         {
-          "title": "문제 의식 및 목표",
-          "items": [
-            "미실행 사용자 중 34%가 대출 한도 때문에 중단한 점에 주목해, 기존 상품으로 충족하지 못한 자금 수요에 대응할 제휴 상품 확대"
-          ]
+          "id": "case-19-example",
+          "page": 19,
+          "company": "toss",
+          "title": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
+          "image": "assets/evidence-hd-19.png?v=20260922-results",
+          "sections": [
+            {
+              "title": "문제 의식 및 목표",
+              "items": [
+                "주택 검색 단계 이탈률 28%, 이탈 사용자의 72%가 KB시세 없는 신축 아파트를 검색한 결과를 바탕으로 시세 정보 부재로 중단되는 대출 수요 확보"
+              ]
+            },
+            {
+              "title": "주요 업무",
+              "items": [
+                "검색 로그로 이탈 원인과 시세 정보 부재로 중단된 대출 수요 분석",
+                "KB시세 없는 주택을 취급하는 제휴사 발굴",
+                "해당 주택의 대출 지원 상품 연동"
+              ]
+            },
+            {
+              "title": "결과/성과",
+              "items": [
+                "주택 검색 단계 전환율 11%p 상승",
+                "기존에 수용하지 못한 신축 주택 수요 확보"
+              ]
+            }
+          ],
+          "role": "제품 총괄 및 데이터 분석 · 제휴 기획",
+          "contribution": "100%",
+          "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
+          "caption": null,
+          "originals": [
+            {
+              "src": "assets/sep23-image16.jpg",
+              "label": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
+              "caption": "주택 검색 이탈 원인 분석으로 전환율 11%p 상승",
+              "wide": true,
+              "width": 1889,
+              "height": 1914
+            }
+          ],
+          "galleryColumns": 1,
+          "teamLabel": "협업 구성",
+          "evidenceTitle": "주택 검색 단계 개선 전 · 후의 퍼널 전환",
+          "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+          "position": "대출 Product Owner"
         },
         {
-          "title": "주요 업무",
-          "items": [
-            "제휴사 콜센터 상담 수천 건으로 대출 미실행 사유 분석·분류",
-            "당시 담보가치의 최대 90%까지 대출하고 소득 대비 상환 비율(DSR) 제약이 없는 후순위 상품 발굴",
-            "제휴 상품 연동과 성과 확인"
-          ]
-        },
-        {
-          "title": "결과/성과",
-          "items": [
-            "후순위 대출 취급 금융사 3개 연동",
-            "담당 대출 서비스 매출에서 후순위 제휴사 비중 최대 28%"
-          ]
+          "id": "case-20",
+          "page": 20,
+          "company": "toss",
+          "title": "후순위 대출 제휴로 담당 대출 서비스 매출의 최대 28% 창출",
+          "image": "assets/evidence-hd-20.png?v=20260922-results",
+          "sections": [
+            {
+              "title": "문제 의식 및 목표",
+              "items": [
+                "미실행 사용자 중 34%가 대출 한도 때문에 중단한 점에 주목해, 기존 상품으로 충족하지 못한 자금 수요에 대응할 제휴 상품 확대"
+              ]
+            },
+            {
+              "title": "주요 업무",
+              "items": [
+                "제휴사 콜센터 상담 수천 건으로 대출 미실행 사유 분석·분류",
+                "당시 담보가치의 최대 90%까지 대출하고 소득 대비 상환 비율(DSR) 제약이 없는 후순위 상품 발굴",
+                "제휴 상품 연동과 성과 확인"
+              ]
+            },
+            {
+              "title": "결과/성과",
+              "items": [
+                "후순위 대출 취급 금융사 3개 연동",
+                "담당 대출 서비스 매출에서 후순위 제휴사 비중 최대 28%"
+              ]
+            }
+          ],
+          "role": "제품 총괄 및 제휴 상품 기획",
+          "contribution": "100%",
+          "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
+          "caption": null,
+          "originals": [
+            {
+              "src": "assets/sep23-image17.png",
+              "label": "후순위 대출 제휴로 담당 대출 서비스 매출의 최대 28% 창출",
+              "caption": "후순위 대출 제휴로 담당 대출 서비스 매출의 최대 28% 창출",
+              "wide": true,
+              "width": 782,
+              "height": 1601
+            }
+          ],
+          "galleryColumns": 1,
+          "teamLabel": "협업 구성",
+          "evidenceTitle": "상담 분석을 바탕으로 확대한 대출 상품",
+          "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+          "position": "대출 Product Owner"
         }
-      ],
-      "role": "제품 총괄 및 제휴 상품 기획",
-      "contribution": "100%",
-      "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
-      "caption": null,
-      "originals": [
-        {
-          "src": "assets/sep23-image17.png",
-          "label": "후순위 대출 제휴로 담당 대출 서비스 매출의 최대 28% 창출",
-          "caption": "후순위 대출 제휴로 담당 대출 서비스 매출의 최대 28% 창출",
-          "wide": true,
-          "width": 782,
-          "height": 1601
-        }
-      ],
-      "galleryColumns": 1,
-      "teamLabel": "협업 구성",
-      "evidenceTitle": "상담 분석을 바탕으로 확대한 대출 상품",
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
+      ]
     },
     {
       "id": "case-21",
       "page": 21,
       "company": "toss",
-      "title": "시장 금리 비교 정보로 최종 전환율 22% 상승",
+      "title": "금리 비교와 신청 화면 개선으로 대출 전환 확대",
       "image": "assets/evidence-hd-21.png?v=20260922-results",
-      "sections": [
-        {
-          "title": "문제 의식 및 목표",
-          "items": [
-            "낮아진 제휴 상품 금리를 사용자가 체감하지 못하는 문제를 해소하고, 시장 금리와의 비교 정보로 상품 선택과 최종 전환 지원"
-          ]
-        },
-        {
-          "title": "주요 업무",
-          "items": [
-            "공시된 시중 평균 금리를 활용한 비교 정보 실험안 설계",
-            "A/B 테스트로 사용자 반응·최종 전환율 비교",
-            "효과가 확인된 정보 노출 방식 적용"
-          ]
-        },
-        {
-          "title": "결과/성과",
-          "items": [
-            "최종 전환율 22% 상승"
-          ]
-        }
-      ],
-      "role": "제품 총괄 및 A/B 실험 기획",
+      "sections": [],
+      "role": "제품 총괄·A/B 실험·대출 신청 정보 안내 기획",
       "contribution": "100%",
       "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
       "caption": null,
-      "originals": [
-        {
-          "src": "assets/sep23-image18.png",
-          "label": "시장 금리 비교 정보로 최종 전환율 22% 상승",
-          "caption": "시장 금리 비교 정보로 최종 전환율 22% 상승",
-          "wide": true,
-          "width": 1734,
-          "height": 1648
-        }
-      ],
+      "originals": [],
       "galleryColumns": 1,
-      "teamLabel": "협업 구성",
+      "teamLabel": "협업 구성 · 금리 비교 실험",
       "evidenceTitle": "금리 비교 정보를 추가한 A/B 테스트 실험안",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
-    },
-    {
-      "id": "case-22",
-      "page": 22,
-      "company": "toss",
-      "title": "쉬운 금융 용어 안내로 목적 인지율 62%→87%",
-      "image": "assets/evidence-hd-22.png?v=20260922-results",
-      "sections": [
+      "position": "대출 Product Owner",
+      "parts": [
         {
-          "title": "대출 목적을 쉬운 표현으로 안내",
-          "items": [
-            "‘대환’이라는 용어로 생기는 오해를 줄이고 신용대출 상환에 맞는 ‘생활자금’ 선택 유도",
-            "생활자금 대출 클릭 약 5% 증가"
-          ]
+          "id": "case-21-example",
+          "page": 21,
+          "company": "toss",
+          "title": "시장 금리 비교 정보로 최종 전환율 22% 상승",
+          "image": "assets/evidence-hd-21.png?v=20260922-results",
+          "sections": [
+            {
+              "title": "문제 의식 및 목표",
+              "items": [
+                "낮아진 제휴 상품 금리를 사용자가 체감하지 못하는 문제를 해소하고, 시장 금리와의 비교 정보로 상품 선택과 최종 전환 지원"
+              ]
+            },
+            {
+              "title": "주요 업무",
+              "items": [
+                "공시된 시중 평균 금리를 활용한 비교 정보 실험안 설계",
+                "A/B 테스트로 사용자 반응·최종 전환율 비교",
+                "효과가 확인된 정보 노출 방식 적용"
+              ]
+            },
+            {
+              "title": "결과/성과",
+              "items": [
+                "최종 전환율 22% 상승"
+              ]
+            }
+          ],
+          "role": "제품 총괄 및 A/B 실험 기획",
+          "contribution": "100%",
+          "team": "디자인 1명 · 개발 5명 · 분석 1명 · 사업개발 3명",
+          "caption": null,
+          "originals": [
+            {
+              "src": "assets/sep23-image18.png",
+              "label": "시장 금리 비교 정보로 최종 전환율 22% 상승",
+              "caption": "시장 금리 비교 정보로 최종 전환율 22% 상승",
+              "wide": true,
+              "width": 1734,
+              "height": 1648
+            }
+          ],
+          "galleryColumns": 1,
+          "teamLabel": "협업 구성",
+          "evidenceTitle": "금리 비교 정보를 추가한 A/B 테스트 실험안",
+          "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+          "position": "대출 Product Owner"
         },
         {
-          "title": "금융사 정보의 신뢰도 보완",
-          "items": [
-            "1금융권 여부를 알 수 있도록 은행 목록에 배지 표시",
-            "상담 신청 비중 9% 증가"
-          ]
-        },
-        {
-          "title": "이용 가능한 대출 목적 안내",
-          "items": [
-            "주택 구입 외에도 생활자금 등으로 이용할 수 있다는 정보를 시작 화면에 안내",
-            "목적 인지율 62%에서 87%로 상승"
-          ]
+          "id": "case-22",
+          "page": 22,
+          "company": "toss",
+          "title": "대출 신청 화면·금융 정보 안내 개선 3건",
+          "image": "assets/evidence-hd-22.png?v=20260922-results",
+          "sections": [
+            {
+              "title": "대출 목적을 쉬운 표현으로 안내",
+              "items": [
+                "‘대환’이라는 용어로 생기는 오해를 줄이고 신용대출 상환에 맞는 ‘생활자금’ 선택 유도",
+                "생활자금 대출 클릭 약 5% 증가"
+              ]
+            },
+            {
+              "title": "금융사 정보의 신뢰도 보완",
+              "items": [
+                "1금융권 여부를 알 수 있도록 은행 목록에 배지 표시",
+                "상담 신청 비중 9% 증가"
+              ]
+            },
+            {
+              "title": "이용 가능한 대출 목적 안내",
+              "items": [
+                "주택 구입 외에도 생활자금 등으로 이용할 수 있다는 정보를 시작 화면에 안내",
+                "목적 인지율 62%에서 87%로 상승"
+              ]
+            }
+          ],
+          "role": "사용자 관점의 금융 용어·정보 안내 개선, 실험 기획",
+          "contribution": "100%",
+          "team": "",
+          "caption": null,
+          "galleryColumns": 3,
+          "originals": [
+            {
+              "src": "assets/sep23-image21.png",
+              "label": "대출 목적 안내 개선 전 · 후",
+              "caption": "대출 목적 안내 개선 전 · 후",
+              "wide": false,
+              "width": 1606,
+              "height": 1416
+            },
+            {
+              "src": "assets/financial-term-image19.png",
+              "label": "금융사 정보의 신뢰도 보완",
+              "caption": "금융사 정보의 신뢰도 보완",
+              "wide": false,
+              "width": 1080,
+              "height": 2116
+            },
+            {
+              "src": "assets/financial-term-image20.png",
+              "label": "이용 가능한 대출 목적 안내",
+              "caption": "이용 가능한 대출 목적 안내",
+              "wide": false,
+              "width": 1080,
+              "height": 2116
+            }
+          ],
+          "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
+          "position": "대출 Product Owner"
         }
-      ],
-      "role": "사용자 관점의 금융 용어·정보 안내 개선, 실험 기획",
-      "contribution": "100%",
-      "team": "",
-      "caption": null,
-      "galleryColumns": 3,
-      "originals": [
-        {
-          "src": "assets/sep23-image21.png",
-          "label": "대출 목적 안내 개선 전 · 후",
-          "caption": "대출 목적 안내 개선 전 · 후",
-          "wide": false,
-          "width": 1606,
-          "height": 1416
-        },
-        {
-          "src": "assets/financial-term-image19.png",
-          "label": "금융사 정보의 신뢰도 보완",
-          "caption": "금융사 정보의 신뢰도 보완",
-          "wide": false,
-          "width": 1080,
-          "height": 2116
-        },
-        {
-          "src": "assets/financial-term-image20.png",
-          "label": "이용 가능한 대출 목적 안내",
-          "caption": "이용 가능한 대출 목적 안내",
-          "wide": false,
-          "width": 1080,
-          "height": 2116
-        }
-      ],
-      "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
-      "position": "대출 Product Owner"
+      ]
     },
     {
       "id": "case-23",
@@ -1706,7 +1723,7 @@ const PORTFOLIO = {
   "kakaoProjects": [
     {
       "id": "case-9",
-      "title": "개인화 메모리 에이전트 기획·구축",
+      "title": "개인화 메모리",
       "intro": "사용자의 취향·계획·답변 선호를 다음 대화에 반영하는 개인화 메모리 구축. 저장·관리 기능과 프롬프트·평가를 설계하고, 장소 추천·쇼핑 등 다른 AI 서비스의 활용 기준까지 마련",
       "role": "개인화 메모리의 제품 방향·개발 범위 총괄, 저장·관리 기준 수립과 프롬프트·평가 개선",
       "outcomes": [
@@ -1721,40 +1738,42 @@ const PORTFOLIO = {
         "case-memory-verticals"
       ],
       "labels": [
-        "메모리 기능·정책 설계",
-        "프롬프트·저장 오류 개선",
-        "여러 AI 서비스의 메모리 활용"
+        "저장·관리",
+        "프롬프트·평가",
+        "다른 에이전트 활용"
       ],
       "challenge": "대화나 서비스가 바뀔 때마다 같은 취향·계획을 반복해 설명하는 불편을 줄이고, 사용자가 알려준 정보를 다음 답변에 활용하는 개인화 경험 설계",
-      "approach": "메모리 저장·수정·삭제 정책과 관리 화면을 설계하고, 실제 오류를 바탕으로 프롬프트 개선·반복 평가 진행. 장소·쇼핑 등 다른 AI 서비스의 활용 기준까지 확장"
+      "approach": "메모리 저장·수정·삭제 정책과 관리 화면을 설계하고, 실제 오류를 바탕으로 프롬프트 개선·반복 평가 진행. 장소·쇼핑 등 다른 AI 서비스의 활용 기준까지 확장",
+      "company": "kakao",
+      "position": "AI Product Manager"
     },
     {
       "id": "case-5",
-      "title": "카카오톡 대화분석 에이전트 기획·출시",
+      "title": "카카오톡 대화연동",
       "intro": "카카오톡 대화에서 정보를 찾거나 대화 내용을 분석해 답하는 에이전트 기획·출시. “넷플릭스 비밀번호 찾아줘”, “내 성격 분석해줘” 등 다양한 요청을 지원하도록 기존 기기 내 분석(On-device AI)을 서버 분석으로 확장",
       "role": "초기 제공 범위·이용 정책 결정과 출시 주도, 실제 대화량·평가 결과에 따른 조회·처리 방식과 공유 콘텐츠 개선",
       "outcomes": [
         {
           "value": "출시 후 답변 품질·분석 범위 개선",
-          "label": "사실 확인 평가 평균 0.860→0.969(1점 만점) · 질문 기반 전체 채팅방 탐색 확대 · 콘텐츠 최고 공유율 25.52%"
+          "label": "동일 샘플 입력 토큰 약 60% 절감 · 사실 확인 평균 0.860→0.969 · 콘텐츠 최고 공유율 25.52%"
         }
       ],
       "detailIds": [
         "case-5",
-        "case-8",
-        "case-7",
         "case-6",
+        "case-8",
         "case-10"
       ],
       "labels": [
-        "대화분석 초기 설계",
-        "모델·프롬프트 개선",
-        "대화 탐색 확대",
-        "대량 대화 처리",
-        "공유 콘텐츠 확장"
+        "서비스 출시",
+        "긴 대화 처리",
+        "답변 품질",
+        "공유 콘텐츠"
       ],
       "challenge": "기기 내 분석(On-device AI)을 서버로 확장하면서, 사용자의 질문부터 대화 선택·분석·답변까지 하나의 흐름으로 연결하고 대량 대화에 대응할 처리 기준 수립",
-      "approach": "초기 제공 범위와 이용 정책 수립, 서버 분석 첫 출시 주도. 출시 후 실제 대화량과 평가 결과를 바탕으로 모델·프롬프트, 조회 범위와 대량 대화 처리 방식 개선"
+      "approach": "초기 제공 범위와 이용 정책 수립, 서버 분석 첫 출시 주도. 출시 후 실제 대화량과 평가 결과를 바탕으로 모델·프롬프트, 조회 범위와 대량 대화 처리 방식 개선",
+      "company": "kakao",
+      "position": "AI Product Manager"
     }
   ],
   "tossProjects": [
@@ -1762,7 +1781,7 @@ const PORTFOLIO = {
       "id": "toss-loans",
       "company": "toss",
       "position": "Product Owner",
-      "title": "대출 제품 성장·서비스 확장",
+      "title": "대출",
       "intro": "진입부터 신청·실행까지의 사용자 여정을 개선하고, 금융사 연동·제휴 상품 확대·규제특례로 대출 서비스의 범위를 확장",
       "role": "대출 제품 전략·개발 우선순위·핵심 지표 관리, 신청 과정 개선과 금융사 제휴·연동·제도 대응 총괄",
       "outcomes": [
@@ -1774,29 +1793,25 @@ const PORTFOLIO = {
       "detailIds": [
         "case-14",
         "case-15",
+        "case-19",
         "case-17",
         "case-18",
-        "case-19",
-        "case-20",
-        "case-21",
-        "case-22"
+        "case-21"
       ],
       "labels": [
-        "신청 과정의 병목 개선",
-        "금융사 제휴·연동",
-        "주택담보대출 갈아타기 출시",
-        "규제특례를 통한 서비스 확장",
-        "주택 검색 단계 개선",
-        "후순위 대출 상품 확대",
-        "금리 비교 정보 실험",
-        "신청 화면·금융 정보 안내 개선"
+        "성장 전략",
+        "금융사 연동",
+        "상품 확대",
+        "갈아타기 출시",
+        "규제 특례",
+        "신청 과정 개선"
       ]
     },
     {
       "id": "toss-insurance",
       "company": "toss",
       "position": "Product Owner",
-      "title": "보험 제품 성장·고객 경험 개선",
+      "title": "보험",
       "intro": "보험 관리부터 상담 신청까지 이어지는 사용자 경험을 정리하고, 신청 경로와 보험 홈의 정보 구조를 개선해 이용·매출 성과로 연결",
       "role": "보험 제품 전략·핵심 지표 관리, 상담 신청 경로·보험 홈 개선과 실험 총괄",
       "outcomes": [
@@ -1810,8 +1825,8 @@ const PORTFOLIO = {
         "case-13"
       ],
       "labels": [
-        "상담 신청 경로 개선",
-        "관리 중심 보험 홈 개편"
+        "상담 신청 경로",
+        "보험 홈 개편"
       ]
     }
   ]

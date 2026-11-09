@@ -233,3 +233,68 @@
 .project-detail .detail-label{color:#7b8a9d;font-weight:550}
 #company-toss>.supporting-project{margin-top:34px;border:1px solid #dce4ee;border-radius:14px;background:#fff}
 #company-toss>.supporting-project>.project-header{background:#f5f7fb}
+
+
+/* Company → product → case, aligned with the reviewed career deck. */
+:root{--portfolio-scroll-offset:210px}
+html{scroll-padding-top:0}.section{scroll-margin-top:96px}
+.project-nav{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:7px}
+.product-links{display:flex;margin-left:0;align-items:center;gap:8px;padding:0 3px 4px;overflow-x:auto;scrollbar-width:thin}
+.product-links[hidden]{display:none}
+.product-links a{display:block;flex:none;padding:5px 12px;border-radius:7px;font-size:13px;font-weight:650;color:#647087;border:1px solid #dfe5ee;background:#fff}
+.product-links a[aria-current=location]{color:var(--navy);background:#eaf0f7;border-color:#cedaeb}
+.company-title{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.company-title>span{font-size:14px;color:var(--muted)}
+.company-heading .company-period{font-size:12px;margin-top:11px;color:#647087}
+.company-group,.project,.core-project,.project-detail,.scenario-case,.additional-work,.case-anchor{scroll-margin-top:var(--portfolio-scroll-offset)}
+.company-group:focus,.project-detail:focus,.scenario-case:focus,.additional-work:focus{outline:none}
+.core-header .product-title{font-size:27px;line-height:1.5;margin:0;color:var(--navy);letter-spacing:-.035em}
+.case-index{display:flex;margin-left:0;gap:8px;flex-wrap:wrap;margin:24px 0 0;padding:0;font-size:13px}
+.case-index a{padding:6px 12px;border:1px solid #dce4ef;border-radius:7px;background:#fff;color:#53647e;font-weight:550}
+.case-index a:hover{border-color:#9cb1ce;color:var(--navy);background:#f4f7fb}
+.case-kicker{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:12px}
+.product-badge{display:inline-block;padding:4px 10px;border-radius:6px;background:#edf1f6;color:var(--navy);font-size:13px;line-height:1.6;font-weight:750}
+.project-detail .detail-label{font-size:12px;line-height:1.6;margin:0;font-weight:550;color:#62748c}
+.project-header .case-title{margin:0;font-size:23px;line-height:1.55;letter-spacing:-.03em;font-weight:700}
+.project-detail>.project-header .case-title{font-size:22px}
+.project-copy .copy-label{font-size:16px;color:var(--navy);margin:0 0 13px;font-weight:750;line-height:1.5}
+.grouped-examples>.scenario-case+.scenario-case{border-top:1px solid #e1e7f0}
+.scenario-case>.project-header{padding:24px 28px 0;border:0}
+.scenario-case>.project-header .case-title{font-size:18px;line-height:1.6}
+.scenario-case>.project-body{padding:22px 28px 28px}
+.scenario-case .project-copy .copy-label,.paired-item .project-copy .copy-label{font-size:15px}
+.scenario-case .project-copy ul{font-size:14px}
+.grouped-meta{padding:0 28px 26px}
+.grouped-meta>.project-meta{margin:0;padding-top:22px;border-top:1px solid #e1e7f0}
+.additional-evidence,.additional-work{border-top:1px solid #e1e7f0;background:#fafbfd}
+.additional-evidence>summary,.additional-work>summary{cursor:pointer;padding:17px 28px;color:var(--navy);font-size:13px;font-weight:650;line-height:1.6}
+.additional-work>summary>span{font-size:11px;font-weight:400;color:#647087;margin-left:14px}
+.additional-evidence-body{padding:8px 28px 26px}
+.additional-evidence-body .evidence{width:100%;max-width:100%}
+.additional-evidence .original-evidence .evidence-gallery>div{max-width:270px}
+.additional-work .scenario-case{background:#fff}
+.additional-work .scenario-case>.project-header{display:none}
+.additional-work .scenario-case>.project-body{padding-top:16px}
+.scenario-case .paired-item .project-copy{min-height:135px}
+@media(max-width:760px){
+ .project-nav{gap:5px;align-items:stretch}
+ .product-links{padding:0 3px 2px;gap:6px}
+ .product-links a{font-size:12px;padding:5px 10px}
+ .company-title{gap:6px 11px}
+ .company-title>span{font-size:12px}
+ .company-heading .company-period{font-size:11px}
+ .core-header .product-title{font-size:24px}
+ .case-index{gap:6px;margin-top:18px}
+ .case-index a{font-size:12px;padding:5px 9px}
+ .case-kicker{gap:8px;margin-bottom:10px}
+ .product-badge{font-size:12px;padding:4px 9px}
+ .project-detail>.project-header .case-title,.project-header .case-title{font-size:20px}
+ .scenario-case>.project-header{padding:20px 20px 0}
+ .scenario-case>.project-header .case-title{font-size:17px}
+ .scenario-case>.project-body{padding:18px 20px 24px}
+ .grouped-meta{padding:0 20px 22px}
+ .additional-evidence>summary,.additional-work>summary{padding:16px 20px}
+ .additional-work>summary>span{display:block;margin:5px 0 0}
+ .additional-evidence-body{padding:5px 20px 22px}
+ .scenario-case .paired-item .project-copy{min-height:0}
+}

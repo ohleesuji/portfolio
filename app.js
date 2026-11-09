@@ -23,40 +23,92 @@ const pictures=originals||[{src:c.image,label:c.title}];
 const steps=c.evaluationSteps?`<ol class="evaluation-steps">${c.evaluationSteps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>`:'';
 return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''} ${c.responseExamples?'response-examples':''}">${c.evidenceTitle?`<figcaption class="evidence-title">${esc(c.evidenceTitle)}</figcaption>`:""}${evaluationGuideHTML(c.evaluationGuide)}${steps}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}" style="--item-width:${previewWidth(p,pictures.length)}px">${p.heading?`<p class="evidence-subheading">${esc(p.heading)}</p>`:""}${p.prompt?`<p class="response-prompt">${esc(p.prompt)}</p>${p.ctr?`<p class="response-stats"><span>클릭률 <b>${esc(p.ctr)}</b></span><span>${esc(c.shareLabel||"추정 공유율")} <b>${esc(p.share)}</b></span></p>`:""}`:""}<button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button>${p.caption?`<p class="image-caption">${esc(p.caption)}</p>`:""}</div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:""}</figure>`;
 }
+function metaHTML(c){
+ return c.role?`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd>${c.contribution?`<dt>기여도</dt><dd>${esc(c.contribution)}</dd>`:''}${c.team?`<dt>${esc(c.teamLabel||'협업 구성')}</dt><dd>${esc(c.team)}</dd>`:''}</dl>`:'';
+}
+function contextHTML(options,c){
+ if(options.scenario)return '';
+ const company=companies.find(x=>x.key===c.company);
+ return options.product?`<div class="case-kicker"><a class="product-badge" href="#${esc(options.product.id)}">${esc(options.product.title)}</a><span class="detail-label">${esc(options.label||'')}</span></div>`:`<p class="eyebrow">${esc(company.name)}${c.position?` · ${esc(c.position)}`:''}</p>`;
+}
+function sectionCopyHTML(c,heading){
+ return c.sections.map((s,i)=>`<section class="${s.title==='결과/성과'?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}><ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>`).join('');
+}
 function pairedCaseHTML(c,options={}){
- const detail=options.detail,tag=detail?'section':'article',heading=detail?'h4':'h3',sectionHeading=detail?'h5':'h4';
- const label=options.label||`${companies.find(x=>x.key===c.company).name}${c.position?` · ${c.position}`:''}`;
- const meta=`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd>${c.contribution?`<dt>기여도</dt><dd>${esc(c.contribution)}</dd>`:""}${c.team?`<dt>${esc(c.teamLabel||"협업 구성")}</dt><dd>${esc(c.team)}</dd>`:''}</dl>`;
- return `<${tag} class="${detail?'project-detail':'project'} paired-project" id="${esc(options.id||c.id)}"><header class="project-header"><p class="${detail?'detail-label':'eyebrow'}">${esc(label)}</p><${heading}>${esc(c.title)}</${heading}></header><div class="project-body paired-body"><div class="paired-grid">${c.sections.map((s,i)=>`<section class="paired-item"><div class="project-copy"><${sectionHeading}>${esc(s.title)}</${sectionHeading}><ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>${evidenceHTML({...c,originals:[c.originals[i]],galleryColumns:1},false)}</section>`).join('')}</div>${meta}</div></${tag}>`;
+ const heading=options.scenario?'h6':options.detail?'h5':'h4';
+ return `<section class="${options.scenario?'scenario-case':options.detail?'project-detail':'project'} paired-project" id="${esc(options.id||c.id)}"><header class="project-header">${contextHTML(options,c)}<${heading} class="case-title">${esc(c.title)}</${heading}></header><div class="project-body paired-body"><div class="paired-grid">${c.sections.map((s,i)=>`<section class="paired-item"><div class="project-copy"><p class="copy-label">${esc(s.title)}</p><ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>${evidenceHTML({...c,originals:[c.originals[i]],evaluationGuide:null,evidenceTitle:null,disclaimer:null,galleryColumns:1},false)}</section>`).join('')}</div>${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:''}${options.hideMeta?'':metaHTML(c)}</div></section>`;
+}
+function moreEvidenceHTML(c){
+ const extra=c.additionalEvidence;
+ return extra?`<details class="additional-evidence"><summary>${esc(extra.title)}</summary><div class="additional-evidence-body">${evidenceHTML({...extra,evidenceTitle:null},false)}</div></details>`:'';
+}
+function additionalWorkHTML(c){
+ const extra=c.additionalWork;
+ return extra?`<details class="additional-work" id="${esc(extra.id)}"><summary>${esc(extra.title)}<span>대출·보험 공통 실행 관리</span></summary>${caseHTML(extra,{scenario:true,id:extra.id+'-content'})}</details>`:'';
 }
 function caseHTML(c,options={}){
  if(c.id==='case-22')return pairedCaseHTML(c,options);
- const detail=options.detail,tag=detail?'section':'article',heading=detail?'h4':'h3',sectionHeading=detail?'h5':'h4';
- const label=options.label||(options.supporting?'공통 제품 경험 개선':`${companies.find(x=>x.key===c.company).name}${c.position?` · ${c.position}`:''}`);
- const meta=c.role?`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd>${c.contribution?`<dt>기여도</dt><dd>${esc(c.contribution)}</dd>`:''}${c.team?`<dt>${esc(c.teamLabel||'협업 구성')}</dt><dd>${esc(c.team)}</dd>`:''}</dl>`:'';
- return `<${tag} class="${detail?'project-detail':'project'} ${options.supporting?'supporting-project':''} ${c.textOnly?'text-only':''}" id="${esc(options.id||c.id)}">${(c.anchorAliases||[]).map(id=>`<span class="case-anchor" id="${esc(id)}"></span>`).join('')}<header class="project-header"><p class="${detail?'detail-label':'eyebrow'}">${esc(label)}</p><${heading}>${esc(c.title)}</${heading}></header><div class="project-body"><div class="project-copy">${c.sections.map((v,i)=>`<section class="${i===2?'results':''}"><${sectionHeading}>${esc(v.title)}</${sectionHeading}><ul>${v.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>`).join('')}${meta}</div>${c.textOnly?'':evidenceHTML(c,false)}</div></${tag}>`;
+ const detail=options.detail,scenario=options.scenario,tag=detail||scenario?'section':'article',heading=scenario?'h6':detail?'h5':'h4',sectionHeading=scenario?'p':detail?'h6':'h5';
+ const cls=scenario?'scenario-case':detail?'project-detail':'project';
+ const aliases=(c.anchorAliases||[]).map(id=>`<span class="case-anchor" id="${esc(id)}"></span>`).join('');
+ const body=c.parts?`<div class="grouped-examples">${c.parts.map(part=>caseHTML(part,{scenario:true,hideMeta:true})).join('')}</div><div class="grouped-meta">${metaHTML(c)}</div>`:`<div class="project-body"><div class="project-copy">${sectionCopyHTML(c,sectionHeading)}${options.hideMeta?'':metaHTML(c)}</div>${c.textOnly?'':evidenceHTML(c,false)}</div>`;
+ return `<${tag} class="${cls} ${c.parts?'grouped-project':''} ${c.textOnly?'text-only':''}" id="${esc(options.id||c.id)}">${aliases}<header class="project-header">${contextHTML(options,c)}<${heading} class="case-title">${esc(c.title)}</${heading}></header>${body}${moreEvidenceHTML(c)}${additionalWorkHTML(c)}</${tag}>`;
 }
-function coreProjectHTML(p){
- const company=companies.find(c=>c.key===(p.company||'kakao'));
- const position=p.position||'AI Product Manager';
- return `<article class="project core-project" id="${esc(p.id)}"><header class="project-header core-header"><p class="eyebrow">${esc(company.name)} · ${esc(position)}</p><h3>${esc(p.title)}</h3><p class="core-intro">${esc(p.intro)}</p><p class="product-status"><strong>${esc(p.outcomes[0].value)}</strong><span>${esc(p.outcomes[0].label)}</span></p><p class="product-role"><b>담당 역할</b>${esc(p.role)}</p></header><div class="core-details">${p.detailIds.map((id,i)=>{const c=cases.find(x=>x.id===id);return caseHTML(c,{detail:true,label:`세부 사례 · ${p.labels[i]}`,id:id===p.id?`${id}-detail`:id})}).join('')}</div></article>`;
-}
-
 const projectsByCompany={kakao:PORTFOLIO.kakaoProjects||[],toss:PORTFOLIO.tossProjects||[]};
 const coreProjects=Object.values(projectsByCompany).flat();
+function detailId(p,id){return id===p.id?`${id}-detail`:id;}
+function coreProjectHTML(p){
+ const company=companies.find(c=>c.key===p.company);
+ return `<article class="project core-project" id="${esc(p.id)}" data-product-company="${esc(p.company)}"><header class="project-header core-header"><p class="eyebrow">${esc(company.name)} · ${esc(p.position)}</p><h4 class="product-title">${esc(p.title)}</h4><p class="core-intro">${esc(p.intro)}</p><p class="product-status"><strong>${esc(p.outcomes[0].value)}</strong><span>${esc(p.outcomes[0].label)}</span></p><p class="product-role"><b>담당 역할</b>${esc(p.role)}</p><nav class="case-index" aria-label="${esc(p.title)} 하위 사례">${p.detailIds.map((id,i)=>`<a href="#${esc(detailId(p,id))}">${esc(p.labels[i])}</a>`).join('')}</nav></header><div class="core-details">${p.detailIds.map((id,i)=>caseHTML(cases.find(c=>c.id===id),{detail:true,label:p.labels[i],product:p,id:detailId(p,id)})).join('')}</div></article>`;
+}
 function companyProjectsHTML(company){
  const groups=projectsByCompany[company.key]||[];
  if(!groups.length)return cases.filter(c=>c.company===company.key).map(c=>caseHTML(c)).join('');
- const groupedIds=new Set(groups.flatMap(p=>p.detailIds));
- const supporting=cases.filter(c=>c.company===company.key&&!groupedIds.has(c.id));
- return groups.map(coreProjectHTML).join('')+supporting.map(c=>caseHTML(c,{supporting:true,label:`${company.name} · 공통 업무`})).join('');
+ return groups.map(coreProjectHTML).join('');
 }
-document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${c.key}" id="company-${c.key}" tabindex="-1"><header class="company-heading"><div><h3>${esc(c.name)}</h3><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
-function selectCompany(key){document.querySelectorAll('[data-company]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.company===key)));}
-function focusSection(id){const target=document.getElementById(id);if(!target)return;target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({behavior:'smooth',block:'start'});}
+document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${esc(c.key)}" id="company-${esc(c.key)}" tabindex="-1"><header class="company-heading"><div><div class="company-title"><h3>${esc(c.name)}</h3><span>${esc(c.role)}${c.rank?` · ${esc(c.rank)}`:''}</span></div><p class="company-period">${esc(c.period)} · ${esc(c.duration)}</p><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
+const productNav=document.querySelector('#product-links');
+let locationKey='';
+function updateScrollOffset(){document.documentElement.style.setProperty('--portfolio-scroll-offset',`${document.querySelector('.topbar').offsetHeight+document.querySelector('.project-nav').offsetHeight+20}px`);}
+function selectCompany(key,productId){
+ filters.querySelectorAll('[data-company]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.company===key)));
+ const groups=projectsByCompany[key]||[],nextKey=`${key}:${productId||''}`;
+ if(nextKey!==locationKey){
+  productNav.hidden=!groups.length;
+  productNav.innerHTML=groups.map(p=>`<a href="#${esc(p.id)}"${p.id===productId?' aria-current="location"':''}>${esc(p.title)}</a>`).join('');
+  if(groups.length)productNav.setAttribute('aria-label',`${companies.find(c=>c.key===key).name} 제품 위치로 이동`);
+  locationKey=nextKey;updateScrollOffset();
+ }
+}
+function revealContainers(target){
+ let node=target;
+ while(node){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+}
+function focusSection(id,behavior='instant'){
+ const target=document.getElementById(id);if(!target)return;
+ revealContainers(target);target.setAttribute('tabindex','-1');target.focus({preventScroll:true});
+ target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':behavior,block:'start'});
+}
+function revealHash(options={}){
+ let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+ let target=document.getElementById(id);if(!target)return;
+ if(target.classList.contains('case-anchor'))target=target.closest('.project-detail,.scenario-case')||target;
+ const company=target.closest('.company-group'),product=target.closest('.core-project');
+ selectCompany(company?.dataset.group||'all',product?.id);focusSection(target.id,options.behavior||'instant');
+}
 filters.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const key=b.dataset.company;selectCompany(key);const id=key==='all'?'projects':`company-${key}`;history.replaceState(null,'',`#${id}`);focusSection(id);});
-function revealHash(){const id=decodeURIComponent(location.hash.slice(1));const c=cases.find(x=>x.id===id||`${x.id}-detail`===id||x.anchorAliases?.includes(id));const core=coreProjects.find(x=>x.id===id);const company=companies.find(x=>`company-${x.key}`===id);if(core)selectCompany(core.company||'kakao');else if(c)selectCompany(c.company);else if(company)selectCompany(company.key);else if(id==='projects')selectCompany('all');if(c||core||company)requestAnimationFrame(()=>focusSection(c?.anchorAliases?.includes(id)?c.id:id));}
-window.addEventListener('hashchange',revealHash);selectCompany('all');if(location.hash)revealHash();
+window.addEventListener('hashchange',revealHash);
+let trackingFrame=0;
+function trackLocation(){
+ trackingFrame=0;const nav=document.querySelector('.project-nav'),cursor=nav.getBoundingClientRect().bottom+22;
+ const company=[...document.querySelectorAll('.company-group')].find(el=>{const r=el.getBoundingClientRect();return r.top<=cursor+80&&r.bottom>cursor;});
+ if(!company){selectCompany('all');return;}
+ const product=[...company.querySelectorAll('.core-project')].find(el=>{const r=el.getBoundingClientRect();return r.top<=cursor&&r.bottom>cursor;});
+ selectCompany(company.dataset.group,product?.id);
+}
+window.addEventListener('scroll',()=>{if(!trackingFrame)trackingFrame=requestAnimationFrame(trackLocation);},{passive:true});
+new ResizeObserver(updateScrollOffset).observe(document.querySelector('.project-nav'));
+selectCompany('all');if(location.hash)requestAnimationFrame(()=>revealHash({behavior:'instant'}));
 const dialog=document.querySelector('#viewer'),viewerImg=document.querySelector('#viewer-image');let lastTrigger;
 document.querySelector('#case-list').addEventListener('click',e=>{const b=e.target.closest('[data-image]');if(!b)return;lastTrigger=b;viewerImg.src=b.dataset.image;viewerImg.alt=b.dataset.title;document.querySelector('#viewer-title').textContent=b.dataset.title;document.querySelector('#original-link').href=b.dataset.image;dialog.showModal();document.body.style.overflow='hidden'});
 function closeViewer(){dialog.close()}
@@ -78,3 +130,4 @@ const compactObserver=new ResizeObserver(()=>compactProjects.forEach(fitCompactE
 compactProjects.forEach(project=>compactObserver.observe(project.querySelector('.project-copy')));
 document.fonts.ready.then(()=>compactProjects.forEach(fitCompactEvidence));
 window.addEventListener('resize',()=>compactProjects.forEach(fitCompactEvidence));
+
