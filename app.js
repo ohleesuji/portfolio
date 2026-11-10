@@ -55,7 +55,7 @@ function caseHTML(c,options={}){
  const detail=options.detail,scenario=options.scenario,tag=detail||scenario?'section':'article',heading=scenario?'h6':detail?'h5':'h4',sectionHeading=scenario?'p':detail?'h6':'h5';
  const cls=scenario?'scenario-case':detail?'project-detail':'project';
  const aliases=(c.anchorAliases||[]).map(id=>`<span class="case-anchor" id="${esc(id)}"></span>`).join('');
- const body=c.parts?`<div class="grouped-examples">${c.parts.map(part=>caseHTML(part,{scenario:true,hideMeta:true})).join('')}</div><div class="grouped-meta">${metaHTML(c)}</div>`:`<div class="project-body"><div class="project-copy">${sectionCopyHTML(c,sectionHeading)}${options.hideMeta?'':metaHTML(c)}</div>${c.textOnly?'':evidenceHTML(c,false)}</div>`;
+ const body=c.parts?`<div class="project-overview"><div class="project-copy">${sectionCopyHTML(c,sectionHeading)}</div></div><div class="grouped-examples">${c.parts.map(part=>caseHTML(part,{scenario:true,hideMeta:true})).join('')}</div><div class="grouped-meta">${metaHTML(c)}</div>`:`<div class="project-body"><div class="project-copy">${sectionCopyHTML(c,sectionHeading)}${options.hideMeta?'':metaHTML(c)}</div>${c.textOnly?'':evidenceHTML(c,false)}</div>`;
  return `<${tag} class="${cls} ${c.parts?'grouped-project':''} ${c.textOnly?'text-only':''}" id="${esc(options.id||c.id)}">${aliases}<header class="project-header">${contextHTML(options,c)}<${heading} class="case-title">${esc(c.title)}</${heading}></header>${body}${moreEvidenceHTML(c)}${additionalWorkHTML(c)}</${tag}>`;
 }
 const projectsByCompany={kakao:PORTFOLIO.kakaoProjects||[],toss:PORTFOLIO.tossProjects||[]};
@@ -134,4 +134,5 @@ const compactObserver=new ResizeObserver(()=>compactProjects.forEach(fitCompactE
 compactProjects.forEach(project=>compactObserver.observe(project.querySelector('.project-copy')));
 document.fonts.ready.then(()=>compactProjects.forEach(fitCompactEvidence));
 window.addEventListener('resize',()=>compactProjects.forEach(fitCompactEvidence));
+
 

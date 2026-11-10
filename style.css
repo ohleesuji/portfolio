@@ -306,3 +306,12 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .supporting-details dl>div{display:grid;grid-template-columns:65px minmax(0,1fr);gap:11px}
 .supporting-details dt{color:var(--navy);font-weight:650}.supporting-details dd{margin:0}
 @media(max-width:760px){.supporting-details dl>div{grid-template-columns:54px minmax(0,1fr);gap:9px}}
+
+
+/* Readable project-level scope and high-contrast navigation. */
+.project-overview{padding:25px 28px;background:#fff;border-bottom:1px solid #e1e7f0}
+.project-overview>.project-copy{display:grid;grid-template-columns:1fr 1.4fr;gap:28px}
+.project-overview .project-copy section+section{margin-top:0}
+.case-index a,.product-links a,.filters button{color:#52657d;text-shadow:none}
+.project-copy ul,.project-meta dd{color:#36465d;text-shadow:none}
+@media(max-width:760px){.project-overview{padding:22px 20px}.project-overview>.project-copy{grid-template-columns:1fr;gap:22px}}
