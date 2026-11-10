@@ -64,17 +64,17 @@
 .metric p>span{font-size:13px;color:#66738b}
 .response-examples.original-evidence .evidence-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;align-items:start}
 .response-examples.original-evidence .evidence-gallery>div{width:100%;display:flex;flex-direction:column;align-items:center}
-.response-examples .response-prompt{font-size:14px;font-weight:700;line-height:1.5;color:#173b63;margin:0 0 12px;width:100%;min-height:42px;text-align:center;word-break:keep-all}
+.response-examples .response-prompt{font-size:11px;font-weight:700;line-height:1.5;color:#173b63;margin:0 0 12px;width:100%;min-height:42px;text-align:center;word-break:keep-all}
 .response-examples.original-evidence .evidence-gallery>div:not(.evidence-wide)>.evidence-button{width:min(100%,234px);max-width:234px;--preview-width:234px}
 .response-examples .evidence-button img{width:100%;height:auto;max-height:none;object-fit:contain}
 #case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{width:100%;max-width:none;--preview-width:100%}
-@media(max-width:600px){.response-examples .response-prompt{font-size:12px}.response-examples.original-evidence .evidence-gallery{gap:20px 10px}.rank-tag{font-size:10px}}
+@media(max-width:600px){.response-examples .response-prompt{font-size:11px}.response-examples.original-evidence .evidence-gallery{gap:20px 10px}.rank-tag{font-size:10px}}
 #case-8 .original-evidence .evidence-gallery>.evidence-wide>.evidence-button{flex:1 1 100%}
 
 /* Three response examples on a single row, with directly associated metrics. */
 #case-10 .project-body{grid-template-columns:.78fr 1.22fr;gap:26px}
 .response-examples.original-evidence .evidence-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
-.response-examples .response-prompt{min-height:42px;margin-bottom:8px;font-size:13px}
+.response-examples .response-prompt{min-height:42px;margin-bottom:8px;font-size:11px}
 .response-stats{width:100%;text-align:center;font-size:11px;line-height:1.7;color:#647087;margin:0 0 13px}
 .response-stats span{display:block}.response-stats b{color:#143762}
 #case-27 .original-evidence .evidence-button{flex-basis:100%;width:100%;max-width:560px}
@@ -85,7 +85,7 @@
 .original-evidence .evidence-gallery>div{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
 .original-evidence .evidence-button,.original-evidence.full .evidence-button{aspect-ratio:auto!important;flex:none!important;height:auto;min-height:0}
 .original-evidence .evidence-button img{position:static!important;inset:auto!important;display:block;width:100%!important;height:auto!important;max-width:100%;max-height:none!important;object-fit:contain;transform:none}
-.evidence-title{font-size:13px!important;line-height:1.6!important;font-weight:650;color:#143762!important;margin:0 0 15px!important;text-align:center}
+.evidence-title{font-size:11px!important;line-height:1.6!important;font-weight:650;color:#143762!important;margin:0 0 15px!important;text-align:center}
 .image-caption{font-size:11px;line-height:1.5;text-align:center;color:#647087;margin:9px 0 0;width:100%}
 .image-disclaimer{font-size:10px;color:#788398;line-height:1.6;margin:18px 0 0;text-align:right}
 #case-10 .original-evidence .evidence-gallery>div>.evidence-button{width:100%;max-width:234px}
@@ -107,10 +107,10 @@
 :is(#case-25,#case-27) .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:min(100%,340px);max-width:340px}
 
 /* Match the final PPT evidence grouping and source captions. */
-.evidence-subheading{font-size:13px;font-weight:650;color:#7b7b7b;text-align:center;margin:12px 0 10px}
+.evidence-subheading{font-size:11px;font-weight:650;color:#7b7b7b;text-align:center;margin:12px 0 10px}
 #case-25 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:44%;max-width:none}
 #case-27 .original-evidence .evidence-gallery>div:last-child>.evidence-button{width:66%;max-width:none}
-:is(#case-25,#case-27) .evidence-title{font-size:15px!important;color:#333!important}
+:is(#case-25,#case-27) .evidence-title{font-size:11px!important;color:#333!important}
 
 /* Evidence for ongoing Kakao product and evaluation work. */
 #case-agent-quality .original-evidence .evidence-button{width:100%;max-width:none}
@@ -329,3 +329,6 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .growth-summary{padding:13px 15px;background:#f1f5fa;border-radius:8px;margin:15px 0 0}
 .growth-summary span{display:block;font-size:11px;color:#5d6e82}.growth-summary strong{display:block;font-size:14px;color:#173b63;margin-top:4px}
 @media(max-width:760px){.growth-results table,.growth-results tbody,.growth-results tr,.growth-results td{display:block}.growth-results thead{display:none}.growth-results tr+tr{border-top:1px solid #e1e7ef}.growth-results td{width:100%;font-size:13px;padding:12px 13px;border:0}.growth-results td:first-child{padding-bottom:6px}.growth-results td:first-child::before{content:'바꾼 내용';display:block;font-size:11px;color:#173b63;font-weight:650;margin-bottom:4px}.growth-results td+td{padding-top:0}.growth-result{font-size:14px}.growth-comparison{font-size:11px}}
+
+/* Equal small captions above and below source images. */
+.evidence .evidence-title,.evidence .evidence-subheading,.evidence .response-prompt,.evidence .image-caption{font-size:11px!important;line-height:1.6!important}
