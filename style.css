@@ -315,3 +315,7 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .case-index a,.product-links a,.filters button{color:#52657d;text-shadow:none}
 .project-copy ul,.project-meta dd{color:#36465d;text-shadow:none}
 @media(max-width:760px){.project-overview{padding:22px 20px}.project-overview>.project-copy{grid-template-columns:1fr;gap:22px}}
+/* Section labels stay subordinate to the narrative text. */
+.project-copy .copy-label,.scenario-case .project-copy .copy-label,.paired-item .project-copy .copy-label{font-size:13px;line-height:1.6}
+.career-row .role-heading{display:flex;align-items:center;flex-wrap:wrap;gap:6px 9px}
+.career-row .rank-tag{flex:none;display:inline-flex;align-items:center;white-space:nowrap;line-height:1.45;padding:2px 7px}
