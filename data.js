@@ -1135,7 +1135,7 @@ const PORTFOLIO = {
       "id": "case-19",
       "page": 19,
       "company": "toss",
-      "title": "미충족 대출 수요 분석과 제휴 상품 확대",
+      "title": "대출 중단 원인 분석을 통한 제휴 상품 확대",
       "image": "assets/evidence-hd-19.png?v=20260922-results",
       "sections": [
         {
