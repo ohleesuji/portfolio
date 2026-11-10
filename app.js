@@ -23,7 +23,7 @@ function supportingDetailsHTML(details){
 }
 function growthResultsHTML(c){
  if(!c.growthResults)return '';
- return `<div class="growth-results"><table><thead><tr><th scope="col">실제로 바꾼 내용</th><th scope="col">그 과제에서 확인한 결과</th></tr></thead><tbody>${c.growthResults.map(row=>`<tr><td>${esc(row.change).replaceAll('\n','<br>')}</td><td><span class="growth-metric">${esc(row.metric)}</span><strong class="growth-result">${esc(row.result)}</strong><span class="growth-comparison">${esc(row.comparison)}</span></td></tr>`).join('')}</tbody></table><p class="growth-summary"><span>${esc(c.growthSummary.title)}</span><strong>${c.growthSummary.items.map(esc).join(' · ')}</strong></p></div>`;
+ return `<div class="growth-results"><table><thead><tr><th scope="col">개선 내용</th><th scope="col">성과</th></tr></thead><tbody>${c.growthResults.map(row=>`<tr><td>${esc(row.change).replaceAll('\n','<br>')}</td><td><span class="growth-metric">${esc(row.metric)}</span><strong class="growth-result">${esc(row.result)}</strong></td></tr>`).join('')}</tbody></table><p class="growth-summary"><span>${esc(c.growthSummary.title)}</span><strong>${c.growthSummary.items.map(esc).join(' · ')}</strong></p></div>`;
 }
 function evidenceHTML(c,special){
 const originals=c.originals;
