@@ -319,3 +319,13 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .project-copy .copy-label,.scenario-case .project-copy .copy-label,.paired-item .project-copy .copy-label{font-size:13px;line-height:1.6}
 .career-row .role-heading{display:flex;align-items:center;flex-wrap:wrap;gap:6px 9px}
 .career-row .rank-tag{flex:none;display:inline-flex;align-items:center;white-space:nowrap;line-height:1.45;padding:2px 7px}
+.growth-results{margin:0 0 24px;text-align:left}
+.growth-results table{width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #dce4ef}
+.growth-results th{padding:11px 13px;background:#eaf0f8;font-size:12px;color:#173b63;text-align:left}
+.growth-results td{padding:12px 13px;border-top:1px solid #e1e7ef;font-size:13px;line-height:1.7;vertical-align:middle;width:50%}
+.growth-results tbody tr:nth-child(even){background:#f7f9fc}
+.growth-metric,.growth-comparison{display:block;color:#5d6e82;font-size:11px;line-height:1.6}
+.growth-result{display:block;font-size:14px;line-height:1.6;color:#173b63;margin:2px 0 4px}
+.growth-summary{padding:13px 15px;background:#f1f5fa;border-radius:8px;margin:15px 0 0}
+.growth-summary span{display:block;font-size:11px;color:#5d6e82}.growth-summary strong{display:block;font-size:14px;color:#173b63;margin-top:4px}
+@media(max-width:760px){.growth-results table,.growth-results tbody,.growth-results tr,.growth-results td{display:block}.growth-results thead{display:none}.growth-results tr+tr{border-top:1px solid #e1e7ef}.growth-results td{width:100%;font-size:13px;padding:12px 13px;border:0}.growth-results td:first-child{padding-bottom:6px}.growth-results td:first-child::before{content:'바꾼 내용';display:block;font-size:11px;color:#173b63;font-weight:650;margin-bottom:4px}.growth-results td+td{padding-top:0}.growth-result{font-size:14px}.growth-comparison{font-size:11px}}
