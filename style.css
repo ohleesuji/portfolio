@@ -332,3 +332,8 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 
 /* Equal small captions above and below source images. */
 .evidence .evidence-title,.evidence .evidence-subheading,.evidence .response-prompt,.evidence .image-caption{font-size:11px!important;line-height:1.6!important}
+.metric{display:grid;grid-template-rows:auto auto auto 1fr auto;align-content:start;min-width:0}
+.metric .metric-definition{font-weight:650;color:var(--ink);margin:9px 0 0;min-height:2.8em}
+.metric strong{margin-top:0}
+.metric .metric-context{font-size:13px;color:var(--muted);margin:1px 0 13px;min-height:0}
+@media(max-width:640px){.metric .metric-definition{min-height:3.1em}.metric .metric-context{font-size:11px}}
