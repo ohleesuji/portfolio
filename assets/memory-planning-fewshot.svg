@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 283" width="1200" height="283" role="img" aria-labelledby="title">
+<title id="title">추가 조회는 기존 기억을 유지하고 새 필수 조건은 반영하도록 보여주는 퓨샷 예시</title>
+<rect x="0" y="0" width="1200" height="283" rx="22" fill="#f1f5fa"/>
+<text x="34" y="53" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="35" fill="#002c5f" font-weight="700" text-anchor="start">자동기억 판단에 추가한 예시 / 퓨샷 CoT 실험</text>
+<rect x="32" y="78" width="550" height="156" rx="16" fill="#ffffff"/>
+<rect x="618" y="78" width="550" height="156" rx="16" fill="#ffffff"/>
+<text x="55" y="121" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">“후보 더 보여줘”</text>
+<text x="55" y="166" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#172334" font-weight="400" text-anchor="start">새로 확정한 조건 없음</text>
+<text x="55" y="207" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#2262ba" font-weight="700" text-anchor="start">기존 탐색 유지 / 수정 도구 호출 없음</text>
+<text x="643" y="121" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">“이번엔 평일 저녁 7시 이후만”</text>
+<text x="643" y="166" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#172334" font-weight="400" text-anchor="start">사용자가 이번 모임의 필수 조건을 직접 명시</text>
+<text x="643" y="207" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#2262ba" font-weight="700" text-anchor="start">기존 계획에 새 시간 조건 반영</text>
+<text x="34" y="264" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="23" fill="#50637c" font-weight="400" text-anchor="start">같은 탐색에서 조회만 이어가는 경우와 조건을 바꾸는 경우를 한 쌍으로 제시</text>
+</svg>

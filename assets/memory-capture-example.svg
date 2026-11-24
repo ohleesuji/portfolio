@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 345" width="1200" height="345" role="img" aria-labelledby="title">
+<title id="title">취향과 여행 조건을 구분해 기억하고 다음 추천에 반영하는 예시</title>
+<rect x="0" y="0" width="1200" height="345" rx="22" fill="#f1f5fa"/>
+<text x="34" y="55" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="37" fill="#002c5f" font-weight="700" text-anchor="start">대화에서 기억으로, 다음 추천까지</text>
+<rect x="32" y="91" width="326" height="169" rx="16" fill="#ffffff"/>
+<rect x="437" y="91" width="326" height="169" rx="16" fill="#ffffff"/>
+<rect x="842" y="91" width="326" height="169" rx="16" fill="#ffffff"/>
+<text x="393" y="182" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="797" y="182" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="53" y="132" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">사용자가 알려준 내용</text>
+<text x="53" y="180" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">“고기와 맥주를 좋아해”</text>
+<text x="53" y="217" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">“12월에 2박 3일 여행 가”</text>
+<text x="459" y="132" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">취향과 계획을 나눠 기억</text>
+<text x="459" y="180" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">취향 / 고기와 맥주</text>
+<text x="459" y="217" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">계획 / 12월 2박 3일 여행</text>
+<text x="864" y="132" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">다음 답변에 반영</text>
+<text x="864" y="180" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">취향에 맞는 식당 후보</text>
+<text x="864" y="217" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">여행 기간에 맞춘 일정</text>
+<text x="34" y="306" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#50637c" font-weight="400" text-anchor="start">음식 취향은 이후 추천에도, 기간은 해당 여행의 일정에 반영</text>
+</svg>
