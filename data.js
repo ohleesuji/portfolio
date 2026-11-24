@@ -185,7 +185,7 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "같은 카카오톡 메시지 386개를 읽는 데 필요한 입력 토큰이 약 17,000개에서 6,900개로 감소",
+            "같은 대화를 플랫 텍스트로 바꾸자 예상 입력량이 약 17,000토큰에서 6,900토큰으로 감소",
             "한 번에 읽기 어려운 대화도 나눠 분석해 하나의 답변으로 통합"
           ]
         }
@@ -196,7 +196,7 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/hierarchy-format-comparison.svg?v=20261124-dialogue-lead",
+          "src": "assets/hierarchy-format-comparison.svg?v=20261124-token-comparison",
           "label": "같은 대화의 JSON·플랫 텍스트 입력 비교",
           "width": 1200,
           "height": 408,

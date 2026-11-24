@@ -17,5 +17,5 @@
 <text x="654" y="202" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">@D 2026-03-02</text>
 <text x="654" y="239" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">12:40 l=1234 ME: 메시지1</text>
 <text x="654" y="276" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">13:03 l=1235 OT(홍길동): 메시지2</text>
-<text x="35" y="371" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="700" fill="#2262ba" text-anchor="start" xml:space="preserve">같은 메시지 386개를 읽는 데 드는 토큰 / 약 17,000 → 6,900</text>
+<text x="35" y="371" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="700" fill="#2262ba" text-anchor="start" xml:space="preserve">같은 대화의 예상 입력 토큰 / 약 17,000 → 6,900</text>
 </svg>
