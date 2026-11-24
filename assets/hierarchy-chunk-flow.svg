@@ -1,17 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="title">
-<title id="title">나눠 읽은 대화를 시간순으로 통합</title>
-<rect x="0" y="0" width="1200" height="380" rx="22" fill="#f1f5fa"/>
-<text x="35" y="55" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="38" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">나눠 읽은 대화를 시간순으로 통합</text>
-<rect x="35" y="82" width="535" height="125" rx="16" fill="#ffffff"/>
-<rect x="630" y="82" width="535" height="125" rx="16" fill="#ffffff"/>
-<text x="61" y="128" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">앞 대화</text>
-<text x="656" y="128" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">뒤 대화</text>
-<text x="61" y="172" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">“강남에서 만나자”</text>
-<text x="656" y="172" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">“홍대로 바꾸자”</text>
-<text x="303" y="248" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="36" font-weight="700" fill="#2262ba" text-anchor="middle" xml:space="preserve">↓</text>
-<text x="898" y="248" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="36" font-weight="700" fill="#2262ba" text-anchor="middle" xml:space="preserve">↓</text>
-<rect x="35" y="269" width="1130" height="81" rx="16" fill="#ffffff"/>
-<text x="61" y="320" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">최종 약속 장소</text>
-<text x="268" y="320" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="36" font-weight="700" fill="#2262ba" text-anchor="start" xml:space="preserve">홍대</text>
-<text x="1139" y="320" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="27" font-weight="400" fill="#50637c" text-anchor="end" xml:space="preserve">나중에 바뀐 장소를 최종 답변에 반영</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 278" width="1200" height="278" role="img" aria-labelledby="title">
+<title id="title">긴 대화를 나눠 병렬로 읽고 결과 통합</title>
+<rect width="1200" height="278" rx="22" fill="#f1f5fa"/>
+<text x="34" y="52" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="37" fill="#002c5f" font-weight="700" text-anchor="start">긴 대화를 나눠 병렬로 읽고 결과 통합</text>
+<rect x="34" y="76" width="318" height="143" rx="16" fill="#ffffff"/>
+<rect x="428" y="76" width="344" height="143" rx="16" fill="#ffffff"/>
+<rect x="848" y="76" width="318" height="143" rx="16" fill="#ffffff"/>
+<text x="57" y="117" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">입력 한도에 맞춰 분할</text>
+<text x="451" y="117" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">최대 3개 구간 동시 분석</text>
+<text x="871" y="117" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" fill="#002c5f" font-weight="700" text-anchor="start">시간순으로 결과 통합</text>
+<text x="390" y="163" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="37" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="810" y="163" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="37" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<rect x="57" y="141" width="85" height="47" rx="9" fill="#edf3fa"/>
+<rect x="149" y="141" width="85" height="47" rx="9" fill="#edf3fa"/>
+<rect x="241" y="141" width="85" height="47" rx="9" fill="#edf3fa"/>
+<text x="100" y="172" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="21" fill="#2262ba" font-weight="700" text-anchor="middle">구간 A</text>
+<text x="192" y="172" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="21" fill="#2262ba" font-weight="700" text-anchor="middle">구간 B</text>
+<text x="284" y="172" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="21" fill="#2262ba" font-weight="700" text-anchor="middle">구간 C</text>
+<text x="451" y="160" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">구간마다 질문의 근거를 찾고</text>
+<text x="451" y="193" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="24" fill="#50637c" font-weight="400" text-anchor="start">남은 구간은 차례로 분석</text>
+<text x="871" y="160" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="24" fill="#172334" font-weight="400" text-anchor="start">근거를 모아 하나의</text>
+<text x="871" y="193" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="24" fill="#50637c" font-weight="400" text-anchor="start">답변으로 정리</text>
+<text x="34" y="255" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="24" fill="#50637c" font-weight="400" text-anchor="start">약속 장소가 강남에서 홍대로 바뀌었다면 최종 답변에 홍대 반영</text>
 </svg>
