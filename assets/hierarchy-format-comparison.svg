@@ -1,25 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 930" role="img" aria-labelledby="title"><title id="title">같은 대화의 JSON과 플랫 텍스트 비교</title>
-<rect x="0" y="0" width="1200" height="930" rx="20" fill="#f1f5fa"/>
-<text x="44" y="68" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="38" font-weight="700" fill="#002c5f" xml:space="preserve">채팅방과 날짜는 한 번, 메시지는 한 줄씩</text>
-<text x="44" y="110" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#50637c" xml:space="preserve">메시지마다 이름 붙은 항목을 반복하던 JSON을 짧은 표기로 변환</text>
-<rect x="44" y="145" width="1112" height="238" rx="20" fill="#ffffff"/>
-<text x="70" y="187" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" xml:space="preserve">변경 전 / JSON 일부</text>
-<text x="70" y="229" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="400" fill="#172334" xml:space="preserve">&quot;chatId&quot;: 123456, &quot;chatName&quot;: &quot;1번 채팅방&quot;, &quot;chatType&quot;: &quot;&quot;,</text>
-<text x="70" y="259" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="400" fill="#172334" xml:space="preserve">&quot;memberCount&quot;: 2, &quot;unreadCount&quot;: 1, &quot;chatLogs&quot;: [</text>
-<text x="70" y="289" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="400" fill="#172334" xml:space="preserve">  {&quot;logId&quot;: 1234, &quot;message&quot;: &quot;메시지1&quot;, &quot;nickname&quot;: &quot;나에요&quot;, &quot;isMe&quot;: true, &quot;sendAt&quot;: …},</text>
-<text x="70" y="319" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="400" fill="#172334" xml:space="preserve">  {&quot;logId&quot;: 1235, &quot;message&quot;: &quot;메시지2&quot;, &quot;nickname&quot;: &quot;홍길동&quot;, &quot;isMe&quot;: false, &quot;sendAt&quot;: …}</text>
-<text x="70" y="349" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="400" fill="#172334" xml:space="preserve">]</text>
-<rect x="44" y="399" width="1112" height="261" rx="20" fill="#ffffff"/>
-<text x="70" y="441" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" xml:space="preserve">변경 후 / 플랫 텍스트</text>
-<text x="70" y="485" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="400" fill="#172334" xml:space="preserve">@CHAT cn=&quot;1번 채팅방&quot; ci=123456 ct=&quot;&quot; mem=2 un=1</text>
-<text x="70" y="519" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="400" fill="#172334" xml:space="preserve">@D 2026-03-02</text>
-<text x="70" y="553" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="400" fill="#172334" xml:space="preserve">12:40 l=1234 ME: 메시지1</text>
-<text x="70" y="587" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="400" fill="#172334" xml:space="preserve">13:03 l=1235 OT(홍길동): 메시지2</text>
-<text x="70" y="630" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="21" font-weight="400" fill="#50637c" xml:space="preserve">ME: 나 / OT(이름): 상대 / l: 메시지 ID</text>
-<text x="44" y="715" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" xml:space="preserve">같은 샘플의 예상 입력 토큰</text>
-<text x="44" y="766" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="700" fill="#50637c" xml:space="preserve">1주 / 386건</text>
-<text x="310" y="766" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700" fill="#2262ba" xml:space="preserve">약 17,000 → 6,900토큰 / 약 60% 절감</text>
-<text x="44" y="811" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="700" fill="#50637c" xml:space="preserve">1개월 / 1,537건</text>
-<text x="310" y="811" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700" fill="#2262ba" xml:space="preserve">약 70,000 → 28,000토큰 / 플랫 텍스트만 전체 한도 이내</text>
-<text x="44" y="869" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#50637c" xml:space="preserve">당시 모델 전체 한도 기준 / 실제 분석 범위는 별도 산정</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 408" width="1200" height="408" role="img" aria-labelledby="title">
+<title id="title">같은 대화의 입력 형식 비교</title>
+<rect x="0" y="0" width="1200" height="408" rx="22" fill="#f1f5fa"/>
+<text x="35" y="55" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="38" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">같은 대화의 입력 형식 비교</text>
+<rect x="35" y="82" width="535" height="238" rx="16" fill="#ffffff"/>
+<rect x="630" y="82" width="535" height="238" rx="16" fill="#ffffff"/>
+<text x="59" y="126" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">변경 전 / JSON 일부</text>
+<text x="654" y="126" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#002c5f" text-anchor="start" xml:space="preserve">변경 후 / 플랫 텍스트 일부</text>
+<text x="601" y="225" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="42" font-weight="700" fill="#2262ba" text-anchor="middle" xml:space="preserve">→</text>
+<text x="59" y="163" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">"chatName": "1번 채팅방",</text>
+<text x="59" y="189" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">"chatLogs": [</text>
+<text x="59" y="215" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">  {"logId": 1234, "message": "메시지1",</text>
+<text x="59" y="241" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">   "nickname":"나에요","isMe":true,…},</text>
+<text x="59" y="267" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">  {"logId": 1235, "message": "메시지2",</text>
+<text x="59" y="293" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="22" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">   "nickname":"홍길동","isMe":false,…}]</text>
+<text x="654" y="165" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">@CHAT cn="1번 채팅방" ci=123456 …</text>
+<text x="654" y="202" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">@D 2026-03-02</text>
+<text x="654" y="239" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">12:40 l=1234 ME: 메시지1</text>
+<text x="654" y="276" font-family="Menlo, Apple SD Gothic Neo, monospace" font-size="23" font-weight="400" fill="#172334" text-anchor="start" xml:space="preserve">13:03 l=1235 OT(홍길동): 메시지2</text>
+<text x="35" y="371" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="700" fill="#2262ba" text-anchor="start" xml:space="preserve">1주 대화 386건 / 약 17,000 → 6,900토큰 / 약 60% 절감</text>
 </svg>
