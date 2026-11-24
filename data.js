@@ -185,8 +185,8 @@ const PORTFOLIO = {
         {
           "title": "결과/성과",
           "items": [
-            "1주 대화 386건 기준 예상 입력 토큰 약 60% 절감",
-            "1년치 산정 예시 / 하루 말풍선 약 210개 기준 원본 약 7.7만 건을 플랫 텍스트로 변환 후 약 9개 청크로 분할"
+            "같은 카카오톡 메시지 386개를 읽는 데 필요한 입력 토큰이 약 17,000개에서 6,900개로 감소",
+            "한 번에 읽기 어려운 대화도 나눠 분석해 하나의 답변으로 통합"
           ]
         }
       ],
@@ -196,7 +196,7 @@ const PORTFOLIO = {
       "caption": null,
       "originals": [
         {
-          "src": "assets/hierarchy-format-comparison.svg?v=20261124-dialogue-brief",
+          "src": "assets/hierarchy-format-comparison.svg?v=20261124-dialogue-lead",
           "label": "같은 대화의 JSON·플랫 텍스트 입력 비교",
           "width": 1200,
           "height": 408,
@@ -217,7 +217,7 @@ const PORTFOLIO = {
       "anchorAliases": [
         "case-token-budget"
       ],
-      "evidenceNote": "기존 분석 요청 10건 중 약 9건은 하루 평균 말풍선 수가 210개 이하"
+      "evidenceNote": "예를 들어 하루에 메시지 약 210개가 오가는 채팅방의 1년치 대화는 약 7.7만 개. 플랫 텍스트로 바꾼 뒤 모델이 한 번에 읽을 수 있는 크기로 나누면 약 9개 구간"
     },
     {
       "id": "case-8",
