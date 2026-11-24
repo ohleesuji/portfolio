@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title">
+<title id="title">여행 날짜와 호텔 후기에서 발견한 오류를 수정하고 전체 평가로 다시 확인한 방법</title>
+<rect x="0" y="0" width="1200" height="720" rx="22" fill="#f1f5fa"/>
+<text x="34" y="57" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="40" fill="#002c5f" font-weight="700" text-anchor="start">테스트에서 발견한 두 가지 오류</text>
+<text x="52" y="114" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">사용자 요청 예시</text>
+<text x="447" y="114" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">실제로 생긴 오류</text>
+<text x="840" y="114" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">바꾼 기준</text>
+<rect x="35" y="133" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="52" y="179" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">“여행 날짜만</text>
+<text x="52" y="216" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">17일로 바꿔줘”</text>
+<rect x="430" y="133" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="447" y="179" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">날짜를 바꾸면서</text>
+<text x="447" y="216" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">기존 여행 예산도 삭제</text>
+<rect x="823" y="133" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="840" y="179" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#2262ba" font-weight="700" text-anchor="start">날짜만 17일로 변경</text>
+<text x="840" y="216" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#2262ba" font-weight="700" text-anchor="start">기존 여행 예산 유지</text>
+<text x="402" y="195" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="798" y="195" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<rect x="35" y="260" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="52" y="306" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">“이 호텔 후기</text>
+<text x="52" y="343" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">알려줘”</text>
+<rect x="430" y="260" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="447" y="306" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">카나나가 찾은 객실 정보를</text>
+<text x="447" y="343" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#172334" font-weight="400" text-anchor="start">사용자의 여행 계획에 저장</text>
+<rect x="823" y="260" width="342" height="112" rx="16" fill="#ffffff"/>
+<text x="840" y="306" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#2262ba" font-weight="700" text-anchor="start">객실 정보는 답변에만 사용</text>
+<text x="840" y="343" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" fill="#2262ba" font-weight="700" text-anchor="start">여행 계획은 그대로 유지</text>
+<text x="402" y="322" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="798" y="322" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<path d="M34 420H1166" stroke="#d4e0ee" stroke-width="2"/>
+<text x="34" y="480" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="39" fill="#002c5f" font-weight="700" text-anchor="start">오류를 하나씩 고치고 전체를 다시 확인</text>
+<rect x="35" y="510" width="342" height="144" rx="16" fill="#ffffff"/>
+<text x="53" y="561" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">같은 오류끼리 묶기</text>
+<text x="53" y="612" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#172334" font-weight="400" text-anchor="start">유형별로 몇 건인지 확인</text>
+<rect x="430" y="510" width="342" height="144" rx="16" fill="#ffffff"/>
+<text x="448" y="561" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">많이 나온 오류부터 수정</text>
+<text x="448" y="612" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#172334" font-weight="400" text-anchor="start">한 번에 한 유형씩 개선</text>
+<rect x="823" y="510" width="342" height="144" rx="16" fill="#ffffff"/>
+<text x="841" y="561" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="29" fill="#002c5f" font-weight="700" text-anchor="start">전체 평가 다시 실행</text>
+<text x="841" y="612" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="25" fill="#172334" font-weight="400" text-anchor="start">전에 맞던 사례도 재확인</text>
+<text x="402" y="587" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+<text x="798" y="587" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="31" fill="#2262ba" font-weight="700" text-anchor="middle">→</text>
+</svg>
