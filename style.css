@@ -381,3 +381,7 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .planning-details .planning-table{margin-top:10px}
 .project-copy li::marker{content:"-  "}
 @media(max-width:600px){.planning-table th,.planning-table td{padding:9px 7px}.planning-table{font-size:12px}}
+
+.card-points{list-style-type:"-  ";padding-left:1.05em;margin:0}
+.card-points>li::marker{content:"-  "}
+.card-points>li+li{margin-top:.15em}
