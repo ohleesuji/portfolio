@@ -385,3 +385,9 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .card-points{list-style-type:"-  ";padding-left:1.05em;margin:0}
 .card-points>li::marker{content:"-  "}
 .card-points>li+li{margin-top:.15em}
+
+.planning-example th:first-child{width:45%}
+.planning-example th:nth-child(2){width:55%}
+.planning-result th:first-child{width:26%}
+.planning-result th:nth-child(2){width:74%}
+.evidence-link a{color:var(--navy);font-weight:650}

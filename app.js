@@ -27,18 +27,19 @@ function growthResultsHTML(c){
 }
 function planningEvidenceHTML(planning){
  if(!planning)return '';
- function table(headers,rows,label){
-  return `<table class="planning-table${headers.length===2?' planning-distribution':''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${esc(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+ function table(headers,rows,label,variant=''){
+  const cell=value=>Array.isArray(value) ? `<ul class="card-points">${value.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>` : esc(value);
+  return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${cell(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  }
  return `<div class="planning-evidence">
   <p class="planning-method">${esc(planning.distributionNote)}</p>
-  ${table(planning.distributionHeaders,planning.distribution,planning.distributionTitle)}
+  ${table(planning.distributionHeaders,planning.distribution,planning.distributionTitle,'distribution')}
   <h6 class="planning-example-heading">${esc(planning.promptTitle)}</h6>
   <p class="planning-method">${esc(planning.promptNote)}</p>
-  ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle)}
+  ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle,'example')}
   <h6 class="planning-example-heading">${esc(planning.caseTitle)}</h6>
   <p class="planning-method">${esc(planning.caseBasis)}</p>
-  ${table(planning.caseHeaders,planning.caseRows,planning.caseTitle)}
+  ${table(planning.caseHeaders,planning.caseRows,planning.caseTitle,'result')}
   <p class="planning-review-note">${esc(planning.caseNote)}</p>
   <details class="supporting-details planning-details"><summary>오류 유형별 프롬프트 지시와 검증 기준</summary>${table(planning.reviewHeaders,planning.review,'오류 유형별 프롬프트 지시와 검증 기준')}</details>
  </div>`;
@@ -46,8 +47,9 @@ function planningEvidenceHTML(planning){
 function evidenceHTML(c,special){
 const originals=c.originals;
 const pictures=originals||[{src:c.image,label:c.title}];
+const reference=c.evidenceLink;
 const steps=c.evaluationSteps?`<ol class="evaluation-steps">${c.evaluationSteps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>`:'';
-return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''} ${c.responseExamples?'response-examples':''}">${c.evidenceTitle?`<figcaption class="evidence-title">${esc(c.evidenceTitle)}</figcaption>`:""}${planningEvidenceHTML(c.planningEvidence)}${evaluationGuideHTML(c.evaluationGuide)}${steps}${growthResultsHTML(c)}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}" style="--item-width:${previewWidth(p,pictures.length)}px">${p.heading?`<p class="evidence-subheading">${esc(p.heading)}</p>`:""}${p.prompt?`<p class="response-prompt">${esc(p.prompt)}</p>${p.ctr?`<p class="response-stats"><span>클릭률 <b>${esc(p.ctr)}</b></span><span>${esc(c.shareLabel||"추정 공유율")} <b>${esc(p.share)}</b></span></p>`:""}`:""}<button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button>${p.caption?`<p class="image-caption">${esc(p.caption)}</p>`:""}</div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}${supportingDetailsHTML(c.supportingDetails)}${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:""}</figure>`;
+return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''} ${c.responseExamples?'response-examples':''}">${c.evidenceTitle?`<figcaption class="evidence-title">${esc(c.evidenceTitle)}</figcaption>`:""}${planningEvidenceHTML(c.planningEvidence)}${evaluationGuideHTML(c.evaluationGuide)}${steps}${growthResultsHTML(c)}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}" style="--item-width:${previewWidth(p,pictures.length)}px">${p.heading?`<p class="evidence-subheading">${esc(p.heading)}</p>`:""}${p.prompt?`<p class="response-prompt">${esc(p.prompt)}</p>${p.ctr?`<p class="response-stats"><span>클릭률 <b>${esc(p.ctr)}</b></span><span>${esc(c.shareLabel||"추정 공유율")} <b>${esc(p.share)}</b></span></p>`:""}`:""}<button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button>${p.caption?`<p class="image-caption">${esc(p.caption)}</p>`:""}</div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}${reference?`<p class="evidence-note evidence-link"><a href="${esc(reference.href)}">${esc(reference.label)} →</a></p>`:''}${supportingDetailsHTML(c.supportingDetails)}${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:""}</figure>`;
 }
 function metaHTML(c){
  return c.role?`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd>${c.contribution?`<dt>기여도</dt><dd>${esc(c.contribution)}</dd>`:''}${c.team?`<dt>${esc(c.teamLabel||'협업 구성')}</dt><dd>${esc(c.team)}</dd>`:''}</dl>`:'';
