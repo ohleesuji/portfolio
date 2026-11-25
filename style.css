@@ -353,3 +353,7 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
     .approach-card dl{grid-row:span 3;grid-template-rows:subgrid;row-gap:12px;margin:0}
   }
 }
+
+.project-copy .case-paragraph{margin:0;color:#36465d;font-size:15px;line-height:1.7}
+.project-copy .case-paragraph + .case-paragraph{margin-top:10px}
+@media(max-width:760px){.project-copy .case-paragraph{font-size:14px}}

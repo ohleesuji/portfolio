@@ -40,7 +40,12 @@ function contextHTML(options,c){
  return options.product?`<div class="case-kicker"><a class="product-badge" href="#${esc(options.product.id)}">${esc(options.product.title)}</a><span class="detail-label">${esc(options.label||'')}</span></div>`:`<p class="eyebrow">${esc(company.name)}${c.position?` · ${esc(c.position)}`:''}</p>`;
 }
 function sectionCopyHTML(c,heading){
- return c.sections.map((s,i)=>`<section class="${s.title==='결과/성과'?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}><ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>`).join('');
+ return c.sections.map(s=>{
+  const content=s.paragraphs
+   ? s.paragraphs.map(t=>`<p class="case-paragraph">${esc(t)}</p>`).join('')
+   : `<ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
+  return `<section class="${s.title==='결과/성과'?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}</section>`;
+ }).join('');
 }
 function pairedCaseHTML(c,options={}){
  const heading=options.scenario?'h6':options.detail?'h5':'h4';
