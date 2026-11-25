@@ -362,3 +362,15 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .project-copy .case-paragraph{margin:0;color:#36465d;font-size:15px;line-height:1.7}
 .project-copy .case-paragraph + .case-paragraph{margin-top:10px}
 @media(max-width:760px){.project-copy .case-paragraph{font-size:14px}}
+
+.planning-evidence{margin:0 0 20px}
+.planning-table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:13px;line-height:1.55;color:var(--ink);text-align:left;background:#fff;border:1px solid #d7e2ef;border-radius:9px;overflow:hidden}
+.planning-table th,.planning-table td{padding:12px 11px;vertical-align:top;overflow-wrap:anywhere}
+.planning-table thead th{color:var(--navy);background:#edf3fb;font-weight:700}
+.planning-table tbody th,.planning-table tbody td{border-top:1px solid #e1e8f1}
+.planning-table tbody th{font-weight:650;color:var(--navy)}
+.planning-table th:first-child{width:25%}
+.planning-table th:nth-child(2){width:34%}
+.planning-checks{margin-top:12px}
+.planning-checks .planning-table{margin-top:10px}
+@media(max-width:600px){.planning-table th,.planning-table td{padding:9px 7px}.planning-table{font-size:12px}}
