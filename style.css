@@ -348,7 +348,7 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .approach-card dl{grid-template-columns:minmax(0,1fr);align-items:start;line-height:1.65}
 .approach-card dt{margin-bottom:4px}
 .approach-card .outcome{margin:0;padding-top:13px;font-size:inherit}
-.approach-card .outcome dd{color:var(--ink)}
+
 .approach-basis{display:block;color:var(--muted);font-size:.88em;font-weight:500;margin-top:2px}
 @supports (grid-template-rows:subgrid){
   @media(min-width:761px){
@@ -377,8 +377,12 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .planning-distribution th:first-child{width:66%}
 .planning-distribution th:nth-child(2){width:34%}
 .planning-distribution th,.planning-distribution td{padding-block:7px}
-.planning-details{margin-top:12px}
-.planning-details .planning-table{margin-top:10px}
+.planning-goal{background:#edf3fb;border:1px solid #d7e2ef;border-radius:9px;margin-top:14px;padding:10px 12px}
+.planning-goal h6{font-size:14px;margin:0 0 4px;color:var(--navy)}
+.planning-goal p{font-size:13px;margin:0;line-height:1.55}
+.planning-goal .planning-method{margin-top:4px;font-size:12px}
+.planning-result td{white-space:pre-line}
+.project-copy :is(ul,.case-paragraph),.approach-card dd,.approach-card .outcome dd,.planning-table td,.planning-goal p{color:#505967}
 .project-copy li::marker{content:"-  "}
 @media(max-width:600px){.planning-table th,.planning-table td{padding:9px 7px}.planning-table{font-size:12px}}
 

@@ -33,14 +33,15 @@ function planningEvidenceHTML(planning){
  return `<div class="planning-evidence">
   <p class="planning-method">${esc(planning.distributionNote)}</p>
   ${table(planning.distributionHeaders,planning.distribution,planning.distributionTitle,'distribution')}
-  <h6 class="planning-example-heading">${esc(planning.promptTitle)}</h6>
-  <p class="planning-method">${esc(planning.promptNote)}</p>
-  ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle,'example')}
   <h6 class="planning-example-heading">${esc(planning.caseTitle)}</h6>
-  <p class="planning-method">${esc(planning.caseBasis)}</p>
   ${table(planning.caseHeaders,planning.caseRows,planning.caseTitle,'result')}
-  <p class="planning-review-note">${esc(planning.caseNote)}</p>
-  <details class="supporting-details planning-details"><summary>오류 유형별 프롬프트 지시와 검증 기준</summary>${table(planning.reviewHeaders,planning.review,'오류 유형별 프롬프트 지시와 검증 기준')}</details>
+  <h6 class="planning-example-heading">${esc(planning.promptTitle)}</h6>
+  ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle,'example')}
+  <div class="planning-goal">
+   <h6>갱신 목표</h6>
+   <p>“${esc(planning.goal)}”</p>
+   <p class="planning-method">${esc(planning.goalNote)}</p>
+  </div>
  </div>`;
 }
 function evidenceHTML(c,special){
