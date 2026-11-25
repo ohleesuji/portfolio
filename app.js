@@ -54,7 +54,7 @@ const originals=c.originals;
 const pictures=originals||[{src:c.image,label:c.title}];
 const reference=c.evidenceLink;
 const steps=c.evaluationSteps?`<ol class="evaluation-steps">${c.evaluationSteps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>`:'';
-return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''} ${c.responseExamples?'response-examples':''}">${c.evidenceTitle?`<figcaption class="evidence-title">${esc(c.evidenceTitle)}</figcaption>`:""}${planningEvidenceHTML(c.planningEvidence)}${evaluationGuideHTML(c.evaluationGuide)}${steps}${growthResultsHTML(c)}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}" style="--item-width:${previewWidth(p,pictures.length)}px">${p.heading?`<p class="evidence-subheading">${esc(p.heading)}</p>`:""}${p.prompt?`<p class="response-prompt">${esc(p.prompt)}</p>${p.ctr?`<p class="response-stats"><span>클릭률 <b>${esc(p.ctr)}</b></span><span>${esc(c.shareLabel||"추정 공유율")} <b>${esc(p.share)}</b></span></p>`:""}`:""}<button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button>${p.caption?`<p class="image-caption">${esc(p.caption)}</p>`:""}</div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note">${esc(c.evidenceNote)}</p>`:''}${reference?`<p class="evidence-note evidence-link"><a href="${esc(reference.href)}">${esc(reference.label)} →</a></p>`:''}${supportingDetailsHTML(c.supportingDetails)}${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:""}</figure>`;
+return `<figure class="evidence ${special?'full':''} ${originals?'original-evidence':''} ${c.responseExamples?'response-examples':''}">${c.evidenceTitle?`<figcaption class="evidence-title">${esc(c.evidenceTitle)}</figcaption>`:""}${planningEvidenceHTML(c.planningEvidence)}${evaluationGuideHTML(c.evaluationGuide)}${steps}${growthResultsHTML(c)}<div style="--image-count:${c.galleryColumns||pictures.length}" class="evidence-gallery ${originals&&originals.length>1?'phone-gallery':''}">${pictures.map(p=>`<div class="${p.wide?'evidence-wide':''}" style="--item-width:${previewWidth(p,pictures.length)}px">${p.heading?`<p class="evidence-subheading">${esc(p.heading)}</p>`:""}${p.prompt?`<p class="response-prompt">${esc(p.prompt)}</p>${p.ctr?`<p class="response-stats"><span>클릭률 <b>${esc(p.ctr)}</b></span><span>${esc(c.shareLabel||"추정 공유율")} <b>${esc(p.share)}</b></span></p>`:""}`:""}<button type="button" class="evidence-button" style="--preview-width:${previewWidth(p,pictures.length)}px" data-image="${esc(p.src)}" data-title="${esc(p.label)}" aria-label="${esc(p.label)} 자료 확대"><img src="${esc(p.src)}" alt="${esc(p.label)}" ${p.width?`width="${p.width}" height="${p.height}"`:""} loading="lazy" decoding="async"><span class="zoom">자료 확대</span></button>${p.caption?`<p class="image-caption">${esc(p.caption)}</p>`:""}</div>`).join('')}</div>${c.evidenceNote?`<p class="evidence-note breakdown">${esc(c.evidenceNote)}</p>`:''}${reference?`<p class="evidence-note evidence-link"><a href="${esc(reference.href)}">${esc(reference.label)} →</a></p>`:''}${supportingDetailsHTML(c.supportingDetails)}${c.disclaimer?`<p class="image-disclaimer">${esc(c.disclaimer)}</p>`:""}</figure>`;
 }
 function metaHTML(c){
  return c.role?`<dl class="project-meta"><dt>담당 역할</dt><dd>${esc(c.role)}</dd>${c.contribution?`<dt>기여도</dt><dd>${esc(c.contribution)}</dd>`:''}${c.team?`<dt>${esc(c.teamLabel||'협업 구성')}</dt><dd>${esc(c.team)}</dd>`:''}</dl>`:'';
@@ -62,7 +62,7 @@ function metaHTML(c){
 function contextHTML(options,c){
  if(options.scenario)return '';
  const company=companies.find(x=>x.key===c.company);
- return options.product?`<div class="case-kicker"><a class="product-badge" href="#${esc(options.product.id)}">${esc(options.product.title)}</a><span class="detail-label">${esc(options.label||'')}</span></div>`:`<p class="eyebrow">${esc(company.name)}${c.position?` · ${esc(c.position)}`:''}</p>`;
+ return options.product?`<div class="case-kicker"><a class="product-badge" href="#${esc(options.product.id)}">${esc(options.product.title)}</a><span class="detail-label">${esc(options.label||'')}</span></div>`:`<p class="eyebrow">${esc(company.name)}${c.position?`: ${esc(c.position)}`:''}</p>`;
 }
 function sectionCopyHTML(c,heading){
  return c.sections.map(s=>{
@@ -72,7 +72,8 @@ function sectionCopyHTML(c,heading){
   const content=s.paragraphs?.length===1
    ? `<p class="case-paragraph">${render(entries[0])}</p>`
    : `<ul>${entries.map(t=>`<li>${render(t)}</li>`).join('')}</ul>`;
-  return `<section class="${isOutcome?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}</section>`;
+  const notes=s.notes?.length?`<ul class="outcome-notes">${s.notes.map(note=>`<li>${esc(note)}</li>`).join('')}</ul>`:'';
+  return `<section class="${isOutcome?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}${notes}</section>`;
  }).join('');
 }
 function pairedCaseHTML(c,options={}){
@@ -100,14 +101,14 @@ const coreProjects=Object.values(projectsByCompany).flat();
 function detailId(p,id){return id===p.id?`${id}-detail`:id;}
 function coreProjectHTML(p){
  const company=companies.find(c=>c.key===p.company);
- return `<article class="project core-project" id="${esc(p.id)}" data-product-company="${esc(p.company)}"><header class="project-header core-header"><p class="eyebrow">${esc(company.name)} · ${esc(p.position)}</p><h4 class="product-title">${esc(p.title)}</h4><p class="core-intro">${esc(p.intro)}</p><p class="product-status"><strong>${esc(p.outcomes[0].value)}</strong><span>${esc(p.outcomes[0].label)}</span></p><p class="product-role"><b>담당 역할</b>${esc(p.role)}</p><nav class="case-index" aria-label="${esc(p.title)} 하위 사례">${p.detailIds.map((id,i)=>`<a href="#${esc(detailId(p,id))}">${esc(p.labels[i])}</a>`).join('')}</nav></header><div class="core-details">${p.detailIds.map((id,i)=>caseHTML(cases.find(c=>c.id===id),{detail:true,label:p.labels[i],product:p,id:detailId(p,id)})).join('')}</div></article>`;
+ return `<article class="project core-project" id="${esc(p.id)}" data-product-company="${esc(p.company)}"><header class="project-header core-header"><p class="eyebrow">${esc(company.name)}: ${esc(p.position)}</p><h4 class="product-title">${esc(p.title)}</h4><p class="core-intro">${esc(p.intro)}</p><p class="product-status"><strong>${esc(p.outcomes[0].value)}</strong><span>${esc(p.outcomes[0].label)}</span></p><p class="product-role"><b>담당 역할</b>${esc(p.role)}</p><nav class="case-index" aria-label="${esc(p.title)} 하위 사례">${p.detailIds.map((id,i)=>`<a href="#${esc(detailId(p,id))}">${esc(p.labels[i])}</a>`).join('')}</nav></header><div class="core-details">${p.detailIds.map((id,i)=>caseHTML(cases.find(c=>c.id===id),{detail:true,label:p.labels[i],product:p,id:detailId(p,id)})).join('')}</div></article>`;
 }
 function companyProjectsHTML(company){
  const groups=projectsByCompany[company.key]||[];
  if(!groups.length)return cases.filter(c=>c.company===company.key).map(c=>caseHTML(c)).join('');
  return groups.map(coreProjectHTML).join('');
 }
-document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${esc(c.key)}" id="company-${esc(c.key)}" tabindex="-1"><header class="company-heading"><div><div class="company-title"><h3>${esc(c.name)}</h3><span>${esc(c.role)}${c.rank?` · ${esc(c.rank)}`:''}</span></div><p class="company-period">${esc(c.period)} · ${esc(c.duration)}</p><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
+document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${esc(c.key)}" id="company-${esc(c.key)}" tabindex="-1"><header class="company-heading"><div><div class="company-title"><h3>${esc(c.name)}</h3><span>${esc(c.role)}${c.rank?` (${esc(c.rank)})`:''}</span></div><p class="company-period">${esc(c.period)} (${esc(c.duration)})</p><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
 const productNav=document.querySelector('#product-links');
 let locationKey='';
 function updateScrollOffset(){document.documentElement.style.setProperty('--portfolio-scroll-offset',`${document.querySelector('.topbar').offsetHeight+document.querySelector('.project-nav').offsetHeight+20}px`);}
