@@ -1,8 +1,57 @@
 'use strict';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const {companies,cases}=PORTFOLIO;
+// 재직기간은 data.js의 startDate·endDate에서 계산한다. 첫날과 마지막 날을 모두 재직일로 세고,
+// 기준일은 방문자 시계의 시간대와 무관하게 한국 시간(KST)의 오늘로 잡는다.
+const DAY_MS=86400000;
+function parseYMD(value){
+ const found=/^(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})$/.exec(String(value??'').trim());
+ return found?{y:+found[1],m:+found[2],d:+found[3]}:null;
+}
+function todayInKorea(){
+ const kst=new Date(Date.now()+9*3600000);
+ return {y:kst.getUTCFullYear(),m:kst.getUTCMonth()+1,d:kst.getUTCDate()};
+}
+function daysInMonth(year,month){return new Date(Date.UTC(year,month,0)).getUTCDate();}
+function addOneDay(date){
+ const next=new Date(Date.UTC(date.y,date.m-1,date.d)+DAY_MS);
+ return {y:next.getUTCFullYear(),m:next.getUTCMonth()+1,d:next.getUTCDate()};
+}
+function calendarSpan(from,to){
+ let y=to.y-from.y,m=to.m-from.m,d=to.d-from.d;
+ if(d<0){const previousMonth=to.m===1?12:to.m-1,previousYear=to.m===1?to.y-1:to.y;d+=daysInMonth(previousYear,previousMonth);m-=1;}
+ if(m<0){y-=1;m+=12;}
+ return {y,m,d};
+}
+function tenureOf(company,today){
+ const from=parseYMD(company.startDate),to=company.endDate?parseYMD(company.endDate):today;
+ if(!from||!to)return null;
+ return calendarSpan(from,addOneDay(to));
+}
+function tenureText(span){
+ const parts=[];
+ if(span.y)parts.push(`${span.y}년`);
+ if(span.m)parts.push(`${span.m}개월`);
+ if(span.d||!parts.length)parts.push(`${span.d}일`);
+ return parts.join(' ');
+}
+function periodText(company){
+ const from=parseYMD(company.startDate),to=company.endDate?parseYMD(company.endDate):null;
+ if(!from)return company.period||'';
+ const stamp=value=>`${value.y}.${String(value.m).padStart(2,'0')}.${String(value.d).padStart(2,'0')}`;
+ return `${stamp(from)} ~ ${to?stamp(to):'현재'}`;
+}
+function totalTenureText(today){
+ let y=0,m=0,d=0;
+ companies.forEach(c=>{const span=tenureOf(c,today);if(!span)return;y+=span.y;m+=span.m;d+=span.d;});
+ m+=Math.floor(d/30);y+=Math.floor(m/12);m%=12;
+ return m?`${y}년 ${m}개월`:`${y}년`;
+}
+const careerToday=todayInKorea();
+companies.forEach(c=>{const span=tenureOf(c,careerToday);c.periodText=periodText(c);c.tenureText=span?tenureText(span):(c.duration||'');});
+document.querySelectorAll('[data-career-total]').forEach(node=>{node.textContent=totalTenureText(careerToday);});
 const career=document.querySelector('#career-list');
-career.innerHTML=companies.map(c=>`<a class="career-row" href="#${esc(c.entryId||`case-${c.start}`)}"><span class="date">${esc(c.period)}<small>${esc(c.duration)}</small></span><strong>${esc(c.name)}</strong><span class="role"><span class="role-heading">${esc(c.role)}${c.rank?`<span class="rank-tag">${esc(c.rank)}</span>`:""}</span><small>${esc(c.intro)}</small></span><span class="arrow">→</span></a>`).join('');
+career.innerHTML=companies.map(c=>`<a class="career-row" href="#${esc(c.entryId||`case-${c.start}`)}"><span class="date">${esc(c.periodText)}<small>${esc(c.tenureText)}</small></span><strong>${esc(c.name)}</strong><span class="role"><span class="role-heading">${esc(c.role)}${c.rank?`<span class="rank-tag">${esc(c.rank)}</span>`:""}</span><small>${esc(c.intro)}</small></span><span class="arrow">→</span></a>`).join('');
 const filters=document.querySelector('#filters');
 filters.innerHTML=[{key:'all',name:'전체'},...companies].map(c=>`<button type="button" data-company="${c.key}" aria-pressed="${c.key==='all'}">${esc(c.name)}</button>`).join('');
 function previewWidth(p,count){
@@ -112,7 +161,7 @@ function companyProjectsHTML(company){
  if(!groups.length)return cases.filter(c=>c.company===company.key).map(c=>caseHTML(c)).join('');
  return groups.map(coreProjectHTML).join('');
 }
-document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${esc(c.key)}" id="company-${esc(c.key)}" tabindex="-1"><header class="company-heading"><div><div class="company-title"><h3>${esc(c.name)}</h3><span>${esc(c.role)}${c.rank?` (${esc(c.rank)})`:''}</span></div><p class="company-period">${esc(c.period)} (${esc(c.duration)})</p><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
+document.querySelector('#case-list').innerHTML=companies.map(c=>`<div class="company-group" data-group="${esc(c.key)}" id="company-${esc(c.key)}" tabindex="-1"><header class="company-heading"><div><div class="company-title"><h3>${esc(c.name)}</h3><span>${esc(c.role)}${c.rank?` (${esc(c.rank)})`:''}</span></div><p class="company-period">${esc(c.periodText)} (${esc(c.tenureText)})</p><p>${esc(c.intro)}</p></div></header>${companyProjectsHTML(c)}</div>`).join('');
 const productNav=document.querySelector('#product-links');
 let locationKey='';
 function updateScrollOffset(){document.documentElement.style.setProperty('--portfolio-scroll-offset',`${document.querySelector('.topbar').offsetHeight+document.querySelector('.project-nav').offsetHeight+20}px`);}
