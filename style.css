@@ -344,11 +344,15 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 
 /* The three cases share the same row lines, including when copy wraps. */
 .approach-grid > .approach-card{min-width:0}
-.approach-card dl{grid-template-columns:39px minmax(0,1fr);align-items:start}
+.approach-card dl{grid-template-columns:minmax(0,1fr);align-items:start;line-height:1.65}
+.approach-card dt{margin-bottom:4px}
+.approach-card .outcome{margin:0;padding-top:13px;font-size:inherit}
+.approach-card .outcome dd{color:var(--navy)}
+.approach-basis{display:block;color:var(--muted);font-size:.88em;font-weight:500;margin-top:2px}
 @supports (grid-template-rows:subgrid){
   @media(min-width:761px){
     .approach-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:12px}
-    .approach-card{display:grid;grid-row:span 8;grid-template-rows:subgrid;row-gap:12px;align-items:start}
+    .approach-card{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:12px;align-items:start}
     .approach-card h3,.approach-card figure,.approach-card .outcome{margin-block:0}
     .approach-card dl{grid-row:span 3;grid-template-rows:subgrid;row-gap:12px;margin:0}
   }
