@@ -410,3 +410,6 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
  :is(.project,.project-detail,.scenario-case,.paired-item) .project-copy :is(ul,.case-paragraph),
  .approach-card dd{font-size:.9375rem}
 }
+
+.project-copy .results :is(ul,.case-paragraph),.approach-card .outcome dd{font-weight:400}
+.project-copy .results strong,.approach-card .outcome strong,.planning-table strong,.planning-goal strong{color:#173b63;font-weight:750}

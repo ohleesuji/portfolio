@@ -25,10 +25,15 @@ function growthResultsHTML(c){
  if(!c.growthResults)return '';
  return `<div class="growth-results"><table><thead><tr><th scope="col">개선 내용</th><th scope="col">성과</th></tr></thead><tbody>${c.growthResults.map(row=>`<tr><td>${esc(row.change).replaceAll('\n','<br>')}</td><td><span class="growth-metric">${esc(row.metric)}</span><strong class="growth-result">${esc(row.result)}</strong></td></tr>`).join('')}</tbody></table><p class="growth-summary"><span>${esc(c.growthSummary.title)}</span><strong>${c.growthSummary.items.map(esc).join(' · ')}</strong></p></div>`;
 }
+const resultAccent=new RegExp("((?:\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*미만)?\\s*→\\s*\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*내외)?|(?:최대 |약 |연간? )?\\d[\\d,.]*\\s*(?:%p?|배|개월|일치|일 분량|억 원|만 원|명)(?:\\s*(?:감소|증가|상승|절감|달성|이상))?|(?:약 )?(?:[2-9]|\\d{2,})곳|7종|개인화 메모리 출시|대화분석 에이전트 출시|갈아타기 서비스 출시|혁신금융서비스 지정|온라인 비교 특례 확보|오픈마켓 출시|타기팅 광고 상품 출시))","g");
+function accentHTML(value,pattern){
+ return String(value).split(pattern).map((part,i)=>i%2?`<strong>${esc(part)}</strong>`:esc(part)).join('');
+}
 function planningEvidenceHTML(planning){
  if(!planning)return '';
+ const required=/(미끄럼 방지 필수|미끄럼 방지는 필수)/g;
  function table(headers,rows,label,variant=''){
-  return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${esc(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${accentHTML(detail,required)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  }
  return `<div class="planning-evidence">
   <p class="planning-method">${esc(planning.distributionNote)}</p>
@@ -38,8 +43,8 @@ function planningEvidenceHTML(planning){
   <h6 class="planning-example-heading">${esc(planning.promptTitle)}</h6>
   ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle,'example')}
   <div class="planning-goal">
-   <h6>갱신 목표</h6>
-   <p>“${esc(planning.goal)}”</p>
+   <h6>저장 목표</h6>
+   <p>“${accentHTML(planning.goal,required)}”</p>
    <p class="planning-method">${esc(planning.goalNote)}</p>
   </div>
  </div>`;
@@ -62,10 +67,12 @@ function contextHTML(options,c){
 function sectionCopyHTML(c,heading){
  return c.sections.map(s=>{
   const entries=s.paragraphs||s.items;
+  const isOutcome=s.title==='결과/성과';
+  const render=text=>isOutcome?accentHTML(text,resultAccent):esc(text);
   const content=s.paragraphs?.length===1
-   ? `<p class="case-paragraph">${esc(entries[0])}</p>`
-   : `<ul>${entries.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
-  return `<section class="${s.title==='결과/성과'?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}</section>`;
+   ? `<p class="case-paragraph">${render(entries[0])}</p>`
+   : `<ul>${entries.map(t=>`<li>${render(t)}</li>`).join('')}</ul>`;
+  return `<section class="${isOutcome?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}</section>`;
  }).join('');
 }
 function pairedCaseHTML(c,options={}){
