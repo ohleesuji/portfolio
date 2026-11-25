@@ -28,9 +28,20 @@ function growthResultsHTML(c){
 function planningEvidenceHTML(planning){
  if(!planning)return '';
  function table(headers,rows,label){
-  return `<table class="planning-table" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${esc(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  return `<table class="planning-table${headers.length===2?' planning-distribution':''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${esc(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  }
- return `<div class="planning-evidence">${table(planning.reviewHeaders,planning.review,'오류 유형별 프롬프트 수정 순서')}<p class="planning-review-note">${esc(planning.reviewNote)}</p><p class="planning-example-heading">입력·근거·행동 예시</p>${table(planning.steps,planning.examples,'입력·근거·행동 예시')}</div>`;
+ return `<div class="planning-evidence">
+  <p class="planning-method">${esc(planning.distributionNote)}</p>
+  ${table(planning.distributionHeaders,planning.distribution,planning.distributionTitle)}
+  <h6 class="planning-example-heading">${esc(planning.promptTitle)}</h6>
+  <p class="planning-method">${esc(planning.promptNote)}</p>
+  ${table(planning.promptHeaders,planning.promptRows,planning.promptTitle)}
+  <h6 class="planning-example-heading">${esc(planning.caseTitle)}</h6>
+  <p class="planning-method">${esc(planning.caseBasis)}</p>
+  ${table(planning.caseHeaders,planning.caseRows,planning.caseTitle)}
+  <p class="planning-review-note">${esc(planning.caseNote)}</p>
+  <details class="supporting-details planning-details"><summary>오류 유형별 프롬프트 지시와 검증 기준</summary>${table(planning.reviewHeaders,planning.review,'오류 유형별 프롬프트 지시와 검증 기준')}</details>
+ </div>`;
 }
 function evidenceHTML(c,special){
 const originals=c.originals;
