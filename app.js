@@ -30,7 +30,7 @@ function planningEvidenceHTML(planning){
  function table(headers,rows,label){
   return `<table class="planning-table" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${esc(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  }
- return `<div class="planning-evidence">${table(planning.steps,planning.examples,'입력·근거·행동 예시')}<details class="supporting-details planning-checks"><summary>오류 유형별 수정과 통과 기준</summary>${table(['오류 유형','실행 전 확인할 근거','통과 기준'],planning.review,'오류 유형별 수정과 통과 기준')}</details></div>`;
+ return `<div class="planning-evidence">${table(planning.reviewHeaders,planning.review,'오류 유형별 프롬프트 수정 순서')}<p class="planning-review-note">${esc(planning.reviewNote)}</p><p class="planning-example-heading">입력·근거·행동 예시</p>${table(planning.steps,planning.examples,'입력·근거·행동 예시')}</div>`;
 }
 function evidenceHTML(c,special){
 const originals=c.originals;
@@ -48,9 +48,10 @@ function contextHTML(options,c){
 }
 function sectionCopyHTML(c,heading){
  return c.sections.map(s=>{
-  const content=s.paragraphs
-   ? s.paragraphs.map(t=>`<p class="case-paragraph">${esc(t)}</p>`).join('')
-   : `<ul>${s.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
+  const entries=s.paragraphs||s.items;
+  const content=s.paragraphs?.length===1
+   ? `<p class="case-paragraph">${esc(entries[0])}</p>`
+   : `<ul>${entries.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
   return `<section class="${s.title==='결과/성과'?'results':''}"><${heading} class="copy-label">${esc(s.title)}</${heading}>${content}</section>`;
  }).join('');
 }
