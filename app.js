@@ -28,7 +28,7 @@ function growthResultsHTML(c){
 function planningEvidenceHTML(planning){
  if(!planning)return '';
  function table(headers,rows,label,variant=''){
-  const cell=value=>Array.isArray(value) ? `<ul class="card-points">${value.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>` : esc(value);
+  const cell=value=>Array.isArray(value) ? `<ol class="planning-steps">${value.map(item=>`<li>${esc(item)}</li>`).join('')}</ol>` : esc(value);
   return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${cell(detail)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  }
  return `<div class="planning-evidence">
