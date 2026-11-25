@@ -393,7 +393,10 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .planning-result th:nth-child(2){width:74%}
 .evidence-link a{color:var(--navy);font-weight:650}
 
-@media(min-width:1060px){#case-6>.project-body{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+@media(min-width:1060px){
+ #case-6>.project-body{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+ #case-6 .evidence-wide .evidence-button{max-width:none}
+}
 
 :is(.project,.project-detail,.scenario-case,.paired-item) .project-copy .copy-label,
 .approach-card dt{font-size:1rem;font-weight:750}
