@@ -139,6 +139,7 @@
 .supporting-project{border-color:#dce3ed}
 .supporting-project>.project-header .eyebrow{color:#647087;font-size:12px;letter-spacing:.04em}
 #case-token-budget .original-evidence .evidence-button,#case-6 .original-evidence .evidence-button{width:100%;max-width:580px}
+@media(max-width:600px){#case-5-detail .original-evidence .evidence-gallery>div:not(.evidence-wide){width:min(100%,340px)}}
 @media(max-width:760px){
  .core-header{padding:24px 20px}
  .core-header h3{font-size:22px}
