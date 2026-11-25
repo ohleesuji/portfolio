@@ -374,8 +374,10 @@ html{scroll-padding-top:0}.section{scroll-margin-top:96px}
 .planning-review-note{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
 .planning-example-heading{margin:19px 0 6px;font-weight:700;font-size:15px;color:var(--navy)}
 .planning-method{margin:0 0 8px;color:var(--muted);font-size:13px;line-height:1.55;word-break:keep-all}
-.planning-distribution th:first-child{width:66%}
-.planning-distribution th:nth-child(2){width:34%}
+.planning-distribution :is(th,td):first-child{width:3rem;text-align:center}
+.planning-distribution td:first-child{color:#173b63;font-weight:750}
+.planning-distribution th:nth-child(2){width:auto}
+.planning-distribution th:nth-child(3){width:31%}
 .planning-distribution th,.planning-distribution td{padding-block:7px}
 .planning-goal{background:#edf3fb;border:1px solid #d7e2ef;border-radius:9px;margin-top:14px;padding:10px 12px}
 .planning-goal h6{font-size:14px;margin:0 0 4px;color:var(--navy)}

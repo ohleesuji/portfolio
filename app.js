@@ -33,7 +33,11 @@ function planningEvidenceHTML(planning){
  if(!planning)return '';
  const required=/(미끄럼 방지 필수|미끄럼 방지는 필수)/g;
  function table(headers,rows,label,variant=''){
-  return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${rows.map(([entry,...details])=>`<tr><th scope="row">${esc(entry)}</th>${details.map(detail=>`<td>${accentHTML(detail,required)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  const rowHeading=variant==='distribution'?1:0;
+  const body=rows.map(row=>`<tr>${row.map((cell,i)=>i===rowHeading
+   ? `<th scope="row">${esc(cell)}</th>`
+   : `<td>${accentHTML(cell,required)}</td>`).join('')}</tr>`).join('');
+  return `<table class="planning-table${variant ? ' planning-'+variant : ''}" aria-label="${esc(label)}"><thead><tr>${headers.map(header=>`<th scope="col">${esc(header)}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table>`;
  }
  return `<div class="planning-evidence">
   <p class="planning-method">${esc(planning.distributionNote)}</p>
