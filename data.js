@@ -1143,21 +1143,21 @@ const PORTFOLIO = {
       "id": "case-18",
       "page": 18,
       "company": "toss",
-      "title": "규제 특례로 주택담보대출 온라인 비교 허용",
-      "image": "assets/evidence-hd-18.png?v=20260922-results",
+      "title": "규제 특례로 대출 모집인 온라인 비딩 허용",
+      "image": "assets/toss-recruiter-bidding.png",
       "sections": [
         {
           "title": "문제 의식 및 목표",
           "items": [
-            "대출 조건을 모집인마다 따로 문의해야 했고, 재위탁 규정으로 온라인 비교에 제약",
-            "주택담보대출 조건을 온라인에서 비교하고 선택 후 모집인 상담으로 연결"
+            "고객은 모집인마다 대출 조건을 따로 문의, 재위탁 제한으로 모집인의 온라인 중개에 제약",
+            "대출 모집인이 금리·한도를 온라인으로 제안하고 고객이 비교·선택 후 상담하는 모델 기획"
           ]
         },
         {
           "title": "주요 업무",
           "items": [
             "당시 주택담보대출의 온라인 이용 비중 약 6%, 은행 대출 실행의 모집인 경유 비중 50~70% 등 시장 지표를 분석해 온라인 중개 기회와 소비자 편익 정리",
-            "재위탁 규제 쟁점과 특례 적용 범위를 검토하고 서비스 모델·운영 방안을 규제특례 신청서로 작성",
+            "토스에 모집인 온라인 비딩을 처음 넣는 운영 모델을 설계하고, 재위탁 제한에 대한 특례 신청서 작성",
             "법무·대관·금융소비자보호 담당자와 심사 자료를 준비하고 쟁점별 답변 검토",
             "심사위원회에서 서비스 모델과 소비자 편익을 발표하고 질의에 대응해 혁신금융서비스 지정 추진"
           ]
@@ -1166,43 +1166,43 @@ const PORTFOLIO = {
           "title": "결과/성과",
           "items": [
             "신청 6개월 만에 금융위원회 혁신금융서비스 신규 지정",
-            "모집인이 제시한 주택담보대출 조건을 온라인에서 비교하고 상담으로 연결할 수 있도록 규제 특례 확보"
+            "대출 모집인이 온라인으로 견적을 제안할 수 있도록 재위탁 제한에 대한 규제 특례 확보"
           ]
         }
       ],
-      "role": "서비스 모델·규제특례 신청서 작성, 심사위원회 발표와 심사 대응 주도",
+      "role": "모집인 온라인 비딩 모델 설계, 규제특례 신청서 작성과 심사위원회 발표",
       "contribution": "100%",
       "team": "법무 1명 · 대관 1명 · 금융소비자보호 1명",
       "caption": null,
       "originals": [
         {
-          "src": "assets/claude-fig_toss_sandbox.png",
-          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
-          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "src": "assets/toss-recruiter-bidding.png",
+          "label": "모집인 온라인 비딩과 고객 비교·상담 흐름",
+          "caption": "모집인 온라인 비딩과 고객 비교·상담 흐름",
           "wide": true,
           "width": 2000,
           "height": 890
         },
         {
           "src": "assets/sep23-s13_orig0.png",
-          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
-          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "label": "혁신금융서비스 특례 신청서 발췌",
+          "caption": "혁신금융서비스 특례 신청서 발췌",
           "wide": false,
           "width": 990,
           "height": 450
         },
         {
           "src": "assets/claude-s13_orig1.jpeg",
-          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
-          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "label": "주택담보대출 시장·사업자 분석",
+          "caption": "주택담보대출 시장·사업자 분석",
           "wide": false,
           "width": 611,
           "height": 470
         },
         {
           "src": "assets/claude-s13_orig2.jpeg",
-          "label": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
-          "caption": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+          "label": "주택담보대출 온라인 이용 비중 분석",
+          "caption": "주택담보대출 온라인 이용 비중 분석",
           "wide": false,
           "width": 599,
           "height": 465
@@ -1210,10 +1210,14 @@ const PORTFOLIO = {
       ],
       "galleryColumns": 3,
       "teamLabel": "협업 구성",
-      "evidenceTitle": "오프라인 모집인 중개를 온라인 비교로 바꾼 신규 모델",
+      "evidenceTitle": "모집인 온라인 비딩과 고객 비교·상담 흐름",
       "disclaimer": "일부 내부 자료는 공개 가능한 범위에서 발췌 · 비식별화 처리",
       "position": "대출 Product Owner",
-      "evidenceNote": "금융위원회 혁신금융서비스 지정 사례 / 대출모집인을 통한 주택담보대출 비교 플랫폼"
+      "evidenceNote": "금융위원회 혁신금융서비스 지정 / 내게 맞는 대출상담사 비교하기 서비스",
+      "evidenceLink": {
+        "href": "https://sandbox.fintech.or.kr/business/enterprise.do?id=318&lang=ko",
+        "label": "금융규제 샌드박스 지정 사례"
+      }
     },
     {
       "id": "case-19",

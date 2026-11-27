@@ -74,7 +74,7 @@ function growthResultsHTML(c){
  if(!c.growthResults)return '';
  return `<div class="growth-results"><table><thead><tr><th scope="col">개선 내용</th><th scope="col">성과</th></tr></thead><tbody>${c.growthResults.map(row=>`<tr><td>${esc(row.change).replaceAll('\n','<br>')}</td><td><span class="growth-metric">${esc(row.metric)}</span><strong class="growth-result">${esc(row.result)}</strong></td></tr>`).join('')}</tbody></table><p class="growth-summary"><span>${esc(c.growthSummary.title)}</span><strong>${c.growthSummary.items.map(esc).join(' · ')}</strong></p></div>`;
 }
-const resultAccent=new RegExp("((?:\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*미만)?\\s*→\\s*\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*내외)?|(?:최대 |약 |연간? )?\\d[\\d,.]*\\s*(?:%p?|배|개월|일치|일 분량|억 원|만 원|명)(?:\\s*(?:감소|증가|상승|절감|달성|이상))?|(?:약 )?(?:[2-9]|\\d{2,})곳|7종|개인화 메모리 출시|대화분석 에이전트 출시|갈아타기 서비스 출시|혁신금융서비스 지정|온라인 비교 특례 확보|오픈마켓 출시|타기팅 광고 상품 출시))","g");
+const resultAccent=new RegExp("((?:\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*미만)?\\s*→\\s*\\d[\\d,.]*\\s*(?:%p?|억 원)(?:\\s*내외)?|(?:최대 |약 |연간? )?\\d[\\d,.]*\\s*(?:%p?|배|개월|일치|일 분량|억 원|만 원|명)(?:\\s*(?:감소|증가|상승|절감|달성|이상))?|(?:약 )?(?:[2-9]|\\d{2,})곳|7종|개인화 메모리 출시|대화분석 에이전트 출시|갈아타기 서비스 출시|혁신금융서비스 지정|온라인 비딩 특례 확보|오픈마켓 출시|타기팅 광고 상품 출시))","g");
 function accentHTML(value,pattern){
  return String(value).split(pattern).map((part,i)=>i%2?`<strong>${esc(part)}</strong>`:esc(part)).join('');
 }
